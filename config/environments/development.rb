@@ -30,4 +30,8 @@ DiamondClinic::Application.configure do
   # Have unicorn log more info in sdout
   config.logger = Logger.new(STDOUT)
   config.logger.level = Logger.const_get(ENV['LOG_LEVEL'] ? ENV['LOG_LEVEL'].upcase : 'DEBUG')
+
+  # Set mongoid log level for development
+  Mongoid.logger.level = Logger::DEBUG
+  Moped.logger.level = Logger::DEBUG
 end
