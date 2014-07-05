@@ -18,7 +18,3 @@
 # Intellij stuff
 /.idea
 *.iml
-
-# Config
-/config/mongoid.yml
-/config/unicorn.rb
