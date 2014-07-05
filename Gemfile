@@ -2,12 +2,9 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.8'
-gem 'mongoid', '~> 4.0.0'
 
-gem 'haml-rails'
-gem 'phony'
-gem 'newrelic_rpm'
-gem 'unicorn'
+# Use mongodb
+gem 'mongoid', '~> 4.0.0'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -31,6 +28,12 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+# Use haml for views
+gem 'haml-rails'
+
+# Gem for localization of phone numbers
+gem 'phony'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
@@ -47,4 +50,10 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'quiet_assets'
   gem 'rspec-rails'
+end
+
+group :development, :production do
+  gem 'newrelic_rpm'
+  gem 'rails_12factor'
+  gem 'unicorn'
 end
