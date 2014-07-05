@@ -1,7 +1,6 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    a9n (0.3.0)
     actionmailer (4.0.8)
       actionpack (= 4.0.8)
       mail (~> 2.5.4)
@@ -185,7 +184,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  a9n
   capybara
   coffee-rails (~> 4.0.0)
   cucumber-rails

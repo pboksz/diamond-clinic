@@ -4,7 +4,6 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.8'
 gem 'mongodb'
 
-gem 'a9n'
 gem 'haml-rails'
 gem 'phony'
 gem 'unicorn'
