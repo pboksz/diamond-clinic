@@ -6,6 +6,7 @@ gem 'mongoid', '~> 4.0.0'
 
 gem 'haml-rails'
 gem 'phony'
+gem 'newrelic_rpm'
 gem 'unicorn'
 
 # Use SCSS for stylesheets
