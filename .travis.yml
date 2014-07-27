@@ -1,6 +1,5 @@
 language: ruby
 bundler_args: --without development
-script: bundle exec rspec spec
 rvm:
   - 2.0.0
 services:
@@ -11,7 +10,8 @@ env:
   - secure: EZfG34EWKhrOhytw0w36kmnLRsBLKMLMcO+WX/NACY4U6HtT1N/pwc8otI1GOjTJkFrTfGwT5UginP6Nt9JX3+eSaO4+DzH6uBKxKzlS7OmoGEEa74PZkJBT0owOgmBpniRFaLc58kNvEmwO/gXDJFNJZ1FtYlmoHigLUkyxf6I=
   #MONGO_SERVER
   - secure: Y8LhrdwkaByxz6+eVT1YduuMVCnTP5PIkrMYUB1rGch6xIJjzDEkLMxFBIqj99jCKqebKiHz9Xytu/KmE/ZFQpD84iTx/CkN9DxqZygiRPIEBh2xjlo/KiLW36SDutD6gliaRIHLC6+xv/kgzrRxJzpd4/SwMc2FW8gy35uqKEo=
-after_script:
+script:
+  - bundle exec rspec spec
   - export MONGOHQ_URL="$MONGO_HEROKU@$MONGO_SERVER"
   - echo "---------------------------------------------------------------------------"
   - echo "$MONGO_HEROKU"
