@@ -5,10 +5,16 @@ rvm:
   - 2.0.0
 services:
   - mongodb
-#deploy:
-#  provider: heroku
-#  api_key:
-#    secure: M2Mhwt7nSlgO/p8+kivByb3U123ZGhfzyBGmclRukKaxmFzGESliV0+51bbkCAPllEzpejsToy/XK4KZZm2rmThdGw4dVuZ7NaYwKEHjQjIEKTB7FdYTPIyNjSj3Ma3AKhhF7n8GQ6TrzAph783Rn+bPgPFoeMOYyhfza6bneHY=
-#  app: diamond-clinic
-#  on:
-#    repo: pboksz/diamond-clinic
+before_script:
+  - secret=`openssl rsautl -decrypt -inkey ~/.ssh/id_rsa -in mongohq.secret`
+  - openssl aes-256-cbc -k "$secret" -in mongohq.enc -d -a -out mongohq
+deploy:
+  provider: heroku
+  api_key:
+    secure: M2Mhwt7nSlgO/p8+kivByb3U123ZGhfzyBGmclRukKaxmFzGESliV0+51bbkCAPllEzpejsToy/XK4KZZm2rmThdGw4dVuZ7NaYwKEHjQjIEKTB7FdYTPIyNjSj3Ma3AKhhF7n8GQ6TrzAph783Rn+bPgPFoeMOYyhfza6bneHY=
+  app: diamond-clinic
+  on:
+    repo: pboksz/diamond-clinic
+  env:
+    global:
+      - mongohq
