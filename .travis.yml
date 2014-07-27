@@ -11,13 +11,8 @@ env:
   #MONGO_SERVER
   - secure: Y8LhrdwkaByxz6+eVT1YduuMVCnTP5PIkrMYUB1rGch6xIJjzDEkLMxFBIqj99jCKqebKiHz9Xytu/KmE/ZFQpD84iTx/CkN9DxqZygiRPIEBh2xjlo/KiLW36SDutD6gliaRIHLC6+xv/kgzrRxJzpd4/SwMc2FW8gy35uqKEo=
 script:
-  - bundle exec rspec spec
   - export MONGOHQ_URL="$MONGO_HEROKU@$MONGO_SERVER"
-  - echo "---------------------------------------------------------------------------"
-  - echo "$MONGO_HEROKU"
-  - echo "$MONGO_SERVER"
-  - echo "$MONGOHQ_URL"
-  - echo "---------------------------------------------------------------------------"
+  - bundle exec rspec spec
 deploy:
   provider: heroku
   api_key:
@@ -25,3 +20,5 @@ deploy:
   app: diamond-clinic
   on:
     repo: pboksz/diamond-clinic
+  run:
+    - export MONGOHQ_URL="$MONGO_HEROKU@$MONGO_SERVER"
