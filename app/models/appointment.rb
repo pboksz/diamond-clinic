@@ -1,4 +1,4 @@
-class AppointmentRequest
+class Appointment
   include Mongoid::Document
   include Mongoid::Timestamps
 
