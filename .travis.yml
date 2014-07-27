@@ -5,10 +5,10 @@ rvm:
   - 2.0.0
 services:
   - mongodb
-deploy:
-  provider: heroku
-  api_key:
-    secure: M2Mhwt7nSlgO/p8+kivByb3U123ZGhfzyBGmclRukKaxmFzGESliV0+51bbkCAPllEzpejsToy/XK4KZZm2rmThdGw4dVuZ7NaYwKEHjQjIEKTB7FdYTPIyNjSj3Ma3AKhhF7n8GQ6TrzAph783Rn+bPgPFoeMOYyhfza6bneHY=
-  app: diamond-clinic
-  on:
-    repo: pboksz/diamond-clinic
+#deploy:
+#  provider: heroku
+#  api_key:
+#    secure: M2Mhwt7nSlgO/p8+kivByb3U123ZGhfzyBGmclRukKaxmFzGESliV0+51bbkCAPllEzpejsToy/XK4KZZm2rmThdGw4dVuZ7NaYwKEHjQjIEKTB7FdYTPIyNjSj3Ma3AKhhF7n8GQ6TrzAph783Rn+bPgPFoeMOYyhfza6bneHY=
+#  app: diamond-clinic
+#  on:
+#    repo: pboksz/diamond-clinic
