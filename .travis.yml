@@ -4,14 +4,7 @@ rvm:
   - 2.0.0
 services:
   - mongodb
-env:
-  global:
-  #MONGO_HEROKU
-  - secure: EZfG34EWKhrOhytw0w36kmnLRsBLKMLMcO+WX/NACY4U6HtT1N/pwc8otI1GOjTJkFrTfGwT5UginP6Nt9JX3+eSaO4+DzH6uBKxKzlS7OmoGEEa74PZkJBT0owOgmBpniRFaLc58kNvEmwO/gXDJFNJZ1FtYlmoHigLUkyxf6I=
-  #MONGO_SERVER
-  - secure: Y8LhrdwkaByxz6+eVT1YduuMVCnTP5PIkrMYUB1rGch6xIJjzDEkLMxFBIqj99jCKqebKiHz9Xytu/KmE/ZFQpD84iTx/CkN9DxqZygiRPIEBh2xjlo/KiLW36SDutD6gliaRIHLC6+xv/kgzrRxJzpd4/SwMc2FW8gy35uqKEo=
 script:
-  - export MONGOHQ_URL="$MONGO_HEROKU@$MONGO_SERVER"
   - bundle exec rspec spec
 deploy:
   provider: heroku
