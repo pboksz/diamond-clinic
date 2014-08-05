@@ -1,6 +1,6 @@
 %header{ :role => 'banner' }
   %nav
-    = link_to 'Home', root_path
-    = link_to 'Our Doctors', root_path
-    = link_to 'About Us', root_path
-    = link_to 'Contact Us', root_path
+    = link_to 'Home', root_path(locale)
+    = link_to 'Our Doctors', root_path(locale)
+    = link_to 'About Us', about_path(locale)
+    = link_to 'Contact Us', root_path(locale)
