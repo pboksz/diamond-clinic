@@ -1,3 +1,5 @@
 DiamondClinic::Application.routes.draw do
-  root 'home#index'
+  scope '(:locale)', :locale => /(en|pl)/ do
+    root 'home#index'
+  end
 end
