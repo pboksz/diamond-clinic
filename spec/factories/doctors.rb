@@ -4,6 +4,7 @@ FactoryGirl.define do
   factory :doctor do
     first_name 'First'
     last_name 'Last'
+    specialty 'Specialty'
     biography 'Doctor biography...'
   end
 end
