@@ -35,6 +35,9 @@ gem 'haml-rails'
 # Gem for localization of phone numbers
 gem 'phony'
 
+# Gem for even simpler forms
+gem 'simple_form'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
