@@ -5,6 +5,7 @@ describe Appointment do
     it { expect(build(:appointment)).to be_valid }
 
     describe 'presence' do
+      it { expect(build(:appointment, :doctor => nil)).not_to be_valid }
       it { expect(build(:appointment, :first_name => nil)).not_to be_valid }
       it { expect(build(:appointment, :last_name => nil)).not_to be_valid }
     end

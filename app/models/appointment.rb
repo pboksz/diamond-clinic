@@ -2,11 +2,14 @@ class Appointment
   include Mongoid::Document
   include Mongoid::Timestamps
 
+  field :doctor_id, :type => Integer
   field :first_name, :type => String
   field :last_name, :type => String
   field :phone_number, :type => String
 
-  validates :first_name, :last_name, :presence => true
+  belongs_to :doctor
+
+  validates :doctor, :first_name, :last_name, :presence => true
   validate  :phone_number_is_plausible
 
   def phone_number=(value)
