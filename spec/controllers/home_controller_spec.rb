@@ -10,4 +10,9 @@ describe HomeController do
     before { get :about_us }
     it { expect(response).to render_template :about_us }
   end
+
+  describe 'GET #contact_us' do
+    before { get :contact_us }
+    it { expect(response).to render_template :contact_us }
+  end
 end
