@@ -11,4 +11,9 @@ describe Doctor do
       it { expect(build(:doctor, :biography => nil)).not_to be_valid }
     end
   end
+
+  describe '#full_name' do
+    let(:doctor) { build(:doctor) }
+    it { expect(doctor.full_name).to eq "#{doctor.first_name} #{doctor.last_name}" }
+  end
 end
