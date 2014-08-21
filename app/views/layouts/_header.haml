@@ -1,9 +1,9 @@
 %header{ :role => 'banner' }
   %nav
     = link_to 'Home', root_path(locale)
-    = link_to 'About Us', about_path(locale)
-    = link_to 'Our Doctors', root_path(locale)
-    = link_to 'Offer', root_path(locale)
-    = link_to 'Clinical Research', root_path(locale)
-    = link_to 'Contact Us', contact_path(locale)
+    = link_to 'About Us', about_us_path(locale)
+    = link_to 'Our Doctors', our_doctors_path(locale)
+    = link_to 'Services', services_path(locale)
+    = link_to 'Clinical Research', clinical_research_path(locale)
+    = link_to 'Contact Us', contact_us_path(locale)
     = render 'layouts/locale'

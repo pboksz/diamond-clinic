@@ -23,7 +23,7 @@
 
   .appointment
     %p Request an appointment
-    = simple_form_for @appointment, :url => appointment_path(locale), :method => :post do |f|
+    = simple_form_for @appointment, :url => '#', :method => :post do |f|
       = f.input :first_name
       = f.input :last_name
       = f.input :phone_number

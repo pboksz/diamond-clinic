@@ -9,9 +9,11 @@ DiamondClinic::Application.routes.draw do
       get '/admins', :to => 'admin#admins'
     end
 
-    get '/about', :to => 'home#about_us'
-    get '/contact', :to => 'home#contact_us'
-    post '/appointment', :to => 'home#appointment'
+    get '/about_us', :to => 'home#about_us'
+    get '/our_doctors', :to => 'home#our_doctors'
+    get '/services', :to => 'home#services'
+    get '/clinical_research', :to => 'home#clinical_research'
+    get '/contact_us', :to => 'home#contact_us'
 
     root 'home#index'
   end
