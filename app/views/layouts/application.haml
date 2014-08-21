@@ -9,5 +9,8 @@
   %body
     = render 'layouts/header'
     #content
+      .messages
+        .notice= notice
+        .alert= alert
       .container= yield
     = render 'layouts/footer'
