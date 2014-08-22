@@ -9,6 +9,7 @@
         %td= 'Phone number'
         %td= 'Doctor'
         %td= 'Message'
+        %td= 'Created At'
     %tbody
       - @appointments.each do |appointment|
         %tr
@@ -17,3 +18,4 @@
           %td= appointment.phone_number
           %td= appointment.doctor.full_name
           %td= appointment.message
+          %td= time_ago_in_words(appointment.created_at)

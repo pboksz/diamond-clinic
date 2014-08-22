@@ -12,7 +12,7 @@ describe AdminController do
   describe 'GET #appointments' do
     before { get :appointments }
 
-    it { expect(assigns(:appointments)).to eq Appointment.all }
+    it { expect(assigns(:appointments)).to eq Appointment.desc(:created_at) }
     it { expect(response).to render_template :appointments }
   end
 
