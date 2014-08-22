@@ -18,6 +18,7 @@ DiamondClinic::Application.routes.draw do
     get '/services', :to => 'home#services'
     get '/clinical_research', :to => 'home#clinical_research'
     get '/contact_us', :to => 'home#contact_us'
+    post '/contact_us', :to => 'home#appointment_create'
 
     root 'home#index'
   end

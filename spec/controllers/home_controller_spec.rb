@@ -33,4 +33,23 @@ describe HomeController do
     it { expect(assigns(:appointment)).to be_a_new Appointment }
     it { expect(response).to render_template :contact_us }
   end
+
+  describe 'POST #appointment_create' do
+    before { post :appointment_create, :appointment => params }
+
+    describe 'saves properly' do
+      let(:params) { attributes_for(:appointment) }
+
+      it { expect(assigns(:appointment)).to be_persisted }
+      it { expect(response).to redirect_to contact_us_path }
+    end
+
+    describe 'does not save' do
+      let(:params) { attributes_for(:appointment, :first_name => nil) }
+
+      it { expect(assigns(:appointment)).not_to be_persisted }
+      it { expect(assigns(:doctors)).to eq Doctor.all }
+      it { expect(response).to render_template :contact_us }
+    end
+  end
 end

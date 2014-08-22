@@ -22,12 +22,12 @@
 
   .appointment
     %p Request an Appointment
-    = simple_form_for @appointment, :url => '#', :method => :post do |f|
+    = simple_form_for @appointment, :url => contact_us_path(locale), :method => :post do |f|
       = f.input :first_name
       = f.input :last_name
       = f.input :email
       = f.input :phone_number
-      = f.input :doctor, :collection => @doctors, :value_method => :id, :label_method => :full_name
+      = f.input :doctor_id, :collection => @doctors, :value_method => :id, :label_method => :full_name
       = f.input :message, :as => :text
       = f.submit 'Send Request'
 
