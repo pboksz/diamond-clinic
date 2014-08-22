@@ -6,7 +6,11 @@ DiamondClinic::Application.routes.draw do
       get '/', :to => 'admin#index'
       get '/appointments', :to => 'admin#appointments'
       get '/doctors', :to => 'admin#doctors'
+      post '/doctors', :to => 'admin#doctors_create'
+      get '/doctors/new', :to => 'admin#doctors_new'
       get '/admins', :to => 'admin#admins'
+      post '/admins', :to => 'admin#admins_create'
+      get '/admins/new', :to => 'admin#admins_new'
     end
 
     get '/about_us', :to => 'home#about_us'
