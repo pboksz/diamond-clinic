@@ -1,0 +1,14 @@
+.admin.doctors
+  %h1 Add Doctor
+
+  = simple_form_for @doctor, :url => admin_doctors_path(locale), :method => :post do |f|
+    = f.input :first_name
+    = f.input :last_name
+    = f.input :specialty
+    = f.input :biography, :as => :text
+
+    .actions
+      = link_to admin_doctors_path(locale) do
+        %i.fa.fa-trash-o
+      = button_tag do
+        %i.fa.fa-floppy-o

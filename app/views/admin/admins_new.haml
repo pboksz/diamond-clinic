@@ -1,0 +1,13 @@
+.admin.admins
+  %h1 Add Admin
+
+  = simple_form_for @admin, :url => admin_admins_path(locale), :method => :post do |f|
+    = f.input :email
+    = f.input :password, :as => :password
+    = f.input :password_confirmation, :as => :password
+
+    .actions
+      = link_to admin_admins_path(locale) do
+        %i.fa.fa-trash-o
+      = button_tag do
+        %i.fa.fa-floppy-o

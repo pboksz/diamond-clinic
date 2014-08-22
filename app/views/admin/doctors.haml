@@ -1,2 +1,16 @@
 .admin.doctors
-  Will show all doctors, as well as add and edit
+  %h1 Doctors
+  .new= link_to 'Add Doctor', admin_doctors_new_path(locale)
+
+  %table
+    %thead
+      %tr
+        %td= 'Name'
+        %td= 'Specialty'
+        %td= 'Biography'
+    %tbody
+      - @doctors.each do |doctor|
+        %tr
+          %td= doctor.full_name
+          %td= doctor.specialty
+          %td= doctor.biography
