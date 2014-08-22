@@ -6,6 +6,7 @@ FactoryGirl.define do
 
     first_name 'First'
     last_name 'Last'
+    email 'email@email.com'
     phone_number '555555555'
   end
 end

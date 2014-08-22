@@ -6,7 +6,7 @@ class AdminController < ApplicationController
   end
 
   def appointments
-
+    @appointments = Appointment.all
   end
 
   def doctors

@@ -5,11 +5,13 @@ class Appointment
   field :doctor_id, :type => Integer
   field :first_name, :type => String
   field :last_name, :type => String
+  field :email, :type => String
   field :phone_number, :type => String
 
   belongs_to :doctor
 
   validates :doctor, :first_name, :last_name, :presence => true
+  validates :email, :format => { :with => Devise.email_regexp }
   validate  :phone_number_is_plausible
 
   def phone_number=(value)
@@ -18,6 +20,10 @@ class Appointment
 
   def phone_number
     format_phone_number(self[:phone_number])
+  end
+
+  def full_name
+    "#{first_name} #{last_name}"
   end
 
   private

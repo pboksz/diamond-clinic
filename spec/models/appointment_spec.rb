@@ -10,6 +10,10 @@ describe Appointment do
       it { expect(build(:appointment, :last_name => nil)).not_to be_valid }
     end
 
+    describe 'format' do
+      it { expect(build(:appointment, :email => nil)).not_to be_valid }
+    end
+
     describe 'phone_number_is_plausible' do
       describe 'number is plausible' do
         let(:number) { '555555555' }
@@ -51,5 +55,10 @@ describe Appointment do
       let(:number) { 'invalid' }
       it { expect(subject).to eq number }
     end
+  end
+
+  describe '#full_name' do
+    let(:appointment) { build(:appointment) }
+    it { expect(appointment.full_name).to eq "#{appointment.first_name} #{appointment.last_name}" }
   end
 end
