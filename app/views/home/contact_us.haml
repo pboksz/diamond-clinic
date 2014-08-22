@@ -21,12 +21,15 @@
     %p Regon 120413380
 
   .appointment
-    %p Request an appointment
+    %p Request an Appointment
     = simple_form_for @appointment, :url => '#', :method => :post do |f|
       = f.input :first_name
       = f.input :last_name
+      = f.input :email
       = f.input :phone_number
       = f.input :doctor, :collection => @doctors, :value_method => :id, :label_method => :full_name
+      = f.input :message, :as => :text
+      = f.submit 'Send Request'
 
   .google-map
     %iframe{ :src => 'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10245.35099341215!2d19.936241142902205!3d50.06123607529375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1407270488369',

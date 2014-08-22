@@ -8,5 +8,6 @@ FactoryGirl.define do
     last_name 'Last'
     email 'email@email.com'
     phone_number '555555555'
+    message 'This is a message.'
   end
 end
