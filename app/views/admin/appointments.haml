@@ -1,21 +1,24 @@
-.admin.appointments
-  %h1 Appointments
+.wrapper.admin.appointments
+  = render 'layouts/messages'
 
-  %table
-    %thead
-      %tr
-        %td= 'Client'
-        %td= 'Email'
-        %td= 'Phone number'
-        %td= 'Doctor'
-        %td= 'Message'
-        %td= 'Created At'
-    %tbody
-      - @appointments.each do |appointment|
+  .container
+    %h1 Appointments
+
+    %table
+      %thead
         %tr
-          %td= appointment.full_name
-          %td= appointment.email
-          %td= appointment.phone_number
-          %td= appointment.doctor.full_name
-          %td= appointment.message
-          %td= time_ago_in_words(appointment.created_at)
+          %td= 'Client'
+          %td= 'Email'
+          %td= 'Phone number'
+          %td= 'Doctor'
+          %td= 'Message'
+          %td= 'Created At'
+      %tbody
+        - @appointments.each do |appointment|
+          %tr
+            %td= appointment.full_name
+            %td= appointment.email
+            %td= appointment.phone_number
+            %td= appointment.doctor.full_name
+            %td= appointment.message
+            %td= time_ago_in_words(appointment.created_at)
