@@ -1,18 +1,20 @@
 %header{ :role => 'banner' }
-  %nav
-    #pages
-      - if controller_name == 'admin'
-        = link_to 'Dashboard', admin_path(locale)
-        = link_to 'Admins', admin_admins_path(locale)
-        = link_to 'Doctors', admin_doctors_path(locale)
-        = link_to 'Appointments', admin_appointments_path(locale)
-        = link_to 'Logout', destroy_admin_session_path(locale), :method => :delete
-      - else
-        = link_to 'Home', root_path(locale)
-        = link_to 'About Us', about_us_path(locale)
-        = link_to 'Our Doctors', our_doctors_path(locale)
-        = link_to 'Services', services_path(locale)
-        = link_to 'Clinical Research', clinical_research_path(locale)
-        = link_to 'Contact Us', contact_us_path(locale)
+  #logo= image_tag 'diamondclinic_logo.png'
 
+  #nav
+    - if controller_name == 'admin'
+      = link_to 'Dashboard', admin_path(locale)
+      = link_to 'Admins', admin_admins_path(locale)
+      = link_to 'Doctors', admin_doctors_path(locale)
+      = link_to 'Appointments', admin_appointments_path(locale)
+      = link_to 'Logout', destroy_admin_session_path(locale), :method => :delete
+    - else
+      = link_to 'Home', root_path(locale)
+      = link_to 'About Us', about_us_path(locale)
+      = link_to 'Our Doctors', our_doctors_path(locale)
+      = link_to 'Services', services_path(locale)
+      = link_to 'Clinical Research', clinical_research_path(locale)
+      = link_to 'Contact Us', contact_us_path(locale)
+
+  #locale
     = render 'layouts/locale'
