@@ -7,7 +7,7 @@ html, body
   background: image_url('background.png') repeat
 
   a
-    color: $diamond-grey
+    color: $diamond-grey-dark
     text-decoration: none
     @include transition(all 0.50s ease-in-out)
   a:hover
@@ -30,11 +30,24 @@ html, body
     background-position: center
     background-size: cover
 
+    .messages
+      .notice, .alert
+        text-align: center
+        width: 40%
+        margin: 0 auto 2em
+        padding: 0.5em 0
+        @include border-radius(0.6em)
+        @include box-shadow(0px 0px 20px 8px rgba(50, 50, 50, 0.25))
+      .notice
+        background-color: $diamond-blue-light-trans
+      .alert
+        background-color: $diamond-orange-trans
+
     .container
       margin: 0 auto
       width: 80%
       padding: 1em
-      background-color: rgba(255, 255, 255, 0.75)
+      background-color: $diamond-grey-light-trans
       @include border-radius(0.6em)
       @include box-shadow(0px 0px 20px 8px rgba(50, 50, 50, 0.25))
       h1
