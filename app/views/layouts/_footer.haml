@@ -1,5 +1,16 @@
 %footer
-  = "Diamond Clinic © #{Date.today.year}"
-  %i.fa.fa-flask
-  = 'Made by'
-  = link_to 'Phillip Boksz', 'http://www.phillipboksz.com', :target => '_blank'
+  .left.address
+    %p= 'Ul. Gen. Augusta Fieldorfa-Nila 14/JU2'
+    %p= '31-209 Kraków'
+    %p= mail_to 'biuro@diamondclinic.eu'
+  .center
+    .logo= image_tag 'diamondclinic_logo.png'
+    .copyright
+      = "Diamond Clinic © #{Date.today.year}"
+      %i.fa.fa-flask
+      = 'Made by'
+      = link_to 'Phillip Boksz', 'http://www.phillipboksz.com', :target => '_blank'
+  .right.hours
+    %p= 'Monday to Friday 9:00 to 21:00'
+    %p= 'Saturday 9:00 to 15:00'
+    %p= '+48 122 651 165'
