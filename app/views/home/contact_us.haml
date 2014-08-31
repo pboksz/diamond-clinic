@@ -3,25 +3,18 @@
 
   .container
     .address
-      %p DIAMOND CLINIC
-      %p Specjalistyczne Poradnie Lekarskie
-      %p 31-209 Kraków, ul. gen. Augusta Fieldorfa-Nila 14/JU2
-
-    .appointment
-      %p Rejestracja Tel. +48 122651165, Kom. +48 571241412
-
-    .hours
-      %p Przychodnia czynna: od pon-pt 9:00 do 21:00, sob 9:00 do 15:00
-
-    .fax
-      %p Fax. +48 126371533
-
-    .email
-      %p Email: biuro@diamondclinic.eu
-
-    .tax-info
-      %p NIP 678-292-45-94
-      %p Regon 120413380
+      %p= 'Diamond Clinic - Specjalistyczne Poradnie Lekarskie'
+      %p= 'Ul. Gen. Augusta Fieldorfa-Nila 14/JU2'
+      %p= '31-209 Kraków'
+      %p= 'NIP 678-292-45-94'
+      %p= 'Regon 120413380'
+    .contact
+      %p= 'Monday to Friday 9:00 to 21:00'
+      %p= 'Saturday 9:00 to 15:00'
+      %p= 'Tel. +48 122 651 165'
+      %p= 'Kom. +48 571 241 412'
+      %p= 'Fax. +48 126 371 533'
+      %p= mail_to 'biuro@diamondclinic.eu'
 
     .appointment
       %p Request an Appointment
@@ -35,10 +28,10 @@
         = f.submit 'Send Request'
 
     .google-map
-      %iframe{ :src => 'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10245.35099341215!2d19.936241142902205!3d50.06123607529375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1407270488369',
-               :width => '200', :height => '200', :frameborder => '0' }
+      %iframe{ :src => 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5119.737134822999!2d19.933849900260366!3d50.08874758995334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165a573e955c4f%3A0x27c6356f942299f1!2sGenera%C5%82a+Augusta+Fieldorfa-Nila+17%2FJU-3%2C+Krak%C3%B3w!5e0!3m2!1sen!2spl!4v1409495076040',
+               :width => '400', :height => '400', :frameborder => '0' }
 
     .mass-transit
-      %p tramwajami: 3, 5, 18, 50.
-      %p autobusami: 102, 118, 120, 137, 138, 168, 194, 207, 217, 220, 227, 237, 240, 247, 267, 287, 297.
-      %p do przystanku Krowodrza Górka.
+      %p= 'Tramwajami: 3, 5, 18, 50'
+      %p= 'Autobusami: 102, 118, 120, 137, 138, 168, 194, 207, 217, 220, 227, 237, 240, 247, 267, 287, 297'
+      %p= 'Do przystanku Krowodrza Górka'
