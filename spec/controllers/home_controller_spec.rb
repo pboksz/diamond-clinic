@@ -33,7 +33,13 @@ describe HomeController do
     before { post :appointment_create, :appointment => params }
 
     describe 'saves properly' do
+      let(:mailer) { double }
       let(:params) { attributes_for(:appointment) }
+      before do
+        expect(AppointmentMailer).to receive(:appointment_email) { mailer }
+        expect(mailer).to receive(:deliver)
+        post :appointment_create, :appointment => params
+      end
 
       it { expect(assigns(:appointment)).to be_persisted }
       it { expect(response).to redirect_to contact_us_path }
@@ -41,6 +47,7 @@ describe HomeController do
 
     describe 'does not save' do
       let(:params) { attributes_for(:appointment, :first_name => nil) }
+      before { post :appointment_create, :appointment => params }
 
       it { expect(assigns(:appointment)).not_to be_persisted }
       it { expect(assigns(:doctors)).to eq Doctor.all }

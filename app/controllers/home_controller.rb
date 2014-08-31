@@ -24,7 +24,7 @@ class HomeController < ApplicationController
     @appointment = Appointment.new(appointment_params)
 
     if @appointment.save
-      #TODO email diamondclinic with request
+      AppointmentMailer.appointment_email(@appointment).deliver
       flash[:notice] = 'Your appointment request has been sent. You will receive a call or email shortly to finalize the appointment.'
 
       redirect_to contact_us_path(locale)
