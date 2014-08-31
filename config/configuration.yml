@@ -1,0 +1,28 @@
+development: &development
+  email_from: 'hello@localhost'
+  delivery_method: 'smtp'
+  app_host:
+    host: 'localhost'
+    port: 3000
+  smtp_settings:
+    address: 'localhost'
+    port: 1025
+production:
+  <<: *development
+  email_from: 'biuro@diamondclinic.eu'
+  delivery_method: 'smtp'
+  app_host:
+    host: 'diamondclinic.eu'
+  smtp_settings:
+    address: 'smtp.mandrillapp.com'
+    port: 587
+    user_name: ENV['MANDRILL_USERNAME']
+    password: ENV['MANDRILL_APIKEY']
+    domain: 'heroku.com'
+    authentication: 'plain'
+test:
+  <<: *development
+  delivery_method: 'test'
+  app_host:
+    host: 'localhost'
+    port: 3000
