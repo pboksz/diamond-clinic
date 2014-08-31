@@ -49,6 +49,7 @@ end
 
 group :test do
   gem 'capybara'
+  gem 'codeclimate-test-reporter', :require => nil
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
   gem 'headless'
@@ -58,6 +59,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'quiet_assets'
   gem 'rspec-rails'
+  gem 'travis'
 end
 
 group :development, :production do

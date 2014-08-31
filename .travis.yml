@@ -6,6 +6,10 @@ services:
   - mongodb
 script:
   - bundle exec rspec spec
+addons:
+  code_climate:
+    repo_token:
+      secure: cQfNt8d9zRVg8P4UKQZZmqlTCcZLE0xevfNgKUaZD+Hh10FcyCFDBgCbTfe5pUcV8fE+rPGHY8eGOSRSH8Gk24Nn/Zo9HpzFxh/aIuPt1Yz02j8t1KZAAtcm9WU/rhipOt75TaJPsZ66W4q0telVODdiET5OJzptObpwPcd7WNI=
 deploy:
   provider: heroku
   strategy: git
