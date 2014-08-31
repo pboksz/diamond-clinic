@@ -7,6 +7,8 @@ class Appointment
   field :last_name, :type => String
   field :email, :type => String
   field :phone_number, :type => String
+  field :date, :type => Date
+  #field :time, :type => String
   field :message, :type => String
 
   belongs_to :doctor
