@@ -2,7 +2,7 @@ ruby '2.1.2'
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.8'
+gem 'rails', '4.0.9'
 
 # Use mongodb
 gem 'mongoid', '~> 4.0.0'
