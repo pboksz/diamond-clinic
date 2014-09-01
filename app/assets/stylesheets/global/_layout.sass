@@ -4,6 +4,7 @@ html, body
   margin: 0
   padding: 0
   height: 100%
+  color: $diamond-grey-dark
   background: image_url('background.png') repeat
 
   a
@@ -22,6 +23,9 @@ html, body
     float: right
     width: 20%
 
+  .section
+    display: block
+
   .wrapper
     min-height: 100%
     height: auto !important
@@ -33,7 +37,7 @@ html, body
     .messages
       .notice, .alert
         text-align: center
-        width: 40%
+        width: 60%
         margin: 0 auto 2em
         padding: 0.5em 0
         @include border-radius(0.6em)
@@ -45,8 +49,8 @@ html, body
 
     .container
       margin: 0 auto
-      width: 80%
-      padding: 1em
+      width: 60%
+      padding: 1em 2em
       background-color: $diamond-grey-light-trans
       @include border-radius(0.6em)
       @include box-shadow(0px 0px 20px 8px $diamond-grey-dark-shadow)

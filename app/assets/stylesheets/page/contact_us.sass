@@ -1,13 +1,24 @@
 .contact-us
   background-image: image_url('background_contact_us.jpg')
 
-  .google-map
-    text-align: center
-    overflow: hidden
-    height: 40em
+  .information
+    float: left
+    width: 50%
 
-    iframe
-      width: 100%
-      height: 100%
-      border: 0
-      border-radius: 0.6em
+  .appointment
+    float: left
+    width: 50%
+
+  .directions
+    .google-map
+      clear: both
+      text-align: center
+      overflow: hidden
+      height: 40em
+
+      iframe
+        width: 100%
+        height: 100%
+        border: 0
+        @include border-radius(0.6em)
+        @include box-shadow(0px 0px 20px 8px $diamond-grey-dark-shadow)

@@ -2,22 +2,32 @@
   = render 'layouts/messages'
 
   .container
-    .address
-      %p= 'Diamond Clinic - Specjalistyczne Poradnie Lekarskie'
-      %p= 'Ul. Gen. Augusta Fieldorfa-Nila 14/JU2'
-      %p= '31-209 Kraków'
-      %p= 'NIP 678-292-45-94'
-      %p= 'Regon 120413380'
-    .contact
-      %p= 'Monday to Friday 9:00 to 21:00'
-      %p= 'Saturday 9:00 to 15:00'
-      %p= 'Tel. +48 122 651 165'
-      %p= 'Kom. +48 571 241 412'
-      %p= 'Fax. +48 126 371 533'
-      %p= mail_to 'biuro@diamondclinic.eu'
+    .information
+      .address
+        %h3= 'Address'
+        .section= 'Diamond Clinic'
+        .section= 'Specjalistyczne Poradnie Lekarskie'
+        .section= 'Ul. Gen. Augusta Fieldorfa-Nila 14/JU2'
+        .section= '31-209 Kraków'
+        .section= 'NIP: 678-292-45-94'
+        .section= 'Regon: 120413380'
+      .contact
+        %h3= 'Contact'
+        .section= 'Phone: +48 122 651 165'
+        .section= 'Mobile: +48 571 241 412'
+        .section= 'Fax: +48 126 371 533'
+        .section
+          = 'Email:'
+          %span= mail_to 'biuro@diamondclinic.eu'
+      .hours
+        %h3= 'Hours'
+        .section
+          = 'Monday to Friday:'
+          %span.bold= '9:00 to 21:00'
+        .section= 'Saturday: 9:00 to 15:00'
 
     .appointment
-      %p Request an Appointment
+      %h3= 'Request an Appointment'
       = simple_form_for @appointment, :url => contact_us_path(locale), :method => :post do |f|
         = f.input :first_name
         = f.input :last_name
@@ -27,13 +37,16 @@
         = f.input :date, :as => :string, :input_html => { :class => :datepicker }
         = f.input :time, :collection => @appointment.available_times
         = f.input :message, :as => :text
-        = f.submit 'Send Request'
+        = f.submit 'Send Request', :class => 'button'
 
-    .google-map
-      %iframe{ :src => 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5119.737134822999!2d19.933849900260366!3d50.08874758995334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165a573e955c4f%3A0x27c6356f942299f1!2sGenera%C5%82a+Augusta+Fieldorfa-Nila+17%2FJU-3%2C+Krak%C3%B3w!5e0!3m2!1sen!2spl!4v1409495076040',
-               :width => '400', :height => '400', :frameborder => '0' }
+    .directions
+      %h3= 'Directions'
+      .google-map
+        %iframe{ :src => 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5119.737134822999!2d19.933849900260366!3d50.08874758995334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165a573e955c4f%3A0x27c6356f942299f1!2sGenera%C5%82a+Augusta+Fieldorfa-Nila+17%2FJU-3%2C+Krak%C3%B3w!5e0!3m2!1sen!2spl!4v1409495076040',
+                 :width => '400', :height => '400', :frameborder => '0' }
 
-    .mass-transit
-      %p= 'Tramwajami: 3, 5, 18, 50'
-      %p= 'Autobusami: 102, 118, 120, 137, 138, 168, 194, 207, 217, 220, 227, 237, 240, 247, 267, 287, 297'
-      %p= 'Do przystanku Krowodrza Górka'
+      %h3= 'Directions via mass transit'
+      .mass-transit
+        .section= 'Tramwajami: 3, 5, 18, 50'
+        .section= 'Autobusami: 102, 118, 120, 137, 138, 168, 194, 207, 217, 220, 227, 237, 240, 247, 267, 287, 297'
+        .section= 'Do przystanku Krowodrza Górka'
