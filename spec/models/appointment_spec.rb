@@ -8,6 +8,8 @@ describe Appointment do
       it { expect(build(:appointment, :doctor => nil)).not_to be_valid }
       it { expect(build(:appointment, :first_name => nil)).not_to be_valid }
       it { expect(build(:appointment, :last_name => nil)).not_to be_valid }
+      it { expect(build(:appointment, :date => nil)).not_to be_valid }
+      it { expect(build(:appointment, :time => nil)).not_to be_valid }
     end
 
     describe 'format' do
@@ -60,5 +62,10 @@ describe Appointment do
   describe '#full_name' do
     let(:appointment) { build(:appointment) }
     it { expect(appointment.full_name).to eq "#{appointment.first_name} #{appointment.last_name}" }
+  end
+
+  describe '#available_times' do
+    let(:appointment) { build(:appointment) }
+    it { expect(appointment.available_times).to include '09:00', '20:45' }
   end
 end

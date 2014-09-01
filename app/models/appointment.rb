@@ -8,12 +8,12 @@ class Appointment
   field :email, :type => String
   field :phone_number, :type => String
   field :date, :type => Date
-  #field :time, :type => String
+  field :time, :type => String
   field :message, :type => String
 
   belongs_to :doctor
 
-  validates :doctor, :first_name, :last_name, :presence => true
+  validates :doctor, :first_name, :last_name, :date, :time, :presence => true
   validates :email, :format => { :with => Devise.email_regexp }
   validate  :phone_number_is_plausible
 
@@ -27,6 +27,10 @@ class Appointment
 
   def full_name
     "#{first_name} #{last_name}"
+  end
+
+  def available_times
+    @available_times ||= generate_available_times
   end
 
   private
@@ -54,6 +58,14 @@ class Appointment
       Phony.format(value, :format => :national)[1..-1]
     else
       value
+    end
+  end
+
+  def generate_available_times
+    (9..20).flat_map do |hour|
+      ['00', '15', '30', '45'].map do |minute|
+        "#{hour.to_s.rjust(2, '0')}:#{minute}"
+      end
     end
   end
 end

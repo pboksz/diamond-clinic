@@ -2,11 +2,13 @@
 
 FactoryGirl.define do
   factory :appointment do
-    doctor_id { create(:doctor).id }
+    doctor
     first_name 'First'
     last_name 'Last'
     email 'email@email.com'
     phone_number '555555555'
+    date Date.today
+    time '12:00'
     message 'This is a message.'
   end
 end

@@ -34,7 +34,8 @@ describe HomeController do
 
     describe 'saves properly' do
       let(:mailer) { double }
-      let(:params) { attributes_for(:appointment) }
+      let(:doctor) { create(:doctor) }
+      let(:params) { attributes_for(:appointment).merge(:doctor => doctor) }
       before do
         expect(AppointmentMailer).to receive(:appointment_email) { mailer }
         expect(mailer).to receive(:deliver)
