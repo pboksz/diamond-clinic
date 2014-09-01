@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-DiamondClinic::Application.config.secret_key_base = '1fbfcaf7306418403cca028c48c167a5cfcbd4575531ec6b423a88bfbf35b371191d02fe40964e4a26f3d948e88467ac609d4103dd7c0221d0b8b63ff3e62fce'
+DiamondClinic::Application.config.secret_key_base = A9n.secret_key_base
