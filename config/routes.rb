@@ -1,6 +1,6 @@
 DiamondClinic::Application.routes.draw do
   scope '(:locale)', :locale => /(en|pl)/ do
-    devise_for :admin
+    devise_for :admin, :path_names => { :sign_in => :login, :sign_out => :logout }
 
     scope :admin, :as => :admin do
       get '/', :to => 'admin#index'
