@@ -8,10 +8,11 @@
       = f.input :first_name
       = f.input :last_name
       = f.input :specialty
-      = f.input :biography, :as => :text
+      = f.input :biography_en, :as => :text
+      = f.input :biography_pl, :as => :text
 
       .actions
-        = link_to admin_doctors_path(locale) do
+        = link_to admin_doctors_path(locale), :class => 'button' do
           %i.fa.fa-trash-o
-        = button_tag do
+        = button_tag :class => 'button' do
           %i.fa.fa-floppy-o

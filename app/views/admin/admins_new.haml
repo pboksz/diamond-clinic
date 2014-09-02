@@ -10,7 +10,7 @@
       = f.input :password_confirmation, :as => :password
 
       .actions
-        = link_to admin_admins_path(locale) do
+        = link_to admin_admins_path(locale), :class => 'button' do
           %i.fa.fa-trash-o
-        = button_tag do
+        = button_tag :class => 'button' do
           %i.fa.fa-floppy-o
