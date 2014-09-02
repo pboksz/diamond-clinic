@@ -4,3 +4,24 @@
   &.login
     .container
       width: 40%
+
+  table
+    width: 100%
+
+    thead
+      color: $diamond-orange
+      background-color: $diamond-grey-dark
+    tbody
+      tr:nth-child(even)
+        background-color: $diamond-blue-light
+
+    tr
+      border-top: 1px solid $diamond-grey-dark-shadow
+      &:last-of-type
+        border-bottom: 1px solid $diamond-grey-dark-shadow
+
+    td
+      padding: 0 0.5em
+      border-left: 1px solid $diamond-grey-dark-shadow
+      &:last-of-type
+        border-right: 1px solid $diamond-grey-dark-shadow
