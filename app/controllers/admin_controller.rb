@@ -48,7 +48,7 @@ class AdminController < ApplicationController
   private
 
   def doctor_params
-    params.require(:doctor).permit(:first_name, :last_name, :specialty, :biography)
+    params.require(:doctor).permit(:first_name, :last_name, :specialty, :biography_en, :biography_pl)
   end
 
   def admin_params

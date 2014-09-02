@@ -5,6 +5,7 @@ FactoryGirl.define do
     first_name 'First'
     last_name 'Last'
     specialty 'Specialty'
-    biography 'Doctor biography...'
+    biography_en 'Doctor biography in English...'
+    biography_pl 'Doctor biography in Polish...'
   end
 end
