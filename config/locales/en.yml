@@ -1,2 +1,10 @@
 en:
-  hello: 'Hello'
+
+  doctor:
+    specialty:
+      internist: 'Internist'
+      cardiologist: 'Cardiologist'
+      pulmonologist: 'Pulmonologist'
+      allergologist: 'Allergologist'
+      nephrologist: 'Nephrologist'
+      neurologist: 'Neurologist'

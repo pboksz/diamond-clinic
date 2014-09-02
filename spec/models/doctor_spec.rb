@@ -1,8 +1,10 @@
 require 'rails_helper'
 
 describe Doctor do
+  let(:doctor) { build(:doctor) }
+
   describe 'validations' do
-    it { expect(build(:doctor)).to be_valid }
+    it { expect(doctor).to be_valid }
 
     describe 'presence' do
       it { expect(build(:doctor, :first_name => nil)).not_to be_valid }
@@ -14,15 +16,16 @@ describe Doctor do
   end
 
   describe '#full_name' do
-    let(:doctor) { build(:doctor) }
     it { expect(doctor.full_name).to eq "#{doctor.first_name} #{doctor.last_name}" }
   end
 
   describe '#biography' do
-    let(:doctor) { build(:doctor) }
-
     it { expect(doctor.biography).to eq doctor.biography_en }
     it { expect(doctor.biography(:pl)).to eq doctor.biography_pl }
     it { expect(doctor.biography(:invalid)).to be_nil }
+  end
+
+  describe '#specialty_name' do
+    it { expect(doctor.specialty_name).to eq I18n.t("doctor.specialty.#{doctor.specialty}") }
   end
 end

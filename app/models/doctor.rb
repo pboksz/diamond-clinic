@@ -17,4 +17,8 @@ class Doctor
   def biography(locale = :en)
     self.send("biography_#{locale}") if self.respond_to?("biography_#{locale}")
   end
+
+  def specialty_name
+    I18n.t("doctor.specialty.#{self[:specialty]}")
+  end
 end
