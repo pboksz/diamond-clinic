@@ -3,14 +3,15 @@
 
   .container
     %h1 Doctors
-    .new= link_to 'Add Doctor', admin_doctors_new_path(locale)
+    = link_to 'Add Doctor', admin_doctors_new_path(locale), :class => 'button'
 
     %table
       %thead
         %tr
           %td= 'Name'
           %td= 'Specialty'
-          %td= 'Biography'
+          %td= 'Biography in Polish'
+          %td= 'Biography in English'
       %tbody
         - @doctors.each do |doctor|
           %tr
