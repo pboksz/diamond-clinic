@@ -6,6 +6,7 @@ DiamondClinic::Application.routes.draw do
       resources :appointments, :only => [:index]
       resources :doctors, :only => [:index, :new, :create, :edit, :update]
       resources :admins, :only => [:index, :new, :create, :destroy]
+      resource :password, :only => [:edit, :update]
 
       root 'appointments#index'
     end
