@@ -2,7 +2,7 @@
   = f.input :title
   = f.input :first_name
   = f.input :last_name
-  = f.input :specialty, :collection => I18n.t('doctor.specialty'), :value_method => :first, :label_method => :last
+  = f.input :specialty, :collection => I18n.t('models.doctor.specialty'), :value_method => :first, :label_method => :last
   = f.input :biography_pl, :as => :text
   = f.input :biography_en, :as => :text
 
