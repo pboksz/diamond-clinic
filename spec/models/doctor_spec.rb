@@ -19,6 +19,14 @@ describe Doctor do
     it { expect(doctor.full_name).to eq "#{doctor.first_name} #{doctor.last_name}" }
   end
 
+  describe '#full_title' do
+    it { expect(doctor.full_title).to eq "#{doctor.title} #{doctor.full_name}" }
+  end
+
+  describe '#full_title_with_specialty' do
+    it { expect(doctor.full_title_with_specialty).to eq "#{doctor.full_title} (#{doctor.specialty_name})" }
+  end
+
   describe '#biography' do
     it { expect(doctor.biography).to eq doctor.biography_en }
     it { expect(doctor.biography(:pl)).to eq doctor.biography_pl }

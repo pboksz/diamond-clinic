@@ -2,6 +2,7 @@
 
 FactoryGirl.define do
   factory :doctor do
+    title 'Dr.'
     first_name 'First'
     last_name 'Last'
     specialty 'cardiologist'
