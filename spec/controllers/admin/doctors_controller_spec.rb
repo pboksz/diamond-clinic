@@ -35,4 +35,29 @@ describe Admin::DoctorsController do
       it { expect(response).to render_template :new }
     end
   end
+
+  describe 'GET #edit' do
+    let(:doctor) { create(:doctor) }
+    before { get :edit, :id => doctor.id }
+
+    it { expect(assigns(:doctor)).to eq doctor }
+    it { expect(response).to render_template :edit }
+  end
+
+  describe 'PUT #update' do
+    let(:doctor) { create(:doctor) }
+    before { put :update, :id => doctor.id, :doctor => params }
+
+    describe 'valid params' do
+      let(:params) { { :title => 'M.D.' } }
+
+      it { expect(doctor.reload.title).to eq 'M.D.' }
+      it { expect(response).to redirect_to admin_doctors_path }
+    end
+
+    describe 'invalid params' do
+      let(:params) { { :title => nil } }
+      it { expect(response).to render_template :edit }
+    end
+  end
 end

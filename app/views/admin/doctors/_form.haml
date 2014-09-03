@@ -1,0 +1,13 @@
+= simple_form_for @doctor, :url => url, :method => method do |f|
+  = f.input :title
+  = f.input :first_name
+  = f.input :last_name
+  = f.input :specialty, :collection => I18n.t('doctor.specialty'), :value_method => :first, :label_method => :last
+  = f.input :biography_pl, :as => :text
+  = f.input :biography_en, :as => :text
+
+  .actions
+    = link_to admin_doctors_path(locale), :class => 'button cancel' do
+      %i.fa.fa-trash-o
+    = button_tag :class => 'button' do
+      %i.fa.fa-floppy-o

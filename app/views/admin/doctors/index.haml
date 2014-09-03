@@ -12,10 +12,14 @@
           %td= 'Specialty'
           %td= 'Biography in Polish'
           %td= 'Biography in English'
+          %td= 'Edit'
       %tbody
         - @doctors.each do |doctor|
           %tr
-            %td= doctor.full_name
+            %td= doctor.full_title
             %td= doctor.specialty_name
             %td= doctor.biography_pl
             %td= doctor.biography_en
+            %td.action
+              = link_to edit_admin_doctor_path(locale, doctor) do
+                %i.fa.fa-pencil

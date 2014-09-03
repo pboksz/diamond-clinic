@@ -17,6 +17,20 @@ class Admin::DoctorsController < Admin::ApplicationController
     end
   end
 
+  def edit
+    @doctor = Doctor.find(params[:id])
+  end
+
+  def update
+    @doctor = Doctor.find(params[:id])
+
+    if @doctor.update_attributes(create_params)
+      redirect_to admin_doctors_path(locale)
+    else
+      render :edit
+    end
+  end
+
   private
 
   def create_params

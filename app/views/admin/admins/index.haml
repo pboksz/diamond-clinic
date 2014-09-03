@@ -24,6 +24,6 @@
             %td= admin.current_sign_in_ip
             %td= time_ago_in_words(admin.last_sign_in_at) if admin.last_sign_in_at
             %td= admin.last_sign_in_ip
-            %td.delete
+            %td.action
               = link_to admin_admin_path(locale, admin), :method => :delete do
                 %i.fa.fa-trash-o
