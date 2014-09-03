@@ -1,6 +1,7 @@
-%h1= "Appointment request"
+%h2= "Appointment request"
 
 %p= "Name: #{@appointment.full_name}"
 %p= "Phone Number: #{@appointment.phone_number}"
-%p= "Doctor: #{@appointment.doctor.full_name}"
+%p= "Doctor: #{@appointment.doctor.full_title_with_specialty}"
+%p= "When: #{@appointment.date} @ #{@appointment.time}"
 %p= simple_format @appointment.message
