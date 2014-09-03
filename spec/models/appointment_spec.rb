@@ -6,8 +6,7 @@ describe Appointment do
 
     describe 'presence' do
       it { expect(build(:appointment, :doctor => nil)).not_to be_valid }
-      it { expect(build(:appointment, :first_name => nil)).not_to be_valid }
-      it { expect(build(:appointment, :last_name => nil)).not_to be_valid }
+      it { expect(build(:appointment, :name => nil)).not_to be_valid }
       it { expect(build(:appointment, :date => nil)).not_to be_valid }
       it { expect(build(:appointment, :time => nil)).not_to be_valid }
     end
@@ -57,11 +56,6 @@ describe Appointment do
       let(:number) { 'invalid' }
       it { expect(subject).to eq number }
     end
-  end
-
-  describe '#full_name' do
-    let(:appointment) { build(:appointment) }
-    it { expect(appointment.full_name).to eq "#{appointment.first_name} #{appointment.last_name}" }
   end
 
   describe '#available_times' do

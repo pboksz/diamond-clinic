@@ -29,8 +29,7 @@
     .appointment
       %h3= 'Request an Appointment'
       = simple_form_for @appointment, :url => contact_us_path(locale), :method => :post do |f|
-        = f.input :first_name
-        = f.input :last_name
+        = f.input :name
         = f.input :email
         = f.input :phone_number
         = f.input :doctor, :collection => @doctors, :value_method => :id, :label_method => :full_title_with_specialty

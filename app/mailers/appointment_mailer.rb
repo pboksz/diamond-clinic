@@ -7,6 +7,6 @@ class AppointmentMailer < ActionMailer::Base
     mail :from => @appointment.email,
          :to => A9n.email_from,
          :cc => @appointment.email,
-         :subject => "Appointment request from #{@appointment.full_name}"
+         :subject => "Appointment request from #{@appointment.name} for #{@appointment.date} at #{@appointment.time}"
   end
 end
