@@ -1,8 +1,10 @@
 require 'rails_helper'
 
 describe Appointment do
+  let(:appointment) { build(:appointment) }
+
   describe 'validations' do
-    it { expect(build(:appointment)).to be_valid }
+    it { expect(appointment).to be_valid }
 
     describe 'presence' do
       it { expect(build(:appointment, :doctor => nil)).not_to be_valid }
@@ -58,8 +60,11 @@ describe Appointment do
     end
   end
 
+  describe '#when' do
+    it { expect(appointment.when).to eq "#{appointment.date} @ #{appointment.time}" }
+  end
+
   describe '#available_times' do
-    let(:appointment) { build(:appointment) }
     it { expect(appointment.available_times).to include '09:00', '20:45' }
   end
 end

@@ -24,6 +24,10 @@ class Appointment
     format_phone_number(self[:phone_number])
   end
 
+  def when
+    "#{date} @ #{time}"
+  end
+
   def available_times
     @available_times ||= generate_available_times
   end
