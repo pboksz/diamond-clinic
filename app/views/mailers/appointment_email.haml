@@ -1,7 +1,7 @@
 %h2= t('mailers.header')
 
 %p= t('mailers.name', :name => @appointment.name)
-%p= t('mailers.phone_number', :name => @appointment.phone_number)
+%p= t('mailers.phone_number', :phone_number => @appointment.phone_number)
 %p= t('mailers.email', :email => @appointment.email)
 %p= t('mailers.doctor', :doctor => @appointment.doctor.full_title_with_specialty)
 %p= t('mailers.when', :when => @appointment.when)
