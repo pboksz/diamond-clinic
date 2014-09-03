@@ -3,7 +3,7 @@
 
   .container
     %h1 Admins
-    .new= link_to 'Add Admin', admin_admins_new_path(locale), :class => 'button'
+    .new= link_to 'Add Admin', new_admin_admin_path(locale), :class => 'button'
 
     %table
       %thead
@@ -14,6 +14,7 @@
           %td= 'Current Sign In IP'
           %td= 'Last Sign In At'
           %td= 'Last Sign In IP'
+          %td= 'Delete'
       %tbody
         - @admins.each do |admin|
           %tr
@@ -23,3 +24,6 @@
             %td= admin.current_sign_in_ip
             %td= time_ago_in_words(admin.last_sign_in_at) if admin.last_sign_in_at
             %td= admin.last_sign_in_ip
+            %td.delete
+              = link_to admin_admin_path(locale, admin), :method => :delete do
+                %i.fa.fa-trash-o

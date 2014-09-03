@@ -2,15 +2,12 @@ DiamondClinic::Application.routes.draw do
   scope '(:locale)', :locale => /(en|pl)/ do
     devise_for :admin, :path_names => { :sign_in => :login, :sign_out => :logout }
 
-    scope :admin, :as => :admin do
-      get '/', :to => 'admin#index'
-      get '/appointments', :to => 'admin#appointments'
-      get '/doctors', :to => 'admin#doctors'
-      post '/doctors', :to => 'admin#doctors_create'
-      get '/doctors/new', :to => 'admin#doctors_new'
-      get '/admins', :to => 'admin#admins'
-      post '/admins', :to => 'admin#admins_create'
-      get '/admins/new', :to => 'admin#admins_new'
+    namespace :admin do
+      resources :appointments, :only => [:index]
+      resources :doctors, :only => [:index, :new, :create]
+      resources :admins, :only => [:index, :new, :create, :destroy]
+
+      root 'appointments#index'
     end
 
     get '/about_us', :to => 'home#about_us'
