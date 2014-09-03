@@ -28,7 +28,7 @@ html, body
 
   .button
     display: inline-block
-    margin: 1em 1em 1em 0
+    margin: 1em 0 1em 0
     color: $diamond-grey-dark
     border: 1px solid $diamond-grey-dark-shadow
     background-color: $diamond-blue-light
@@ -42,6 +42,7 @@ html, body
       color: $diamond-orange
       @include box-shadow(0px 2px 2px 0px $diamond-grey-dark-shadow)
     &.cancel
+      float: right
       background-color: $diamond-orange
       &:hover
         color: $diamond-blue-light

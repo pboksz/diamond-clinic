@@ -2,7 +2,7 @@
   = render 'layouts/messages'
 
   .container
-    %h1 Add Admin
+    %h2 Add Admin
 
     = simple_form_for @admin, :url => admin_admins_path(locale), :method => :post do |f|
       = f.input :email
@@ -10,7 +10,7 @@
       = f.input :password_confirmation, :as => :password
 
       .actions
-        = link_to admin_admins_path(locale), :class => 'button cancel' do
-          %i.fa.fa-trash-o
         = button_tag :class => 'button' do
           %i.fa.fa-floppy-o
+        = link_to admin_admins_path(locale), :class => 'button cancel' do
+          %i.fa.fa-trash-o
