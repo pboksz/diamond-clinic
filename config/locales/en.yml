@@ -8,3 +8,12 @@ en:
         allergologist: 'Allergologist'
         nephrologist: 'Nephrologist'
         neurologist: 'Neurologist'
+
+  mailers:
+    subject: "Appointment request from %{name} for %{when}"
+    header: "Appointment request"
+    name: "Name: %{name}"
+    email: "Email: %{email}"
+    phone_number: "Phone number: %{phone_number}"
+    doctor: "Doctor: %{doctor}"
+    when: "When: %{when}"

@@ -1,7 +1,8 @@
-%h2= "Appointment request"
+%h2= t('mailers.header')
 
-%p= "Name: #{@appointment.name}"
-%p= "Phone Number: #{@appointment.phone_number}"
-%p= "Doctor: #{@appointment.doctor.full_title_with_specialty}"
-%p= "When: #{@appointment.when}"
+%p= t('mailers.name', :name => @appointment.name)
+%p= t('mailers.phone_number', :name => @appointment.phone_number)
+%p= t('mailers.email', :email => @appointment.email)
+%p= t('mailers.doctor', :doctor => @appointment.doctor.full_title_with_specialty)
+%p= t('mailers.when', :when => @appointment.when)
 %p= simple_format @appointment.message
