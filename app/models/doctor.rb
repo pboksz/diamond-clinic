@@ -28,6 +28,6 @@ class Doctor
   end
 
   def specialty_name
-    I18n.t("doctor.specialty.#{self[:specialty]}")
+    I18n.t("models.doctor.specialty.#{self[:specialty]}")
   end
 end

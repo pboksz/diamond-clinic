@@ -1,10 +1,10 @@
 pl:
-
-  doctor:
-    specialty:
-      internist: 'Internist'
-      cardiologist: 'Cardiologist'
-      pulmonologist: 'Pulmonologist'
-      allergologist: 'Allergologist'
-      nephrologist: 'Nephrologist'
-      neurologist: 'Neurologist'
+  models:
+    doctor:
+      specialty:
+        internist: 'Internist'
+        cardiologist: 'Cardiologist'
+        pulmonologist: 'Pulmonologist'
+        allergologist: 'Allergologist'
+        nephrologist: 'Nephrologist'
+        neurologist: 'Neurologist'

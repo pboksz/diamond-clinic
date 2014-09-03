@@ -34,6 +34,6 @@ describe Doctor do
   end
 
   describe '#specialty_name' do
-    it { expect(doctor.specialty_name).to eq I18n.t("doctor.specialty.#{doctor.specialty}") }
+    it { expect(doctor.specialty_name).to eq I18n.t("models.doctor.specialty.#{doctor.specialty}") }
   end
 end
