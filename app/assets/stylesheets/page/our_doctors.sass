@@ -1,2 +1,29 @@
 .our-doctors
   background-image: image_url('background_our_doctors.jpg')
+
+  .doctors
+    .doctor
+      border: 1px solid $diamond-grey-dark-shadow
+      background-color: $diamond-white
+      padding: 2em
+      margin-bottom: 1em
+      @include border-radius(0.6em)
+      .photo
+        float: left
+        height: 150px
+        width: 150px
+        font-size: 5em
+        position: relative
+        border: 1px solid $diamond-grey-dark
+        i.fa
+          position: absolute
+          top: 25%
+          left: 30%
+      .information
+        margin-left: 2em
+        float: left
+        .name
+          font-size: 1.4em
+          font-weight: bold
+          i.fa
+            color: $diamond-orange

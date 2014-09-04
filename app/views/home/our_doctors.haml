@@ -1,4 +1,17 @@
 .wrapper.home.our-doctors
   = render 'layouts/messages'
 
-  .container Will have a list of all doctors
+  .container
+    %h1= t('views.header.nav.our_doctors')
+
+    .doctors
+      - @doctors.each do |doctor|
+        .doctor
+          .photo= icon('user')
+          .information
+            .name
+              = icon('chevron-right')
+              = doctor.full_title
+            .specialty= doctor.specialty_name
+            .biography= doctor.biography
+          .clearfix
