@@ -59,7 +59,26 @@ en:
 
     our_doctors:
 
-    services:
+    our_services:
+      consultations:
+        header: "Consultation by Specialists"
+        internists: "Internists"
+        cardiologists: "Cardiologists"
+        pulmonologists: "Pulmonologists"
+        allergologists: "Allergologists"
+        nephrologists: "Nephrologists"
+        neurologists: "Neurologists"
+      diagnostics:
+        header: "Diagnostic Tests"
+        blood_tests: "Laboratory diagnostics of blood and stool"
+        spirometry_tests: "Spirometry diagnostics"
+        ekg_tests: "EKG diagnostics"
+        allergy_tests: "Allergy tests"
+      treatments:
+        header: "Treatments"
+        treatment_types: "Intravenous, subcutaneous, intramuscular"
+        iv_treatment: "I.V treatments"
+        allergy_desensitization: "Allergy desensitization"
 
     clinical_research:
 
@@ -68,23 +87,19 @@ en:
         header: "Address"
         nip: "NIP:"
         regon: "Regon:"
-
       contact:
         header: "Contact"
         phone_number: "Phone:"
         mobile_number: "Mobile:"
         fax_number: "Fax:"
         email: "Email:"
-
       hours:
         header: "Hours"
         hours_weekday: "Monday to Friday:"
         hours_weekend: "Saturday:"
-
       appointment:
         header: "Request an Appointment"
         submit: "Send Request"
-
       directions:
         header: "Directions"
         mass_transit: "Mass Transit"

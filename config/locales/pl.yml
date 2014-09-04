@@ -59,7 +59,26 @@ pl:
 
     our_doctors:
 
-    services:
+    our_services:
+      consultations:
+        header: "Konsultacje Specjalistyczne"
+        internists: "Internistyczne"
+        cardiologists: "Kardiologiczne"
+        pulmonologists: "Pulmonologiczne"
+        allergologists: "Alergologiczne"
+        nephrologists: "Nefrologiczne"
+        neurologists: "Neurologiczne"
+      diagnostics:
+        header: "Badania Diagnostyczne"
+        blood_tests: "Badania laboratoryjne z krwi, moczu"
+        spirometry_tests: "Badania spirometryczne"
+        ekg_tests: "Badanie EKG"
+        allergy_tests: "Testy alergiczne"
+      treatments:
+        header: "Zabiegi"
+        treatment_types: "Iniekcje dożylne, podskórne, domięśniowe"
+        iv_treatment: "Wlewy dożylne"
+        allergy_desensitization: "Odczulanie od alergy"
 
     clinical_research:
 
@@ -68,23 +87,19 @@ pl:
         header: "Adres"
         nip: "NIP:"
         regon: "Regon:"
-
       contact:
         header: "Kontakt"
         phone_number: "Telegfon:"
         mobile_number: "Mobilne:"
         fax_number: "Fax:"
         email: "Email:"
-
       hours:
         header: "Godziny"
         hours_weekday: "Poniedziałku do Piątku:"
         hours_weekend: "Sobota:"
-
       appointment:
         header: "Request an Appointment"
         submit: "Send Request"
-
       directions:
         header: "Dojazd"
         mass_transit: "Komunikacja"

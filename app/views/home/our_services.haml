@@ -4,24 +4,47 @@
   .container
     %h1= t('views.header.nav.our_services')
 
-    %h3 konsultacje specjalistyczne
-    #ul
-      #li internistyczne
-      #li kardiologiczne
-      #li pulmonologiczne
-      #li alergologiczne
-      #li nefrologiczne
-      #li neurologiczne
+    %h3= t('views.our_services.consultations.header')
+    .section
+      = icon('chevron-right')
+      = t('views.our_services.consultations.internists')
+    .section
+      = icon('chevron-right')
+      = t('views.our_services.consultations.cardiologists')
+    .section
+      = icon('chevron-right')
+      = t('views.our_services.consultations.pulmonologists')
+    .section
+      = icon('chevron-right')
+      = t('views.our_services.consultations.allergologists')
+    .section
+      = icon('chevron-right')
+      = t('views.our_services.consultations.nephrologists')
+    .section
+      = icon('chevron-right')
+      = t('views.our_services.consultations.neurologists')
 
-    %h3 badania diagnostyczne
-    #ul
-      #li badania laboratoryjne z krwi, moczu
-      #li badania spirometryczne
-      #li badanie EKG
-      #li testy alergiczne
+    %h3= t('views.our_services.diagnostics.header')
+    .section
+      = icon('chevron-right')
+      = t('views.our_services.diagnostics.blood_tests')
+    .section
+      = icon('chevron-right')
+      = t('views.our_services.diagnostics.spirometry_tests')
+    .section
+      = icon('chevron-right')
+      = t('views.our_services.diagnostics.ekg_tests')
+    .section
+      = icon('chevron-right')
+      = t('views.our_services.diagnostics.allergy_tests')
 
-    %h3 zabiegi
-    #ul
-      #li iniekcje dożylne, podskórne, domięśniowe
-      #li wlewy dożylne
-      #li odczulanie
+    %h3= t('views.our_services.treatments.header')
+    .section
+      = icon('chevron-right')
+      = t('views.our_services.treatments.treatment_types')
+    .section
+      = icon('chevron-right')
+      = t('views.our_services.treatments.iv_treatment')
+    .section
+      = icon('chevron-right')
+      = t('views.our_services.treatments.allergy_desensitization')
