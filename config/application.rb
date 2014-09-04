@@ -32,5 +32,8 @@ module DiamondClinic
 
     # for automatically creating factory girl fixtures
     config.generators.fixture_replacement :factory_girl, :dir => 'spec/factories'
+
+    Date::DATE_FORMATS.merge!(:default => '%d.%m.%Y')
+    Time::DATE_FORMATS.merge!(:default => '%d.%m.%Y @ %H:%M')
   end
 end
