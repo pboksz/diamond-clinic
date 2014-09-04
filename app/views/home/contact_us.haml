@@ -4,30 +4,42 @@
   .container
     .information
       .address
-        %h3= 'Address'
-        .section= 'Diamond Clinic'
-        .section= 'Specjalistyczne Poradnie Lekarskie'
-        .section= 'Ul. Gen. Augusta Fieldorfa-Nila 14/JU2'
-        .section= '31-209 Kraków'
-        .section= 'NIP: 678-292-45-94'
-        .section= 'Regon: 120413380'
+        %h3= t('views.contact_us.address.header')
+        .section= t('defaults.name')
+        .section= t('defaults.tagline')
+        .section= t('defaults.address')
+        .section= t('defaults.city')
+        .section
+          = t('views.contact_us.address.nip')
+          = t('defaults.nip')
+        .section
+          = t('views.contact_us.address.regon')
+          = t('defaults.regon')
       .contact
-        %h3= 'Contact'
-        .section= 'Phone: +48 122 651 165'
-        .section= 'Mobile: +48 571 241 412'
-        .section= 'Fax: +48 126 371 533'
+        %h3= t('views.contact_us.contact.header')
         .section
-          = 'Email:'
-          %span= mail_to 'biuro@diamondclinic.eu'
+          = t('views.contact_us.contact.phone_number')
+          = t('defaults.phone_number')
+        .section
+          = t('views.contact_us.contact.mobile_number')
+          = t('defaults.mobile_number')
+        .section
+          = t('views.contact_us.contact.fax_number')
+          = t('defaults.fax_number')
+        .section
+          = t('views.contact_us.contact.email')
+          = mail_to t('defaults.email')
       .hours
-        %h3= 'Hours'
+        %h3= t('views.contact_us.hours.header')
         .section
-          = 'Monday to Friday:'
-          %span.bold= '9:00 to 21:00'
-        .section= 'Saturday: 9:00 to 15:00'
+          = t('views.contact_us.hours.hours_weekday')
+          = t('defaults.hours_weekday')
+        .section
+          = t('views.contact_us.hours.hours_weekend')
+          = t('defaults.hours_weekend')
 
     .appointment
-      %h3= 'Request an Appointment'
+      %h3= t('views.contact_us.appointment.header')
       = simple_form_for @appointment, :url => contact_us_path(locale), :method => :post do |f|
         = f.input :name
         = f.input :email
@@ -36,16 +48,22 @@
         = f.input :date, :as => :string, :input_html => { :class => :datepicker }
         = f.input :time, :collection => @appointment.available_times
         = f.input :message, :as => :text
-        = f.submit 'Send Request', :class => 'button'
+        = f.submit t('views.contact_us.appointment.submit'), :class => 'button'
 
     .directions
-      %h3= 'Directions'
+      %h3= t('views.contact_us.directions.header')
       .google-map
         %iframe{ :src => 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5119.737134822999!2d19.933849900260366!3d50.08874758995334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165a573e955c4f%3A0x27c6356f942299f1!2sGenera%C5%82a+Augusta+Fieldorfa-Nila+17%2FJU-3%2C+Krak%C3%B3w!5e0!3m2!1sen!2spl!4v1409495076040',
                  :width => '400', :height => '400', :frameborder => '0' }
 
-      %h3= 'Directions via mass transit'
+      %h3= t('views.contact_us.directions.mass_transit')
       .mass-transit
-        .section= 'Tramwajami: 3, 5, 18, 50'
-        .section= 'Autobusami: 102, 118, 120, 137, 138, 168, 194, 207, 217, 220, 227, 237, 240, 247, 267, 287, 297'
-        .section= 'Do przystanku Krowodrza Górka'
+        .section
+          = t('views.contact_us.directions.trams')
+          = t('defaults.trams')
+        .section
+          = t('views.contact_us.directions.buses')
+          = t('defaults.buses')
+        .section
+          = t('views.contact_us.directions.stop')
+          = t('defaults.stop')

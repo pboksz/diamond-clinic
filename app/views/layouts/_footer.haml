@@ -1,16 +1,20 @@
 %footer
   .left.address
-    %p= 'Ul. Gen. Augusta Fieldorfa-Nila 14/JU2'
-    %p= '31-209 Kraków'
-    %p= mail_to 'biuro@diamondclinic.eu'
+    %p= t('defaults.address')
+    %p= t('defaults.city')
+    %p= mail_to t('defaults.email')
   .center
     .logo= image_tag 'diamondclinic_logo.png'
     .copyright
-      = "Diamond Clinic © #{Date.today.year}"
+      = "#{t('defaults.name')} © #{Date.today.year}"
       %i.fa.fa-flask
-      = 'Made by'
+      = t('views.footer.made_by')
       = link_to 'Phillip Boksz', 'http://www.phillipboksz.com', :target => '_blank'
   .right.hours
-    %p= 'Monday to Friday 9:00 to 21:00'
-    %p= 'Saturday 9:00 to 15:00'
-    %p= '+48 122 651 165'
+    %p
+      = t('views.footer.hours_weekday')
+      = t('defaults.hours_weekday')
+    %p
+      = t('views.footer.hours_weekend')
+      = t('defaults.hours_weekend')
+    %p= t('defaults.phone_number')

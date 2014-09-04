@@ -2,12 +2,12 @@ pl:
   models:
     doctor:
       specialty:
-        internist: 'Internist'
-        cardiologist: 'Cardiologist'
-        pulmonologist: 'Pulmonologist'
-        allergologist: 'Allergologist'
-        nephrologist: 'Nephrologist'
-        neurologist: 'Neurologist'
+        internist: "Specjalista Chorób Wewnętrznych"
+        cardiologist: "Kardiolog"
+        pulmonologist: "Specjalista Chorób Płuc"
+        allergologist: "Alergolog"
+        nephrologist: "Nefrolog"
+        neurologist: "Neurolog"
 
   mailers:
     subject: "Appointment request from %{name} for %{when}"
@@ -17,3 +17,77 @@ pl:
     phone_number: "Phone number: %{phone_number}"
     doctor: "Doctor: %{doctor}"
     when: "When: %{when}"
+
+  defaults:
+    name: "Diamond Clinic"
+    tagline: "Specjalistyczne Poradnie Lekarskie"
+    address: "Ul. Gen. Augusta Fieldorfa-Nila 14/JU2"
+    city: "31-209 Kraków"
+    email: "biuro@diamondclinic.eu"
+    hours_weekday: "9:00 to 21:00"
+    hours_weekend: "9:00 to 15:00"
+    nip: "678-292-45-94"
+    regon: "120413380"
+    phone_number: "+48 122 651 165"
+    mobile_number: "+48 571 241 412"
+    fax_number: "+48 126 371 533"
+    trams: "3, 5, 18, 50"
+    buses: "102, 118, 120, 137, 138, 168, 194, 207, 217, 220, 227, 237, 240, 247, 267, 287, 297"
+    stop: "Krowodrza Górka"
+
+  views:
+    header:
+      admin_nav:
+        appointments: "Appointments"
+        doctors: "Lekarze"
+        admins: "Admins"
+        password: "Hasło"
+        logout: "Wyloguj"
+      nav:
+        about_us: "O Nas"
+        our_doctors: "Nasi Lekarze"
+        services: "Oferta"
+        clinical_research: "Badania Kliniczne"
+        contact_us: "Kontakt"
+
+    footer:
+      made_by: "Wykonane Przez"
+      hours_weekday: "Poniedziałku do Piątku:"
+      hours_weekend: "Sobota:"
+
+    about_us:
+
+    our_doctors:
+
+    services:
+
+    clinical_research:
+
+    contact_us:
+      address:
+        header: "Adres"
+        nip: "NIP:"
+        regon: "Regon:"
+
+      contact:
+        header: "Kontakt"
+        phone_number: "Telegfon:"
+        mobile_number: "Mobilne:"
+        fax_number: "Fax:"
+        email: "Email:"
+
+      hours:
+        header: "Godziny"
+      hours_weekday: "Poniedziałku do Piątku:"
+      hours_weekend: "Sobota:"
+
+      appointment:
+        header: "Request an Appointment"
+        submit: "Send Request"
+
+      directions:
+        header: "Dojazd"
+        mass_transit: "Komunikacja"
+        trams: "Tramwajami:"
+        buses: "Autobusami:"
+        stop: "Do przystanku:"

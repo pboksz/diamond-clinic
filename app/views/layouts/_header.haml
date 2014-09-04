@@ -7,17 +7,17 @@
   .center
     .nav
       - if controller_path.include?('admin')
-        = link_to 'Appointments', admin_appointments_path(locale)
-        = link_to 'Doctors', admin_doctors_path(locale)
-        = link_to 'Admins', admin_admins_path(locale)
-        = link_to 'Password', edit_admin_password_path(locale)
-        = link_to 'Logout', destroy_admin_session_path(locale), :method => :delete
+        = link_to t('views.header.admin_nav.appointments'), admin_appointments_path(locale)
+        = link_to t('views.header.admin_nav.doctors'), admin_doctors_path(locale)
+        = link_to t('views.header.admin_nav.admins'), admin_admins_path(locale)
+        = link_to t('views.header.admin_nav.password'), edit_admin_password_path(locale)
+        = link_to t('views.header.admin_nav.logout'), destroy_admin_session_path(locale), :method => :delete
       - else
-        = link_to 'About Us', about_us_path(locale)
-        = link_to 'Our Doctors', our_doctors_path(locale)
-        = link_to 'Services', services_path(locale)
-        = link_to 'Clinical Research', clinical_research_path(locale)
-        = link_to 'Contact Us', contact_us_path(locale)
+        = link_to t('views.header.nav.about_us'), about_us_path(locale)
+        = link_to t('views.header.nav.our_doctors'), our_doctors_path(locale)
+        = link_to t('views.header.nav.services'), services_path(locale)
+        = link_to t('views.header.nav.clinical_research'), clinical_research_path(locale)
+        = link_to t('views.header.nav.contact_us'), contact_us_path(locale)
 
   .right
     .locale= render 'layouts/locale'
