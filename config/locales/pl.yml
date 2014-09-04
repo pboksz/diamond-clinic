@@ -51,7 +51,7 @@ pl:
         contact_us: "Kontakt"
 
     footer:
-      made_by: "Wykonane Przez"
+      made_by: "Wykonane przez"
       hours_weekday: "Poniedziałku do Piątku:"
       hours_weekend: "Sobota:"
 
