@@ -78,8 +78,8 @@ pl:
 
       hours:
         header: "Godziny"
-      hours_weekday: "Poniedziałku do Piątku:"
-      hours_weekend: "Sobota:"
+        hours_weekday: "Poniedziałku do Piątku:"
+        hours_weekend: "Sobota:"
 
       appointment:
         header: "Request an Appointment"
