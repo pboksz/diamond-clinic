@@ -1,6 +1,6 @@
-- new_locale = if locale.nil? || locale == 'en' then :pl else :en end
+- new_locale = if locale.nil? || locale == 'pl' then 'en' else nil end
 - if request.method == 'GET'
   = link_to url_for params.merge(:locale => new_locale) do
-    .language #{new_locale.to_s}
+    .language #{new_locale || 'pl'}
 - else
-  .language #{new_locale.to_s}
+  .language #{new_locale || 'pl'}
