@@ -4,47 +4,50 @@
   .container
     %h1= t('views.header.nav.our_services')
 
-    %h3= t('views.our_services.consultations.header')
-    .section
-      = icon('chevron-right')
-      = t('views.our_services.consultations.internists')
-    .section
-      = icon('chevron-right')
-      = t('views.our_services.consultations.cardiologists')
-    .section
-      = icon('chevron-right')
-      = t('views.our_services.consultations.pulmonologists')
-    .section
-      = icon('chevron-right')
-      = t('views.our_services.consultations.allergologists')
-    .section
-      = icon('chevron-right')
-      = t('views.our_services.consultations.nephrologists')
-    .section
-      = icon('chevron-right')
-      = t('views.our_services.consultations.neurologists')
+    .consultations
+      %h3= t('views.our_services.consultations.header')
+      .section
+        = icon('chevron-right')
+        = t('views.our_services.consultations.internists')
+      .section
+        = icon('chevron-right')
+        = t('views.our_services.consultations.cardiologists')
+      .section
+        = icon('chevron-right')
+        = t('views.our_services.consultations.pulmonologists')
+      .section
+        = icon('chevron-right')
+        = t('views.our_services.consultations.allergologists')
+      .section
+        = icon('chevron-right')
+        = t('views.our_services.consultations.nephrologists')
+      .section
+        = icon('chevron-right')
+        = t('views.our_services.consultations.neurologists')
 
-    %h3= t('views.our_services.diagnostics.header')
-    .section
-      = icon('chevron-right')
-      = t('views.our_services.diagnostics.blood_tests')
-    .section
-      = icon('chevron-right')
-      = t('views.our_services.diagnostics.spirometry_tests')
-    .section
-      = icon('chevron-right')
-      = t('views.our_services.diagnostics.ekg_tests')
-    .section
-      = icon('chevron-right')
-      = t('views.our_services.diagnostics.allergy_tests')
+    .diagnostics
+      %h3= t('views.our_services.diagnostics.header')
+      .section
+        = icon('chevron-right')
+        = t('views.our_services.diagnostics.blood_tests')
+      .section
+        = icon('chevron-right')
+        = t('views.our_services.diagnostics.spirometry_tests')
+      .section
+        = icon('chevron-right')
+        = t('views.our_services.diagnostics.ekg_tests')
+      .section
+        = icon('chevron-right')
+        = t('views.our_services.diagnostics.allergy_tests')
 
-    %h3= t('views.our_services.treatments.header')
-    .section
-      = icon('chevron-right')
-      = t('views.our_services.treatments.treatment_types')
-    .section
-      = icon('chevron-right')
-      = t('views.our_services.treatments.iv_treatment')
-    .section
-      = icon('chevron-right')
-      = t('views.our_services.treatments.allergy_desensitization')
+    .treatments
+      %h3= t('views.our_services.treatments.header')
+      .section
+        = icon('chevron-right')
+        = t('views.our_services.treatments.treatment_types')
+      .section
+        = icon('chevron-right')
+        = t('views.our_services.treatments.iv_treatment')
+      .section
+        = icon('chevron-right')
+        = t('views.our_services.treatments.allergy_desensitization')
