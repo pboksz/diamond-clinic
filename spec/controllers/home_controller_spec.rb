@@ -11,9 +11,9 @@ describe HomeController do
     it { expect(response).to render_template :our_doctors }
   end
 
-  describe 'GET #services' do
-    before { get :services }
-    it { expect(response).to render_template :services }
+  describe 'GET #our_services' do
+    before { get :our_services }
+    it { expect(response).to render_template :our_services }
   end
 
   describe 'GET #clinical_research' do
