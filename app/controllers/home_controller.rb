@@ -7,7 +7,7 @@ class HomeController < ApplicationController
     @doctors = Doctor.all
   end
 
-  def services
+  def our_services
 
   end
 
