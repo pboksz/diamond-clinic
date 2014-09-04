@@ -17,7 +17,7 @@ en:
         email: "Email"
         phone_number: "Phone number"
         doctor: "Which doctor would you like to see?"
-        date: "What day?"
+        date: "Which day?"
         time: "What time?"
         message: "Message and/or additional information about the visit"
 
