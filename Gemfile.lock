@@ -91,8 +91,8 @@ GEM
     faraday_middleware (0.9.1)
       faraday (>= 0.7.4, < 0.10)
     ffi (1.9.3)
-    font-awesome-rails (4.1.0.0)
-      railties (>= 3.2, < 5.0)
+    font-awesome-sass (4.2.0)
+      sass (~> 3.2)
     fssm (0.2.10)
     gh (0.13.2)
       addressable
@@ -285,7 +285,7 @@ DEPENDENCIES
   database_cleaner
   devise
   factory_girl_rails
-  font-awesome-rails
+  font-awesome-sass
   haml-rails
   headless
   jbuilder (~> 1.2)
