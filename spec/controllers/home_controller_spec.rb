@@ -8,6 +8,8 @@ describe HomeController do
 
   describe 'GET #our_doctors' do
     before { get :our_doctors }
+
+    it { expect(assigns(:doctors)).to eq Doctor.all }
     it { expect(response).to render_template :our_doctors }
   end
 
@@ -18,6 +20,8 @@ describe HomeController do
 
   describe 'GET #clinical_research' do
     before { get :clinical_research }
+
+    it { expect(assigns(:clinical_trials)).to eq ClinicalTrial.all }
     it { expect(response).to render_template :clinical_research }
   end
 

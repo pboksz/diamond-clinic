@@ -12,7 +12,7 @@ class HomeController < ApplicationController
   end
 
   def clinical_research
-
+    @clinical_trials = ClinicalTrial.all
   end
 
   def contact_us
