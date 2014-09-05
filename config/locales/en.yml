@@ -39,19 +39,11 @@ en:
 
   views:
     header:
-      admin_nav:
-        appointments: "Appointments"
-        doctors: "Doctors"
-        clinical_trials: "Clinical Trials"
-        admins: "Admins"
-        password: "Password"
-        logout: "Logout"
-      nav:
-        about_us: "About Us"
-        our_doctors: "Our Doctors"
-        our_services: "Our Services"
-        clinical_research: "Clinical Research"
-        contact_us: "Contact Us"
+      about_us: "About Us"
+      our_doctors: "Our Doctors"
+      our_services: "Our Services"
+      clinical_research: "Clinical Research"
+      contact_us: "Contact Us"
 
     footer:
       made_by: "Made by"

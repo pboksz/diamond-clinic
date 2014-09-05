@@ -3,6 +3,14 @@ en:
     edit: "Edit"
     delete: "Delete"
 
+    header:
+      appointments: "Appointments"
+      doctors: "Doctors"
+      clinical_trials: "Clinical Trials"
+      admins: "Admins"
+      password: "Password"
+      logout: "Logout"
+
     appointments:
       index:
         header: "Appointments"

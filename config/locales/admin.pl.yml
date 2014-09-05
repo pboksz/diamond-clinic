@@ -3,6 +3,14 @@ pl:
     edit: "Edit"
     delete: "Delete"
 
+    header:
+      appointments: "Appointments"
+      doctors: "Lekarze"
+      clinical_trials: "Badanie Kliniczne"
+      admins: "Admins"
+      password: "Hasło"
+      logout: "Wyloguj"
+
     appointments:
       index:
         header: "Appointments"

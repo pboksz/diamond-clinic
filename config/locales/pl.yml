@@ -39,19 +39,11 @@ pl:
 
   views:
     header:
-      admin_nav:
-        appointments: "Appointments"
-        doctors: "Lekarze"
-        clinical_trials: "Badanie Kliniczne"
-        admins: "Admins"
-        password: "Hasło"
-        logout: "Wyloguj"
-      nav:
-        about_us: "O Nas"
-        our_doctors: "Nasi Lekarze"
-        our_services: "Nasza Oferta"
-        clinical_research: "Badania Kliniczne"
-        contact_us: "Kontakt"
+      about_us: "O Nas"
+      our_doctors: "Nasi Lekarze"
+      our_services: "Nasza Oferta"
+      clinical_research: "Badania Kliniczne"
+      contact_us: "Kontakt"
 
     footer:
       made_by: "Wykonane przez"
