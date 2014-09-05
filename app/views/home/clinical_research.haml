@@ -6,24 +6,25 @@
 
     .information
       %p= t('views.clinical_research.information.offer')
+
+      .clinical-contact
+        = t('views.clinical_research.information.participate')
+        .section
+          = icon('chevron-right')
+          = t('defaults.clinical_trials_number_1')
+        .section
+          = icon('chevron-right')
+          = t('defaults.clinical_trials_number_2')
+        .section
+          = icon('chevron-right')
+          = mail_to t('defaults.email')
+
       %p= t('views.clinical_research.information.active_research')
 
     .clinical-trials
-    - @clinical_trials.each do |clinical_trial|
-      .clinical-trial
-        .condition
-          = icon('chevron-right')
-          = clinical_trial.condition
-        .description= simple_format(clinical_trial.description(:locale => locale))
-
-    .clinical-contact
-      = t('views.clinical_research.information.participate')
-      .section
-        = icon('chevron-right')
-        = t('defaults.clinical_trials_number_1')
-      .section
-        = icon('chevron-right')
-        = t('defaults.clinical_trials_number_2')
-      .section
-        = icon('chevron-right')
-        = mail_to t('defaults.email')
+      - @clinical_trials.each do |clinical_trial|
+        .clinical-trial
+          .condition
+            = icon('chevron-right')
+            = clinical_trial.condition
+          .description= simple_format(clinical_trial.description(:locale => locale))
