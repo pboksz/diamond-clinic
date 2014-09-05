@@ -7,7 +7,7 @@ RSpec.describe ClinicalTrial, :type => :model do
     it { expect(clinical_trial).to be_valid }
 
     describe 'presence' do
-      it { expect(build(:clinical_trial, :name => nil)).not_to be_valid }
+      it { expect(build(:clinical_trial, :condition => nil)).not_to be_valid }
       it { expect(build(:clinical_trial, :description_pl => nil)).not_to be_valid }
       it { expect(build(:clinical_trial, :description_en => nil)).not_to be_valid }
     end

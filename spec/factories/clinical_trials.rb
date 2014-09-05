@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :clinical_trial do
-    name 'Trial'
+    condition 'Condition'
     description_pl 'Description in Polish'
     description_en 'Description in English'
   end
