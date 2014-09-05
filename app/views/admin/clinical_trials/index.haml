@@ -1,0 +1,24 @@
+.wrapper.admin.clinical-trials
+  = render 'layouts/messages'
+
+  .container
+    .new-model
+      %h2 Clinical Trials
+      = link_to 'New Clinical Trial', new_admin_clinical_trial_path(locale), :class => 'button'
+
+    %table
+      %thead
+        %tr
+          %td= 'Condition'
+          %td= 'Description in Polish'
+          %td= 'Description in English'
+          %td= 'Delete'
+      %tbody
+        - @clinical_trials.each do |clinical_trial|
+          %tr
+            %td= clinical_trial.condition
+            %td= clinical_trial.description_pl
+            %td= clinical_trial.description_en
+            %td.action
+              = link_to admin_clinical_trial_path(locale, clinical_trial), :method => :delete do
+                = icon('trash-o')

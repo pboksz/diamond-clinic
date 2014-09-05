@@ -40,6 +40,7 @@ pl:
       admin_nav:
         appointments: "Appointments"
         doctors: "Lekarze"
+        clinical_trials: "Badanie Kliniczne"
         admins: "Admins"
         password: "Hasło"
         logout: "Wyloguj"
@@ -98,8 +99,8 @@ pl:
         hours_weekday: "Poniedziałku do Piątku:"
         hours_weekend: "Sobota:"
       appointment:
-        header: "Request an Appointment"
-        submit: "Send Request"
+        header: "Zapisz się na wizytę"
+        submit: "Wyślij"
       directions:
         header: "Dojazd"
         mass_transit: "Komunikacja"

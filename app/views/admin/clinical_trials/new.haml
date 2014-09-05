@@ -1,0 +1,16 @@
+.wrapper.admin.clinical-trials
+  = render 'layouts/messages'
+
+  .container
+    %h2 Add Clinical Trial
+
+    = simple_form_for @clinical_trial, :url => admin_clinical_trials_path(locale), :method => :post do |f|
+      = f.input :condition
+      = f.input :description_pl, :as => :text
+      = f.input :description_en, :as => :text
+
+      .actions
+        = button_tag :class => 'button' do
+          = icon('floppy-o')
+        = link_to admin_clinical_trials_path(locale), :class => 'button cancel' do
+          = icon('trash-o')

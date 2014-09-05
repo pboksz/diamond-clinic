@@ -9,6 +9,7 @@
       - if controller_path.include?('admin')
         = link_to t('views.header.admin_nav.appointments'), admin_appointments_path(locale)
         = link_to t('views.header.admin_nav.doctors'), admin_doctors_path(locale)
+        = link_to t('views.header.admin_nav.clinical_trials'), admin_clinical_trials_path(locale)
         = link_to t('views.header.admin_nav.admins'), admin_admins_path(locale)
         = link_to t('views.header.admin_nav.password'), edit_admin_password_path(locale)
         = link_to t('views.header.admin_nav.logout'), destroy_admin_session_path(locale), :method => :delete
