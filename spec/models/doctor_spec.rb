@@ -28,8 +28,8 @@ describe Doctor do
   end
 
   describe '#biography' do
-    it { expect(doctor.biography).to eq doctor.biography_en }
-    it { expect(doctor.biography(:pl)).to eq doctor.biography_pl }
+    it { expect(doctor.biography).to eq doctor.biography_pl }
+    it { expect(doctor.biography(:en)).to eq doctor.biography_en }
     it { expect(doctor.biography(:invalid)).to be_nil }
   end
 
