@@ -8,7 +8,8 @@ class ClinicalTrial
 
   validates :condition, :description_pl, :description_en, :presence => true
 
-  def description(locale = :pl)
+  def description(options = {})
+    locale = options[:locale] || :pl
     self.send("description_#{locale}") if self.respond_to?("description_#{locale}")
   end
 end

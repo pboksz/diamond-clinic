@@ -15,7 +15,7 @@ RSpec.describe ClinicalTrial, :type => :model do
 
   describe '#description' do
     it { expect(clinical_trial.description).to eq clinical_trial.description_pl }
-    it { expect(clinical_trial.description(:en)).to eq clinical_trial.description_en }
-    it { expect(clinical_trial.description(:invalid)).to be_nil }
+    it { expect(clinical_trial.description(:locale => :en)).to eq clinical_trial.description_en }
+    it { expect(clinical_trial.description(:locale => :invalid)).to be_nil }
   end
 end

@@ -29,8 +29,8 @@ describe Doctor do
 
   describe '#biography' do
     it { expect(doctor.biography).to eq doctor.biography_pl }
-    it { expect(doctor.biography(:en)).to eq doctor.biography_en }
-    it { expect(doctor.biography(:invalid)).to be_nil }
+    it { expect(doctor.biography(:locale => :en)).to eq doctor.biography_en }
+    it { expect(doctor.biography(:locale => :invalid)).to be_nil }
   end
 
   describe '#specialty_name' do

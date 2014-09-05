@@ -23,7 +23,8 @@ class Doctor
     "#{full_title} (#{specialty_name})"
   end
 
-  def biography(locale = :pl)
+  def biography(options = {})
+    locale = options[:locale] || :pl
     self.send("biography_#{locale}") if self.respond_to?("biography_#{locale}")
   end
 

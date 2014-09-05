@@ -13,5 +13,5 @@
               = icon('chevron-right')
               = doctor.full_title
             .specialty= doctor.specialty_name
-            .biography= doctor.biography(locale)
+            .biography= simple_format(doctor.biography(:locale => locale))
           .clearfix
