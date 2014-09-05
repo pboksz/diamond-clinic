@@ -29,6 +29,11 @@ en:
         biography_pl: "Biography in Polish"
         biography_en: "Biography in English"
 
+      clinical_trial:
+        condition: "Condition"
+        description_pl: "Description in Polish"
+        description_en: "Description in English"
+
       admin:
         email: "Email"
         password: "Password"
@@ -51,6 +56,11 @@ en:
         specialty: ""
         biography_pl: ""
         biography_en: ""
+
+      clinical_trial:
+        condition: ""
+        description_pl: ""
+        description_en: ""
 
       admin:
         email: "email@email.com"

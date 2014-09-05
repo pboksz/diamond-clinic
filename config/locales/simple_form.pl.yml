@@ -29,6 +29,11 @@ pl:
         biography_pl: "Biografia po Polsku"
         biography_en: "Biografia po Angielsku"
 
+      clinical_trial:
+        condition: "Stan Zdrowia"
+        description_pl: "Opis po Polsku"
+        description_en: "Opis po Angielsku"
+
       admin:
         email: "Email"
         password: "Hasło"
@@ -51,6 +56,11 @@ pl:
         specialty: ""
         biography_pl: ""
         biography_en: ""
+
+      clinical_trial:
+        condition: ""
+        description_pl: ""
+        description_en: ""
 
       admin:
         email: "email@email.com"
