@@ -88,7 +88,7 @@ pl:
         regon: "Regon:"
       contact:
         header: "Kontakt"
-        phone_number: "Telegfon:"
+        phone_number: "Telefon:"
         mobile_number: "Mobilne:"
         fax_number: "Fax:"
         email: "Email:"
