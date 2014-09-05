@@ -3,16 +3,16 @@
 
   .container
     .new-model
-      %h2 Clinical Trials
-      = link_to 'New Clinical Trial', new_admin_clinical_trial_path(locale), :class => 'button'
+      %h2= t('admin.clinical_trials.index.header')
+      = link_to t('admin.clinical_trials.index.new'), new_admin_clinical_trial_path(locale), :class => 'button'
 
     %table
       %thead
         %tr
-          %td= 'Condition'
-          %td= 'Description in Polish'
-          %td= 'Description in English'
-          %td= 'Delete'
+          %td= t('admin.clinical_trials.index.condition')
+          %td= t('admin.clinical_trials.index.description_pl')
+          %td= t('admin.clinical_trials.index.description_en')
+          %td= t('admin.delete')
       %tbody
         - @clinical_trials.each do |clinical_trial|
           %tr

@@ -2,5 +2,5 @@
   = render 'layouts/messages'
 
   .container
-    %h2 Edit Doctor
+    %h2= t('admin.doctors.edit.header')
     = render 'form', :url => admin_doctor_path(locale, @doctor), :method => :put

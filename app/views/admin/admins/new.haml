@@ -2,7 +2,7 @@
   = render 'layouts/messages'
 
   .container
-    %h2 Add Admin
+    %h2= t('admin.admins.new.header')
 
     = simple_form_for @admin, :url => admin_admins_path(locale), :method => :post do |f|
       = f.input :email

@@ -1,0 +1,55 @@
+en:
+  admin:
+    edit: "Edit"
+    delete: "Delete"
+
+    appointments:
+      index:
+        header: "Appointments"
+        client: "Client"
+        email: "Email"
+        phone_number: "Phone number"
+        doctor: "Doctor"
+        when: "When"
+        created_at: "Sent"
+        message: "Message"
+
+    doctors:
+      index:
+        header: "Doctors"
+        add: "Add a Doctor"
+        name: "Name"
+        specialty: "Specialty"
+        biography_pl: "Biography in Polish"
+        biography_en: "Biography in English"
+      new:
+        header: "Add a Doctor"
+      edit:
+        header: "Edit Doctor"
+
+    clinical_trials:
+      index:
+        header: "Clinical Trials"
+        add: "Add a Clinical Trial"
+        condition: "Condition"
+        description_pl: "Description in Polish"
+        description_en: "Description in English"
+      new:
+        header: "Add a Clinical Trial"
+
+    admins:
+      index:
+        header: "Admins"
+        add: "Add an Admin"
+        email: "Email"
+        sign_in_count: "Login Count"
+        current_sign_in_at: "Current Login Time"
+        current_sign_in_ip: "Current Login IP"
+        last_sign_in_at: "Last Login Time"
+        last_sign_in_ip: "Last Login IP"
+      new:
+        header: "Add an Admin"
+
+    passwords:
+      edit:
+        header: "Change Password"

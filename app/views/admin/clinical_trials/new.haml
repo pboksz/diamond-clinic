@@ -2,7 +2,7 @@
   = render 'layouts/messages'
 
   .container
-    %h2 Add Clinical Trial
+    %h2= t('admin.clinical_trials.new.header')
 
     = simple_form_for @clinical_trial, :url => admin_clinical_trials_path(locale), :method => :post do |f|
       = f.input :condition

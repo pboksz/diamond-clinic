@@ -3,17 +3,17 @@
 
   .container
     .new-model
-      %h2 Doctors
-      = link_to 'New Doctor', new_admin_doctor_path(locale), :class => 'button'
+      %h2= t('admin.doctors.index.header')
+      = link_to t('admin.doctors.index.new'), new_admin_doctor_path(locale), :class => 'button'
 
     %table
       %thead
         %tr
-          %td= 'Name'
-          %td= 'Specialty'
-          %td= 'Biography in Polish'
-          %td= 'Biography in English'
-          %td= 'Edit'
+          %td= t('admin.doctors.index.name')
+          %td= t('admin.doctors.index.specialty')
+          %td= t('admin.doctors.index.biography_en')
+          %td= t('admin.doctors.index.biography_pl')
+          %td= t('admin.edit')
       %tbody
         - @doctors.each do |doctor|
           %tr

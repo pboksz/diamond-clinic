@@ -3,19 +3,19 @@
 
   .container
     .new-model
-      %h2 Admins
-      = link_to 'New Admin', new_admin_admin_path(locale), :class => 'button'
+      %h2= t('admin.admins.index.header')
+      = link_to t('admin.admins.index.add'), new_admin_admin_path(locale), :class => 'button'
 
     %table
       %thead
         %tr
-          %td= 'Email'
-          %td= 'Sign In Count'
-          %td= 'Current Sign In At'
-          %td= 'Current Sign In IP'
-          %td= 'Last Sign In At'
-          %td= 'Last Sign In IP'
-          %td= 'Delete'
+          %td= t('admin.admins.index.email')
+          %td= t('admin.admins.index.sign_in_count')
+          %td= t('admin.admins.index.current_sign_in_at')
+          %td= t('admin.admins.index.current_sign_in_ip')
+          %td= t('admin.admins.index.last_sign_in_at')
+          %td= t('admin.admins.index.last_sign_in_ip')
+          %td= t('admin.delete')
       %tbody
         - @admins.each do |admin|
           %tr
