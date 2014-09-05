@@ -4,7 +4,7 @@
   .container
     %h2= t('admin.passwords.edit.header')
 
-    = simple_form_for current_admin, :url => admin_password_path(locale), :method => :put do |f|
+    = simple_form_for @admin, :url => admin_password_path(locale), :method => :put do |f|
       = f.input :password, :as => :password
       = f.input :password_confirmation, :as => :password
 
