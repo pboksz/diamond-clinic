@@ -8,9 +8,4 @@
       = f.input :email
       = f.input :password, :as => :password
       = f.input :password_confirmation, :as => :password
-
-      .actions
-        = button_tag :class => 'button' do
-          = icon('floppy-o')
-        = link_to admin_admins_path(locale), :class => 'button cancel' do
-          = icon('trash-o')
+      = render 'admin/actions', :url => admin_admins_path(locale)

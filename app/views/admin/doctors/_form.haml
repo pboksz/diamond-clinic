@@ -5,9 +5,4 @@
   = f.input :specialty, :collection => I18n.t('models.doctor.specialty'), :value_method => :first, :label_method => :last
   = f.input :biography_pl, :as => :text
   = f.input :biography_en, :as => :text
-
-  .actions
-    = button_tag :class => 'button' do
-      = icon('floppy-o')
-    = link_to admin_doctors_path(locale), :class => 'button cancel' do
-      = icon('trash-o')
+  = render 'admin/actions', :url => admin_doctors_path(locale)
