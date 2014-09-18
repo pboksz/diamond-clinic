@@ -21,7 +21,7 @@ production:
     user_name: ENV['MANDRILL_USERNAME']
     password: ENV['MANDRILL_APIKEY']
     domain: 'heroku.com'
-    authentication: 'plain'
+    authentication: 'login'
 test:
   <<: *development
   delivery_method: 'test'
