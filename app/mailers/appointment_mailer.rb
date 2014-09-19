@@ -6,7 +6,6 @@ class AppointmentMailer < ActionMailer::Base
 
     mail :from => @appointment.email,
          :to => A9n.email_from,
-         :cc => @appointment.email,
          :subject => t('mailers.subject', :name => @appointment.name, :when => @appointment.when)
   end
 end
