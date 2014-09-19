@@ -2,8 +2,8 @@ header
   z-index: 10
   width: 100%
   font-size: 1.2em
+  font-weight: bold
   text-align: center
-  height: 4em
 
   .nav
     height: 50%
@@ -14,16 +14,19 @@ header
       line-height: 2em
       margin: 0
       padding: 0.5em 1em
-      border-right: 1px solid $diamond-grey-light
-      &:last-of-type
-        border-right: 0
+      border-right: 1px solid $diamond-grey-dark-shadow
+      &:first-of-type
+        border-left: 1px solid $diamond-grey-dark-shadow
 
-  .locale
+  .actions
     float: right
     height: 30%
-    margin: 1.5em 1em
+    margin: 1.5em
     padding: 0.25em 1em
     font-size: 0.75em
+    font-weight: normal
     width: 2em
     background-color: $diamond-grey-light-trans
     @include box-shadow(0px 0px 4px 2px $diamond-grey-dark-shadow)
+    a
+      display: inline-block
