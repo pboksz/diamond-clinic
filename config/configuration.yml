@@ -10,7 +10,7 @@ development: &development
     port: 1025
 production:
   <<: *development
-  secret_key_base: ENV['SECRET_KEY_BASE']
+  secret_key_base: <%= ENV['SECRET_KEY_BASE'] %>
   email_from: 'biuro@diamondclinic.eu'
   delivery_method: 'smtp'
   app_host:
@@ -18,8 +18,8 @@ production:
   smtp_settings:
     address: 'smtp.mandrillapp.com'
     port: 587
-    user_name: ENV['MANDRILL_USERNAME']
-    password: ENV['MANDRILL_APIKEY']
+    user_name: <%= ENV['MANDRILL_USERNAME'] %>
+    password: <%= ENV['MANDRILL_APIKEY'] %>
     domain: 'diamondclinic.eu'
     authentication: 'plain'
     enable_starttls_auto: true
