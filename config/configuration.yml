@@ -20,8 +20,9 @@ production:
     port: 587
     user_name: ENV['MANDRILL_USERNAME']
     password: ENV['MANDRILL_APIKEY']
-    domain: 'heroku.com'
-    authentication: 'login'
+    domain: 'diamondclinic.eu'
+    authentication: 'plain'
+    enable_starttls_auto: true
 test:
   <<: *development
   delivery_method: 'test'
