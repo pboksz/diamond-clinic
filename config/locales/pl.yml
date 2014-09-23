@@ -36,6 +36,8 @@ pl:
     trams: "3, 5, 18, 50"
     buses: "102, 118, 120, 137, 138, 168, 194, 207, 217, 220, 227, 237, 240, 247, 267, 287, 297"
     stop: "Krowodrza Górka"
+    description: "Diamond Clinic is a top of the line health clinic"
+    keywords: "health, care, healthcare, surgery, medicine, medical, clinic, diamond, clinical trials, doctor, surgeon, Krakow, Poland, internist, cardiologist, pulmonologist, allergologist, nephrologist, neurologist"
 
   views:
     header:
