@@ -100,6 +100,12 @@ en:
         header: "Clinical Trial List"
         offered: "We are now actively looking for participants for clinical trials with the following conditions:"
 
+    request_appointment:
+      appointment:
+        header: "Contact Form"
+        description: "Schedule An Appointment or Ask About a Clinical Trial"
+        submit: "Send Request"
+
     contact_us:
       address:
         header: "Address"
@@ -111,13 +117,8 @@ en:
         mobile_number: "Mobile:"
         fax_number: "Fax:"
         email: "Email:"
-      hours:
-        header: "Hours"
         hours_weekday: "Monday to Friday:"
         hours_weekend: "Saturday:"
-      appointment:
-        header: "Request an Appointment"
-        submit: "Send Request"
       directions:
         header: "Directions"
         mass_transit: "Mass Transit"

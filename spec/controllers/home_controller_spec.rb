@@ -29,8 +29,14 @@ describe HomeController do
     before { get :contact_us }
 
     it { expect(assigns(:doctors)).to eq Doctor.all }
-    it { expect(assigns(:appointment)).to be_a_new Appointment }
     it { expect(response).to render_template :contact_us }
+  end
+
+  describe 'GET #request_appointment' do
+    before { get :request_appointment }
+
+    it { expect(assigns(:appointment)).to be_a_new Appointment }
+    it { expect(response).to render_template :request_appointment }
   end
 
   describe 'POST #appointment_create' do

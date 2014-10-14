@@ -17,6 +17,9 @@ class HomeController < ApplicationController
 
   def contact_us
     @doctors = Doctor.all
+  end
+
+  def request_appointment
     @appointment = Appointment.new
   end
 

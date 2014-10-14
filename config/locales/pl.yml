@@ -100,6 +100,12 @@ pl:
         header: "Lista Badań"
         offered: "Obecnie do badań klinicznych rekrutujemy chorych:"
 
+    request_appointment:
+      appointment:
+        header: "Formularz Kontaktowy"
+        description: "Zapisz Się Na Wizytę lub Zapytaj o Badanie Kliniczne"
+        submit: "Wyślij"
+
     contact_us:
       address:
         header: "Adres"
@@ -111,13 +117,8 @@ pl:
         mobile_number: "Mobilne:"
         fax_number: "Fax:"
         email: "Email:"
-      hours:
-        header: "Godziny"
         hours_weekday: "Poniedziałku do Piątku:"
         hours_weekend: "Sobota:"
-      appointment:
-        header: "Zapisz się na wizytę"
-        submit: "Wyślij"
       directions:
         header: "Dojazd"
         mass_transit: "Komunikacja"
