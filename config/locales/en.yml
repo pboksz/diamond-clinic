@@ -42,9 +42,10 @@ en:
   views:
     header:
       about_us: "About Us"
-      our_doctors: "Our Doctors"
-      our_services: "Our Services"
-      clinical_research: "Clinical Research"
+      our_doctors: "Our Physicians"
+      our_services: "Our Offer"
+      clinical_research: "Clinical Trials"
+      request_appointment: "Schedule an Appointment"
       contact_us: "Contact Us"
 
     footer:
@@ -53,6 +54,11 @@ en:
       hours_weekend: "Saturday:"
 
     about_us:
+      paragraph1: "Diamond Clinic is a multidisciplinary medical clinic focused on providing excellent patient care as well as conducting high quality clinical trials."
+      paragraph2: "Our mission is to provide the highest quality of healthcare to our diverse patient population giving them a full range of services including access to the newest therapies and medications."
+      paragraph3: "We employ experienced and passionate physicians, educated and practicing at the top Jagiellonian University Hospital departments and clinics."
+      paragraph4: "We pride ourselves on providing these services in an empathetic, respectful, and caring environment."
+      paragraph5: "Contact us today to schedule an appointment with one of our specialists or to learn about our current ongoing medical trials. Call us at %{telephone} or %{mobile} or email us at %{email}"
 
     our_doctors:
 
