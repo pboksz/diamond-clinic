@@ -73,15 +73,15 @@ pl:
         neurologists: "Neurologiczne"
       diagnostics:
         header: "Badania Diagnostyczne"
-        blood_tests: "Badania laboratoryjne z krwi, moczu"
-        spirometry_tests: "Badania spirometryczne"
+        blood_tests: "Badania Laboratoryjne z Krwi i Moczu"
+        spirometry_tests: "Badania Spirometryczne"
         ekg_tests: "Badanie EKG"
-        allergy_tests: "Testy alergiczne"
+        allergy_tests: "Testy Alergiczne"
       treatments:
         header: "Zabiegi"
-        treatment_types: "Iniekcje dożylne, podskórne, domięśniowe"
-        iv_treatment: "Wlewy dożylne"
-        allergy_desensitization: "Odczulanie od alergy"
+        treatment_types: "Iniekcje Dożylne, Podskórne, Pomięśniowe"
+        iv_treatment: "Wlewy Dożylne"
+        allergy_desensitization: "Odczulanie"
 
     clinical_research:
       information:

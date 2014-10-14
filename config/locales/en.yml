@@ -64,24 +64,24 @@ en:
 
     our_services:
       consultations:
-        header: "Consultation by Specialists"
-        internists: "Internists"
-        cardiologists: "Cardiologists"
-        pulmonologists: "Pulmonologists"
-        allergologists: "Allergologists"
-        nephrologists: "Nephrologists"
-        neurologists: "Neurologists"
+        header: "Specialist Consultations"
+        internists: "Internal Medicine"
+        cardiologists: "Cardiology"
+        pulmonologists: "Pulmonology"
+        allergologists: "Allergology"
+        nephrologists: "Nephrology"
+        neurologists: "Neurology"
       diagnostics:
         header: "Diagnostic Tests"
-        blood_tests: "Laboratory diagnostics of blood and stool"
-        spirometry_tests: "Spirometry diagnostics"
-        ekg_tests: "EKG diagnostics"
-        allergy_tests: "Allergy tests"
+        blood_tests: "Laboratory tests: Blood and Urine"
+        spirometry_tests: "Lung Function Testing / Spirometry"
+        ekg_tests: "ECG Testing"
+        allergy_tests: "Allergy Testing"
       treatments:
-        header: "Treatments"
-        treatment_types: "Intravenous, subcutaneous, intramuscular"
-        iv_treatment: "I.V treatments"
-        allergy_desensitization: "Allergy desensitization"
+        header: "Procedures"
+        treatment_types: "Intravascular, Intramuscular, and Subdural Injections"
+        iv_treatment: "Intravenous Infusions"
+        allergy_desensitization: "Allergy Desensitization"
 
     clinical_research:
       information:
