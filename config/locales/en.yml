@@ -85,9 +85,20 @@ en:
 
     clinical_research:
       information:
-        offer: "We offer modern therapy and multidisciplinary car for patients participating in one of our clinical trials, free of charge."
-        active_research: "We are now actively looking for participants for clinical trials with the following conditions:"
-        participate: "Those interested in taking part in our clinical research, please contact us:"
+        offer: "We offer free, state of the art treatment as well as multidisciplinary care for patients taking part in our clinical trials."
+        participate: "If you are interested in taking part in one of our clinical trials or to learn about our current offers please contact us:"
+
+      participate:
+        header: "Why Take Part in One of Our Clinical Trials?"
+        section1: "Patients taking part in our clinical trials are under the constant care of our physicians, who serve their medical needs during the trial and after its completion."
+        section2: "As part of the trials patients have the opportunity to undergo a wide variety of diagnostic procedures which are normally not readily available to the general patient population."
+        section3: "The patient is given modern, and sometimes not yet widely available medical treatment options."
+        section4: "All diagnostic procedures and all treatment is free for patients during the clinical trial."
+        section5: "Patients are refunded the cost of travel to the clinic for doctor visits during the trial."
+
+      current:
+        header: "Clinical Trial List"
+        offered: "We are now actively looking for participants for clinical trials with the following conditions:"
 
     contact_us:
       address:

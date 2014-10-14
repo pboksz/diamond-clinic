@@ -85,9 +85,20 @@ pl:
 
     clinical_research:
       information:
-        offer: "Oferujemy bezpłatne i nowoczesne leczenie oraz wielospecjalistyczną opiekę dla chorych biorących udział w prowadzonych przez nas badaniach klinicznych."
-        active_research: "Obecnie aktywnie rekrutujemy pacjentów do badań klinicznych w zakresie następujących schorzeń:"
-        participate: "Osoby zainteresowane wzięciem udziału w prowadzonych przez nas projektach badawczych prosimy o kontakt:"
+        offer: "W ramach prowadzonych przez nas badań klinicznych, oferujemy pacjentom udział w darmowym leczeniu z wykorzystaniem najnowocześniejszych leków. "
+        participate: "Jeśli jesteście Państwo zainteresowani udziałem w ww badaniach klinicznych, w celu umówienia się na wizytę prosimy o kontakt:"
+
+      participate:
+        header: "Dlaczego Warto Brać Udział w Badaniach Klinicznych?"
+        section1: "Pacjent biorący udział w badaniu ma stałego lekarza, który służy mu codzienną pomocą w czasie trwania badania i po jego zakończeniu."
+        section2: "W ramach badania istnieje możliwość wykonywania szerokiego zakresu badań, niejednokrotnie niedostępnych w podstawowej lub nawet specjalistycznej opiece medycznej."
+        section3: "Pacjent korzysta z nowoczesnych, często jeszcze powszechnie niedostępnych metod leczenia."
+        section4: "Wszystkie wizyty i procedury wykonywanie w trakcie badania są dla pacjentów nieodpłatne."
+        section5: "Pacjenci otrzymują zwrot kosztów dojazdu na badania. "
+
+      current:
+        header: "Lista Badań"
+        offered: "Obecnie do badań klinicznych rekrutujemy chorych:"
 
     contact_us:
       address:
