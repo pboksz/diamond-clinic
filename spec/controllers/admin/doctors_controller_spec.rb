@@ -29,7 +29,7 @@ describe Admin::DoctorsController do
     end
 
     describe 'does not save' do
-      let(:params) { attributes_for(:doctor, :first_name => nil) }
+      let(:params) { attributes_for(:doctor, :name => nil) }
 
       it { expect(assigns(:doctor)).not_to be_persisted }
       it { expect(response).to render_template :new }
@@ -49,14 +49,14 @@ describe Admin::DoctorsController do
     before { put :update, :id => doctor.id, :doctor => params }
 
     describe 'valid params' do
-      let(:params) { { :title => 'M.D.' } }
+      let(:params) { { :name => 'Dr. Who' } }
 
-      it { expect(doctor.reload.title).to eq 'M.D.' }
+      it { expect(doctor.reload.name).to eq 'Dr. Who' }
       it { expect(response).to redirect_to admin_doctors_path }
     end
 
     describe 'invalid params' do
-      let(:params) { { :title => nil } }
+      let(:params) { { :name => nil } }
       it { expect(response).to render_template :edit }
     end
   end

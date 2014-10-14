@@ -34,6 +34,6 @@ class Admin::DoctorsController < Admin::ApplicationController
   private
 
   def create_params
-    params.require(:doctor).permit(:title, :first_name, :last_name, :specialty, :biography_en, :biography_pl)
+    params.require(:doctor).permit(:name, :specialty_pl, :specialty_en, :biography_en, :biography_pl)
   end
 end

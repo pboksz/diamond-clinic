@@ -1,14 +1,4 @@
 en:
-  models:
-    doctor:
-      specialty:
-        internist: "Internist"
-        cardiologist: "Cardiologist"
-        pulmonologist: "Pulmonologist"
-        allergologist: "Allergologist"
-        nephrologist: "Nephrologist"
-        neurologist: "Neurologist"
-
   mailers:
     subject: "Appointment request from %{name} for %{when}"
     header: "Appointment request"

@@ -1,14 +1,4 @@
 pl:
-  models:
-    doctor:
-      specialty:
-        internist: "Specjalista Chorób Wewnętrznych"
-        cardiologist: "Kardiolog"
-        pulmonologist: "Specjalista Chorób Płuc"
-        allergologist: "Alergolog"
-        nephrologist: "Nefrolog"
-        neurologist: "Neurolog"
-
   mailers:
     subject: "Appointment request from %{name} for %{when}"
     header: "Appointment request"

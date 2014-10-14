@@ -27,7 +27,8 @@ pl:
         header: "Doctors"
         add: "Add a Doctor"
         name: "Name"
-        specialty: "Specialty"
+        specialty_pl: "Specialty in Polish"
+        specialty_en: "Specialty in English"
         biography_pl: "Biography in Polish"
         biography_en: "Biography in English"
       new:

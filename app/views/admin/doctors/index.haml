@@ -10,15 +10,17 @@
       %thead
         %tr
           %td= t('admin.doctors.index.name')
-          %td= t('admin.doctors.index.specialty')
+          %td= t('admin.doctors.index.specialty_pl')
+          %td= t('admin.doctors.index.specialty_en')
           %td= t('admin.doctors.index.biography_en')
           %td= t('admin.doctors.index.biography_pl')
           %td= t('admin.edit')
       %tbody
         - @doctors.each do |doctor|
           %tr
-            %td= doctor.full_title
-            %td= doctor.specialty_name
+            %td= doctor.name
+            %td= doctor.specialty_pl
+            %td= doctor.specialty_en
             %td= doctor.biography_pl
             %td= doctor.biography_en
             %td.action
