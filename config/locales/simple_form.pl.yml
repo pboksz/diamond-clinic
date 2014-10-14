@@ -13,13 +13,13 @@ pl:
 
     labels:
       appointment:
-        name: "Imię i nazwisko"
+        name: "Imię i Nazwisko"
         email: "Email"
-        phone_number: "Numer telefonu"
-        doctor: "Który lekarz chciałbyś zobaczyć?"
-        date: "Który dzień?"
-        time: "Jaki czas?"
-        message: "Wiadomości lub dodatkowe informacje o wizycie"
+        phone_number: "Numer Telefonu"
+        doctor: "Wybierz Lekarza"
+        date: "Wybierz Dzień"
+        time: "Wybierz Godzinę"
+        message: "Wiadomość lub Dodatkowe Informacje"
 
       doctor:
         title: "Tytuł"
