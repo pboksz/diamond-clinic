@@ -65,7 +65,7 @@ describe HomeController do
       it { expect(assigns(:appointment)).not_to be_persisted }
       it { expect(assigns(:doctors)).to eq Doctor.all }
       it { expect(assigns(:clinical_trials)).to eq ClinicalTrial.all }
-      it { expect(response).to render_template :contact_us }
+      it { expect(response).to render_template :request_appointment }
     end
   end
 end

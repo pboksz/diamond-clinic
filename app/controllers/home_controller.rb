@@ -38,7 +38,7 @@ class HomeController < ApplicationController
       @doctors = Doctor.all
       @clinical_trials = ClinicalTrial.all
 
-      render :contact_us
+      render :request_appointment
     end
   end
 
