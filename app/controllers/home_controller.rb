@@ -30,11 +30,11 @@ class HomeController < ApplicationController
 
     if @appointment.save
       AppointmentMailer.appointment_email(@appointment).deliver
-      flash[:notice] = 'Your appointment request has been sent. You will receive a call or email shortly to finalize the appointment.'
+      flash[:notice] = t('views.request_appointment.appointment.sent')
 
       redirect_to contact_us_path(locale)
     else
-      flash[:alert] = 'There was an error sending your appointment request. Please fill in the marked fields and try again.'
+      flash[:alert] = t('views.request_appointment.appointment.error')
       @doctors = Doctor.all
       @clinical_trials = ClinicalTrial.all
 

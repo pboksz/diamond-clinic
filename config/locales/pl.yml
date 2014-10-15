@@ -93,6 +93,8 @@ pl:
 
     request_appointment:
       appointment:
+        sent: "Your appointment request has been sent. You will receive a call or email shortly to finalize the appointment."
+        error: "There was an error sending your appointment request. Please fill in the marked fields and try again."
         header: "Formularz Kontaktowy"
         description: "Zapisz Się Na Wizytę lub Zapytaj o Badanie Kliniczne"
         submit: "Wyślij"

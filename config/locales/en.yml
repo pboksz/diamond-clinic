@@ -93,6 +93,8 @@ en:
 
     request_appointment:
       appointment:
+        sent: "Your appointment request has been sent. You will receive a call or email shortly to finalize the appointment."
+        error: "There was an error sending your appointment request. Please fill in the marked fields and try again."
         header: "Contact Form"
         description: "Schedule An Appointment or Ask About a Clinical Trial"
         submit: "Send Request"
