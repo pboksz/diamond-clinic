@@ -36,6 +36,8 @@ describe HomeController do
     before { get :request_appointment }
 
     it { expect(assigns(:appointment)).to be_a_new Appointment }
+    it { expect(assigns(:doctors)).to eq Doctor.all }
+    it { expect(assigns(:clinical_trials)).to eq ClinicalTrial.all }
     it { expect(response).to render_template :request_appointment }
   end
 
@@ -57,11 +59,12 @@ describe HomeController do
     end
 
     describe 'does not save' do
-      let(:params) { attributes_for(:appointment, :first_name => nil) }
+      let(:params) { attributes_for(:appointment, :name => nil) }
       before { post :appointment_create, :appointment => params }
 
       it { expect(assigns(:appointment)).not_to be_persisted }
       it { expect(assigns(:doctors)).to eq Doctor.all }
+      it { expect(assigns(:clinical_trials)).to eq ClinicalTrial.all }
       it { expect(response).to render_template :contact_us }
     end
   end

@@ -21,6 +21,8 @@ class HomeController < ApplicationController
 
   def request_appointment
     @appointment = Appointment.new
+    @doctors = Doctor.all
+    @clinical_trials = ClinicalTrial.all
   end
 
   def appointment_create
@@ -34,6 +36,7 @@ class HomeController < ApplicationController
     else
       flash[:alert] = 'There was an error sending your appointment request. Please correct the errors and retry.'
       @doctors = Doctor.all
+      @clinical_trials = ClinicalTrial.all
 
       render :contact_us
     end

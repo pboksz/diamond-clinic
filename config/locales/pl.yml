@@ -6,6 +6,7 @@ pl:
     email: "Email: %{email}"
     phone_number: "Phone number: %{phone_number}"
     doctor: "Doctor: %{doctor}"
+    clinical_trial: "Clinical trial: %{clinical_trial}"
     when: "When: %{when}"
 
   defaults:

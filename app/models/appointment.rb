@@ -3,6 +3,7 @@ class Appointment
   include Mongoid::Timestamps
 
   field :doctor_id, :type => Integer
+  field :clinical_trial_id, :type => Integer
   field :name, :type => String
   field :email, :type => String
   field :phone_number, :type => String
@@ -11,8 +12,12 @@ class Appointment
   field :message, :type => String
 
   belongs_to :doctor
+  delegate :name, :to => :doctor, :prefix => true, :allow_nil => true
 
-  validates :doctor, :name, :date, :time, :presence => true
+  belongs_to :clinical_trial
+  delegate :condition, :to => :clinical_trial, :prefix => true, :allow_nil => true
+
+  validates :name, :presence => true
   validates :email, :format => { :with => Devise.email_regexp }
   validate  :phone_number_is_plausible
 

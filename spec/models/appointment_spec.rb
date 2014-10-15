@@ -7,10 +7,7 @@ describe Appointment do
     it { expect(appointment).to be_valid }
 
     describe 'presence' do
-      it { expect(build(:appointment, :doctor => nil)).not_to be_valid }
       it { expect(build(:appointment, :name => nil)).not_to be_valid }
-      it { expect(build(:appointment, :date => nil)).not_to be_valid }
-      it { expect(build(:appointment, :time => nil)).not_to be_valid }
     end
 
     describe 'format' do

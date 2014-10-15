@@ -3,6 +3,7 @@
 FactoryGirl.define do
   factory :appointment do
     doctor
+    clinical_trial
     name 'First Last'
     email 'email@email.com'
     phone_number '555555555'

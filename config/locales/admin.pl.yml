@@ -18,6 +18,7 @@ pl:
         email: "Email"
         phone_number: "Phone number"
         doctor: "Doctor"
+        clinical_trial: "Clinical trial"
         when: "When"
         created_at: "Sent"
         message: "Message"
