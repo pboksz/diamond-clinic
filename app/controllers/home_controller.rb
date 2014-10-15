@@ -34,7 +34,7 @@ class HomeController < ApplicationController
 
       redirect_to contact_us_path(locale)
     else
-      flash[:alert] = 'There was an error sending your appointment request. Please correct the errors and retry.'
+      flash[:alert] = 'There was an error sending your appointment request. Please fill in the marked fields and try again.'
       @doctors = Doctor.all
       @clinical_trials = ClinicalTrial.all
 
