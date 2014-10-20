@@ -10,19 +10,15 @@
       %thead
         %tr
           %td= t('admin.doctors.index.name')
-          %td= t('admin.doctors.index.specialty_pl')
-          %td= t('admin.doctors.index.specialty_en')
-          %td= t('admin.doctors.index.biography_en')
-          %td= t('admin.doctors.index.biography_pl')
+          %td= t('admin.doctors.index.specialty')
+          %td= t('admin.doctors.index.biography')
           %td= t('admin.edit')
       %tbody
         - @doctors.each do |doctor|
           %tr
-            %td= doctor.name
-            %td= doctor.specialty_pl
-            %td= doctor.specialty_en
-            %td= doctor.biography_pl
-            %td= doctor.biography_en
+            %td= doctor.name(:locale => locale)
+            %td= doctor.specialty(:locale => locale)
+            %td= doctor.biography(:locale => locale)
             %td.action
               = link_to edit_admin_doctor_path(locale, doctor) do
                 = icon('pencil')

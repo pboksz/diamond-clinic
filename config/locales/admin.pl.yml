@@ -28,10 +28,8 @@ pl:
         header: "Doctors"
         add: "Add a Doctor"
         name: "Name"
-        specialty_pl: "Specialty in Polish"
-        specialty_en: "Specialty in English"
-        biography_pl: "Biography in Polish"
-        biography_en: "Biography in English"
+        specialty: "Specialty"
+        biography: "Biography"
       new:
         header: "Add a Doctor"
       edit:
@@ -42,8 +40,7 @@ pl:
         header: "Clinical Trials"
         add: "Add a Clinical Trial"
         condition: "Condition"
-        description_pl: "Description in Polish"
-        description_en: "Description in English"
+        description: "Description"
       new:
         header: "Add a Clinical Trial"
 
