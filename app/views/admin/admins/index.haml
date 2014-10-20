@@ -15,7 +15,7 @@
           %td= t('admin.admins.index.current_sign_in_ip')
           %td= t('admin.admins.index.last_sign_in_at')
           %td= t('admin.admins.index.last_sign_in_ip')
-          %td= t('admin.delete')
+          %td= t('admin.actions')
       %tbody
         - @admins.each do |admin|
           %tr
@@ -26,5 +26,5 @@
             %td= admin.last_sign_in_at
             %td= admin.last_sign_in_ip
             %td.action
-              = link_to admin_admin_path(locale, admin), :method => :delete do
+              = link_to admin_admin_path(locale, admin), :method => :delete, :data => { :confirm => t('admin.confirm') } do
                 = icon('trash-o')

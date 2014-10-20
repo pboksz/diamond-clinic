@@ -1,6 +1,7 @@
 pl:
   admin:
     actions: "Actions"
+    confirm: "Are you sure you want to delete this?"
 
     header:
       appointments: "Appointments"

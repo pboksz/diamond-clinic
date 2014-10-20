@@ -20,5 +20,5 @@
             %td.action
               = link_to edit_admin_clinical_trial_path(locale, clinical_trial) do
                 = icon('pencil')
-              = link_to admin_clinical_trial_path(locale, clinical_trial), :method => :delete do
+              = link_to admin_clinical_trial_path(locale, clinical_trial), :method => :delete, :data => { :confirm => t('admin.confirm') } do
                 = icon('trash-o')
