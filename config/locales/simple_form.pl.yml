@@ -22,15 +22,18 @@ pl:
         message: "Wiadomość lub Dodatkowe Informacje"
 
       doctor:
-        title: "Tytuł"
-        first_name: "Imię"
-        last_name: "Nazwisko"
-        specialty: "Specjalność"
+        order: "Kolejność"
+        name_pl: "Imię, Nazwisko i Tytuł po Polsku"
+        name_en: "Imię, Nazwisko i Tytuł po Angielsku"
+        specialty_pl: "Specjalność po Polsku"
+        specialty_en: "Specjalność po Angielsku"
         biography_pl: "Biografia po Polsku"
         biography_en: "Biografia po Angielsku"
 
       clinical_trial:
-        condition: "Stan Zdrowia"
+        order: "Kolejność"
+        condition_pl: "Stan Zdrowia po Polsku"
+        condition_en: "Stan Zdrowia po Angielsku"
         description_pl: "Opis po Polsku"
         description_en: "Opis po Angielsku"
 
@@ -45,20 +48,23 @@ pl:
         email: "email@email.com"
         phone_number: "555 555 555"
         doctor: ""
+        clinical_trial: ""
         date: ""
         time: ""
         message: ""
 
       doctor:
-        title: ""
-        first_name: ""
-        last_name: ""
-        specialty: ""
+        order: ""
+        name: ""
+        specialty_pl: ""
+        specialty_en: ""
         biography_pl: ""
         biography_en: ""
 
       clinical_trial:
-        condition: ""
+        order: ""
+        condition_pl: ""
+        condition_en: ""
         description_pl: ""
         description_en: ""
 
