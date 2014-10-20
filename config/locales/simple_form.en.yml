@@ -22,15 +22,18 @@ en:
         message: "Additional Information or Query"
 
       doctor:
-        title: "Title"
-        first_name: "First name"
-        last_name: "Last name"
-        specialty: "Specialty"
+        order: "Order"
+        name_pl: "Name and Title in Polish"
+        name_en: "Name and Title in English"
+        specialty_pl: "Specialty in Polish"
+        specialty_en: "Specialty in English"
         biography_pl: "Biography in Polish"
         biography_en: "Biography in English"
 
       clinical_trial:
-        condition: "Condition"
+        order: "Order"
+        condition_pl: "Condition in Polish"
+        condition_en: "Condition in English"
         description_pl: "Description in Polish"
         description_en: "Description in English"
 
@@ -50,15 +53,17 @@ en:
         message: ""
 
       doctor:
-        title: ""
-        first_name: ""
-        last_name: ""
-        specialty: ""
+        order: ""
+        name: ""
+        specialty_pl: ""
+        specialty_en: ""
         biography_pl: ""
         biography_en: ""
 
       clinical_trial:
-        condition: ""
+        order: ""
+        condition_pl: ""
+        condition_en: ""
         description_pl: ""
         description_en: ""
 
