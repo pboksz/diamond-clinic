@@ -29,7 +29,7 @@ describe Admin::ClinicalTrialsController do
     end
 
     describe 'does not save' do
-      let(:params) { attributes_for(:clinical_trial, :condition => nil) }
+      let(:params) { attributes_for(:clinical_trial, :condition_pl => nil) }
 
       it { expect(assigns(:clinical_trial)).not_to be_persisted }
       it { expect(response).to render_template :new }

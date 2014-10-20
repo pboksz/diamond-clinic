@@ -2,7 +2,8 @@
 
 FactoryGirl.define do
   factory :clinical_trial do
-    condition 'Condition'
+    condition_pl 'Condition'
+    condition_en 'Choroba'
     description_pl 'Description in Polish'
     description_en 'Description in English'
   end
