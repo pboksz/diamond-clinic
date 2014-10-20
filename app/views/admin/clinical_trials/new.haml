@@ -3,10 +3,4 @@
 
   .container
     %h2= t('admin.clinical_trials.new.header')
-
-    = simple_form_for @clinical_trial, :url => admin_clinical_trials_path(locale), :method => :post do |f|
-      = f.input :condition_pl
-      = f.input :condition_en
-      = f.input :description_pl, :as => :text
-      = f.input :description_en, :as => :text
-      = render 'admin/actions', :url => admin_clinical_trials_path(locale)
+    = render 'form', :url => admin_clinical_trials_path(locale), :method => :post

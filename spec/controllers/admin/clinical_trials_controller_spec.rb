@@ -36,6 +36,31 @@ describe Admin::ClinicalTrialsController do
     end
   end
 
+  describe 'GET #edit' do
+    let(:clinical_trial) { create(:clinical_trial) }
+    before { get :edit, :id => clinical_trial.id }
+
+    it { expect(assigns(:clinical_trial)).to eq clinical_trial }
+    it { expect(response).to render_template :edit }
+  end
+
+  describe 'PUT #update' do
+    let(:clinical_trial) { create(:clinical_trial) }
+    before { put :update, :id => clinical_trial.id, :clinical_trial => params }
+
+    describe 'valid params' do
+      let(:params) { { :condition_pl => 'New Condition' } }
+
+      it { expect(clinical_trial.reload.condition).to eq 'New Condition' }
+      it { expect(response).to redirect_to admin_clinical_trials_path }
+    end
+
+    describe 'invalid params' do
+      let(:params) { { :condition_pl => nil } }
+      it { expect(response).to render_template :edit }
+    end
+  end
+
   describe 'DELETE #destroy' do
     let!(:clinical_trial) { create(:clinical_trial) }
     subject { delete :destroy, :id => clinical_trial.id }

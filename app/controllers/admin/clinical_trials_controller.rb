@@ -17,6 +17,20 @@ class Admin::ClinicalTrialsController < Admin::ApplicationController
     end
   end
 
+  def edit
+    @clinical_trial = ClinicalTrial.find(params[:id])
+  end
+
+  def update
+    @clinical_trial = ClinicalTrial.find(params[:id])
+
+    if @clinical_trial.update_attributes(create_params)
+      redirect_to admin_clinical_trials_path(locale)
+    else
+      render :edit
+    end
+  end
+
   def destroy
     @clinical_trial = ClinicalTrial.find(params[:id]).destroy
     redirect_to admin_clinical_trials_path(locale)
