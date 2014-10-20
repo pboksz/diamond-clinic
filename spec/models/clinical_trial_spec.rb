@@ -6,6 +6,10 @@ RSpec.describe ClinicalTrial, :type => :model do
   describe 'validations' do
     it { expect(clinical_trial).to be_valid }
 
+    describe 'numericality' do
+      it { expect(build(:clinical_trial, :order => nil)).not_to be_valid }
+    end
+
     describe 'presence' do
       it { expect(build(:clinical_trial, :condition_pl => nil)).not_to be_valid }
       it { expect(build(:clinical_trial, :condition_en => nil)).not_to be_valid }

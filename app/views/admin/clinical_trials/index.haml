@@ -9,12 +9,14 @@
     %table
       %thead
         %tr
+          %td= t('admin.clinical_trials.index.order')
           %td= t('admin.clinical_trials.index.condition')
           %td= t('admin.clinical_trials.index.description')
           %td= t('admin.actions')
       %tbody
         - @clinical_trials.each do |clinical_trial|
           %tr
+            %td= clinical_trial.order
             %td= clinical_trial.condition(:locale => locale)
             %td= clinical_trial.description(:locale => locale)
             %td.action

@@ -6,6 +6,10 @@ describe Doctor do
   describe 'validations' do
     it { expect(doctor).to be_valid }
 
+    describe 'numericality' do
+      it { expect(build(:doctor, :order => nil)).not_to be_valid }
+    end
+
     describe 'presence' do
       it { expect(build(:doctor, :name_pl => nil)).not_to be_valid }
       it { expect(build(:doctor, :name_en => nil)).not_to be_valid }

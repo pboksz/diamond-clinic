@@ -39,6 +39,6 @@ class Admin::ClinicalTrialsController < Admin::ApplicationController
   private
 
   def create_params
-    params.require(:clinical_trial).permit(:condition_pl, :condition_en, :description_pl, :description_en)
+    params.require(:clinical_trial).permit(:order, :condition_pl, :condition_en, :description_pl, :description_en)
   end
 end

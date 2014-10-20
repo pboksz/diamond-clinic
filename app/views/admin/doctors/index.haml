@@ -9,6 +9,7 @@
     %table
       %thead
         %tr
+          %td= t('admin.doctors.index.order')
           %td= t('admin.doctors.index.name')
           %td= t('admin.doctors.index.specialty')
           %td= t('admin.doctors.index.biography')
@@ -16,6 +17,7 @@
       %tbody
         - @doctors.each do |doctor|
           %tr
+            %td= doctor.order
             %td= doctor.name(:locale => locale)
             %td= doctor.specialty(:locale => locale)
             %td= doctor.biography(:locale => locale)

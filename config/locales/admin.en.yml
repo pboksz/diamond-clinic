@@ -27,6 +27,7 @@ en:
       index:
         header: "Doctors"
         add: "Add a Doctor"
+        order: "Order"
         name: "Name"
         specialty: "Specialty"
         biography: "Biography"
@@ -39,6 +40,7 @@ en:
       index:
         header: "Clinical Trials"
         add: "Add a Clinical Trial"
+        order: "Order"
         condition: "Condition"
         description: "Description"
       new:
