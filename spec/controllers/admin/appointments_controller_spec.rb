@@ -7,7 +7,7 @@ describe Admin::AppointmentsController do
   describe 'GET #index' do
     before { get :index }
 
-    it { expect(assigns(:appointments)).to eq Appointment.desc(:created_at) }
+    it { expect(assigns(:appointments)).to eq Appointment.all }
     it { expect(response).to render_template :index }
   end
 end

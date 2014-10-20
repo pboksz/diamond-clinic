@@ -1,5 +1,5 @@
 class Admin::AppointmentsController < Admin::ApplicationController
   def index
-    @appointments = Appointment.desc(:created_at)
+    @appointments = Appointment.all
   end
 end

@@ -11,6 +11,8 @@ class Appointment
   field :time, :type => String
   field :message, :type => String
 
+  default_scope -> { order_by(:created_at.desc) }
+
   belongs_to :doctor
   delegate :name, :to => :doctor, :prefix => true, :allow_nil => true
 
