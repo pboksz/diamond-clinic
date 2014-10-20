@@ -15,8 +15,8 @@ en:
     address: "Ul. Gen. Augusta Fieldorfa-Nila 14/JU2"
     city: "31-209 Kraków"
     email: "biuro@diamondclinic.eu"
-    hours_weekday: "9:00 to 21:00"
-    hours_weekend: "9:00 to 15:00"
+    hours_weekday: "9:00 - 21:00"
+    hours_weekend: "9:00 - 15:00"
     nip: "678-292-45-94"
     regon: "120413380"
     phone_number: "+48 122 651 165"
@@ -41,7 +41,7 @@ en:
 
     footer:
       made_by: "Made by"
-      hours_weekday: "Monday to Friday:"
+      hours_weekday: "Monday - Friday:"
       hours_weekend: "Saturday:"
 
     about_us:
