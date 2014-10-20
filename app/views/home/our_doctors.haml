@@ -11,7 +11,7 @@
           .information
             .name
               = icon('chevron-right')
-              = doctor.name
+              = doctor.name(:locale => locale)
             .specialty= doctor.specialty(:locale => locale)
             .biography= simple_format(doctor.biography(:locale => locale))
           .clearfix
