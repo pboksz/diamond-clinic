@@ -8,9 +8,9 @@
       %h3= t('views.request_appointment.appointment.header')
       %p= t('views.request_appointment.appointment.description')
       = simple_form_for @appointment, :url => request_appointment_path(locale), :method => :post do |f|
-        = f.input :name, :error => false
-        = f.input :email, :error => false
-        = f.input :phone_number, :error => false
+        = f.input :name
+        = f.input :email
+        = f.input :phone_number
         = f.input :doctor, :collection => @doctors, :value_method => :id, :label_method => :name
         = f.input :clinical_trial, :collection => @clinical_trials, :value_method => :id, :label_method => :condition
         = f.input :date, :as => :string, :input_html => { :class => :datepicker }
