@@ -1,7 +1,6 @@
 pl:
   admin:
-    edit: "Edit"
-    delete: "Delete"
+    actions: "Actions"
 
     header:
       appointments: "Appointments"
@@ -43,6 +42,8 @@ pl:
         description: "Description"
       new:
         header: "Add a Clinical Trial"
+      edit:
+       header: "Edit Clinical Trial"
 
     admins:
       index:

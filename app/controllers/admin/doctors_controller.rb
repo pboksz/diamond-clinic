@@ -31,6 +31,11 @@ class Admin::DoctorsController < Admin::ApplicationController
     end
   end
 
+  def destroy
+    @doctor = Doctor.find(params[:id]).destroy
+    redirect_to admin_doctors_path(locale)
+  end
+
   private
 
   def create_params

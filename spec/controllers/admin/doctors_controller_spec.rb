@@ -60,4 +60,12 @@ describe Admin::DoctorsController do
       it { expect(response).to render_template :edit }
     end
   end
+
+  describe 'DELETE #destroy' do
+    let!(:doctor) { create(:doctor) }
+    subject { delete :destroy, :id => doctor.id }
+
+    it { expect { subject }.to change { Doctor.count }.by(-1) }
+    it { subject; expect(response).to redirect_to admin_doctors_path }
+  end
 end

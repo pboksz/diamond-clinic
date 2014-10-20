@@ -12,7 +12,7 @@
           %td= t('admin.doctors.index.name')
           %td= t('admin.doctors.index.specialty')
           %td= t('admin.doctors.index.biography')
-          %td= t('admin.edit')
+          %td= t('admin.actions')
       %tbody
         - @doctors.each do |doctor|
           %tr
@@ -22,3 +22,5 @@
             %td.action
               = link_to edit_admin_doctor_path(locale, doctor) do
                 = icon('pencil')
+              = link_to admin_doctor_path(locale, doctor), :method => :delete do
+                = icon('trash-o')

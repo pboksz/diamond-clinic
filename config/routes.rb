@@ -4,8 +4,8 @@ DiamondClinic::Application.routes.draw do
 
     namespace :admin do
       resources :appointments, :only => [:index]
-      resources :doctors, :only => [:index, :new, :create, :edit, :update]
-      resources :clinical_trials, :only => [:index, :new, :create, :destroy]
+      resources :doctors, :only => [:index, :new, :create, :edit, :update, :destroy]
+      resources :clinical_trials, :only => [:index, :new, :create, :edit, :update, :destroy]
       resources :admins, :only => [:index, :new, :create, :destroy]
       resource :password, :only => [:edit, :update]
 
