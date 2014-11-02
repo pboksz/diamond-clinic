@@ -62,6 +62,7 @@ end
 group :development, :test do
   gem 'factory_girl_rails'
   gem 'quiet_assets'
+  gem 'pry'
   gem 'rspec-rails'
   gem 'travis'
 end

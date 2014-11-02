@@ -294,6 +294,7 @@ DEPENDENCIES
   mongoid (~> 4.0.0)
   newrelic_rpm
   phony
+  pry
   quiet_assets
   rails (= 4.0.9)
   rails_12factor
