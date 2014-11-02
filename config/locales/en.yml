@@ -110,7 +110,7 @@ en:
         mobile_number: "Mobile:"
         fax_number: "Fax:"
         email: "Email:"
-        hours_weekday: "Monday to Friday:"
+        hours_weekday: "Monday - Friday:"
         hours_weekend: "Saturday:"
       directions:
         header: "Directions"
