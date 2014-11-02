@@ -17,6 +17,7 @@ en:
         email: "Email"
         phone_number: "Phone number"
         doctor: "Choose a Physician"
+        clinical_trial: "Choose a Clinical Trial"
         date: "Choose a Date"
         time: "Choose a Time"
         message: "Additional Information or Query"
