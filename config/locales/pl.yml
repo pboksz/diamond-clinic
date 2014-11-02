@@ -107,10 +107,10 @@ pl:
       contact:
         header: "Kontakt"
         phone_number: "Telefon:"
-        mobile_number: "Mobilne:"
+        mobile_number: "Komórka:"
         fax_number: "Fax:"
         email: "Email:"
-        hours_weekday: "Poniedziałku do Piątku:"
+        hours_weekday: "Poniedziałek - Piątek:"
         hours_weekend: "Sobota:"
       directions:
         header: "Dojazd"
