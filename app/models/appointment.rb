@@ -2,8 +2,8 @@ class Appointment
   include Mongoid::Document
   include Mongoid::Timestamps
 
-  field :doctor_id, :type => Integer
-  field :clinical_trial_id, :type => Integer
+  field :doctor_id, :type => BSON::ObjectId
+  field :clinical_trial_id, :type => BSON::ObjectId
   field :name, :type => String
   field :email, :type => String
   field :phone_number, :type => String
