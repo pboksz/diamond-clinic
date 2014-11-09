@@ -7,11 +7,12 @@
     .doctors
       - @doctors.each do |doctor|
         .doctor
-          .photo= icon('user-md')
-          .information
+          .main-info
+            .photo= icon('user-md')
             .name
               = icon('chevron-right')
               = doctor.name(:locale => locale)
             .specialty= doctor.specialty(:locale => locale)
-            .biography= simple_format(doctor.biography(:locale => locale))
+            .clearfix
+          .biography= simple_format(doctor.biography(:locale => locale))
           .clearfix

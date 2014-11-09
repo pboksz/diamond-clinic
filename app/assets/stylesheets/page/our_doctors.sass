@@ -8,21 +8,21 @@
       padding: 2em
       margin-bottom: 1em
       @include border-radius(0.6em)
-      .photo
-        float: left
-        height: 150px
-        width: 150px
-        font-size: 5em
-        position: relative
-        border: 1px solid $diamond-grey-dark
-        i.fa
-          position: absolute
-          top: 25%
-          left: 30%
-      .information
-        max-width: 80%
-        margin-left: 2em
-        float: left
+      .main-info
+        .photo
+          float: left
+          height: 150px
+          width: 150px
+          font-size: 5em
+          margin-right: 0.4em
+          position: relative
+          border: 1px solid $diamond-grey-dark
+          i.fa
+            position: absolute
+            top: 25%
+            left: 30%
         .name
           font-size: 1.4em
           font-weight: bold
+      .biography
+        max-width: 80%
