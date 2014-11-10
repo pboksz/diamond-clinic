@@ -2,6 +2,8 @@ class Doctor
   include Mongoid::Document
   include Mongoid::Timestamps
 
+  mount_uploader :photo, PhotoUploader
+
   field :order, :type => Integer
   field :name_pl, :type => String
   field :name_en, :type => String
