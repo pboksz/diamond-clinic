@@ -1,6 +1,6 @@
 .wrapper.admin.doctors
-  = render 'layouts/messages'
-
   .container
+    = render 'layouts/messages'
+
     %h2= t('admin.doctors.new.header')
     = render 'form', :url => admin_doctors_path(locale), :method => :post

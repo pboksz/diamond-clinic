@@ -1,9 +1,8 @@
 .wrapper.home.our-doctors
-  = render 'layouts/messages'
-
   .container
-    %h1= t('views.header.our_doctors')
+    = render 'layouts/messages'
 
+    %h1= t('views.header.our_doctors')
     .doctors
       - @doctors.each do |doctor|
         .doctor

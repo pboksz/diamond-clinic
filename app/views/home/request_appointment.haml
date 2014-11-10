@@ -1,9 +1,8 @@
 .wrapper.home.request-appointment
-  = render 'layouts/messages'
-
   .container
-    %h1= t('views.header.request_appointment')
+    = render 'layouts/messages'
 
+    %h1= t('views.header.request_appointment')
     .appointment
       %h3= t('views.request_appointment.appointment.header')
       %p= t('views.request_appointment.appointment.description')

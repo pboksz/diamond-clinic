@@ -1,7 +1,7 @@
 .wrapper.admin.clinical-trials
-  = render 'layouts/messages'
-
   .container
+    = render 'layouts/messages'
+
     .new-model
       %h2= t('admin.clinical_trials.index.header')
       = link_to t('admin.clinical_trials.index.add'), new_admin_clinical_trial_path(locale), :class => 'button'

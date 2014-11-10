@@ -1,6 +1,6 @@
 .wrapper.admin.clinical-trials
-  = render 'layouts/messages'
-
   .container
+    = render 'layouts/messages'
+
     %h2= t('admin.clinical_trials.new.header')
     = render 'form', :url => admin_clinical_trials_path(locale), :method => :post

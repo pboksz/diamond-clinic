@@ -1,7 +1,7 @@
 .wrapper.admin.admins
-  = render 'layouts/messages'
-
   .container
+    = render 'layouts/messages'
+
     %h2= t('admin.admins.new.header')
 
     = simple_form_for @admin, :url => admin_admins_path(locale), :method => :post do |f|
