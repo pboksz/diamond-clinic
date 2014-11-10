@@ -13,6 +13,7 @@
           %td= t('admin.doctors.index.name')
           %td= t('admin.doctors.index.specialty')
           %td= t('admin.doctors.index.biography')
+          %td= t('admin.doctors.index.photo')
           %td= t('admin.actions')
       %tbody
         - @doctors.each do |doctor|
@@ -21,6 +22,12 @@
             %td= doctor.name(:locale => locale)
             %td= doctor.specialty(:locale => locale)
             %td= doctor.biography(:locale => locale)
+            %td
+              .photo
+                - if doctor.photo?
+                  = image_tag photo_doctor_path(locale, doctor)
+                - else
+                  = icon('user-md')
             %td.action
               = link_to edit_admin_doctor_path(locale, doctor) do
                 = icon('pencil')

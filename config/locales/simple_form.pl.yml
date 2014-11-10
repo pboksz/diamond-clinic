@@ -30,6 +30,8 @@ pl:
         specialty_en: "Specjalność po Angielsku"
         biography_pl: "Biografia po Polsku"
         biography_en: "Biografia po Angielsku"
+        photo: "Zdjęcie Lekarza"
+        remove_photo: "Usuń Zdjęcie"
 
       clinical_trial:
         order: "Kolejność"
