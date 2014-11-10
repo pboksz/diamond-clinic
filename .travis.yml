@@ -18,3 +18,5 @@ deploy:
   app: diamond-clinic
   on:
     repo: pboksz/diamond-clinic
+notifications:
+  email: false
