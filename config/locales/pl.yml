@@ -49,7 +49,7 @@ pl:
       paragraph2: "Naszą misją jest zapewnienie wysokiej jakości opieki zdrowotnej zróżnicowanej populacji pacjentów. "
       paragraph3: "Zatrudniamy doświadczonych i kompetentnych specjalistów, wywodzących się z najlepszych Oddziałów i Klinik Szpitala Uniwersyteckiego w Krakowie."
       paragraph4: "Oferujemy szeroki zakres usług medycznych, w tym dostęp do najnowocześniejszych metod diagnostyczno-terapeutycznych. Sukces naszego leczenia zawdzięczamy  indywidualnemu  podejściu do każdego pacjenta i terapii prowadzonej w oparciu o najnowsze standardy medyczne."
-      paragraph5: "W celu umówienia się na spotkanie z naszymi specjalistami, lub uzyskania informacji na temat aktualnie prowadzonych przez nas badań klinicznych prosimy o kontakt telefoniczny pod nr tel. %{telephone}, kom. %{mobile} lub kontakt mailowy pod adres: %{email}"
+      paragraph5: "W celu umówienia się na spotkanie z naszymi specjalistami, lub uzyskania informacji na temat aktualnie prowadzonych przez nas badań klinicznych prosimy o kontakt:"
 
     our_doctors:
 

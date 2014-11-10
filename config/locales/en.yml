@@ -49,7 +49,7 @@ en:
       paragraph2: "Our mission is to provide the highest quality of healthcare to our diverse patient population giving them a full range of services including access to the newest therapies and medications."
       paragraph3: "We employ experienced and passionate physicians, educated and practicing at the top Jagiellonian University Hospital departments and clinics."
       paragraph4: "We pride ourselves on providing these services in an empathetic, respectful, and caring environment."
-      paragraph5: "Contact us today to schedule an appointment with one of our specialists or to learn about our current ongoing medical trials. Call us at %{telephone} or %{mobile} or email us at %{email}"
+      paragraph5: "Contact us today to schedule an appointment with one of our specialists or to learn about our current ongoing medical trials:"
 
     our_doctors:
 

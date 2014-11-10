@@ -7,4 +7,13 @@
     %p= t('views.about_us.paragraph2')
     %p= t('views.about_us.paragraph3')
     %p= t('views.about_us.paragraph4')
-    %p= t('views.about_us.paragraph5', :telephone => t('defaults.phone_number'), :mobile => t('defaults.mobile_number'), :email => t('defaults.email'))
+    %p= t('views.about_us.paragraph5')
+    .section
+      = icon('chevron-right')
+      = t('defaults.clinical_trials_number_1')
+    .section
+      = icon('chevron-right')
+      = t('defaults.clinical_trials_number_2')
+    .section
+      = icon('chevron-right')
+      = mail_to t('defaults.email')
