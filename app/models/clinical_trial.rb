@@ -13,13 +13,5 @@ class ClinicalTrial
   validates :order, :numericality => { :only_integer => true }
   validates :condition_pl, :condition_en, :description_pl, :description_en, :presence => true
 
-  def condition(options = {})
-    locale = options[:locale] || :pl
-    self.send("condition_#{locale}") if self.respond_to?("condition_#{locale}")
-  end
-
-  def description(options = {})
-    locale = options[:locale] || :pl
-    self.send("description_#{locale}") if self.respond_to?("description_#{locale}")
-  end
+  translation_accessor :condition, :description
 end

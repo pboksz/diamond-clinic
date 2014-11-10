@@ -17,18 +17,5 @@ class Doctor
   validates :order, :numericality => { :only_integer => true }
   validates :name_pl, :name_en, :specialty_pl, :specialty_en, :biography_pl, :biography_en, :presence => true
 
-  def name(options = {})
-    locale = options[:locale] || :pl
-    self.send("name_#{locale}") if self.respond_to?("name_#{locale}")
-  end
-
-  def specialty(options = {})
-    locale = options[:locale] || :pl
-    self.send("specialty_#{locale}") if self.respond_to?("specialty_#{locale}")
-  end
-
-  def biography(options = {})
-    locale = options[:locale] || :pl
-    self.send("biography_#{locale}") if self.respond_to?("biography_#{locale}")
-  end
+  translation_accessor :name, :specialty, :biography
 end
