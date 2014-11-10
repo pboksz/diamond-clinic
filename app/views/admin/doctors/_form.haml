@@ -9,7 +9,7 @@
   - if @doctor.photo?
     = label_tag t('simple_form.labels.doctor.photo')
     .input.photo
-      = image_tag photo_doctor_path(locale, @doctor), :class => 'doctor-photo'
+      = image_tag photo_doctor_path(locale, @doctor)
       = f.input :remove_photo, :as => :boolean
   - else
     = f.input :photo, :as => :file
