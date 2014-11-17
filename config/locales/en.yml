@@ -4,9 +4,9 @@ en:
     header: "Appointment request"
     name: "Name: %{name}"
     email: "Email: %{email}"
-    phone_number: "Phone number: %{phone_number}"
+    phone_number: "Phone Number: %{phone_number}"
     doctor: "Doctor: %{doctor}"
-    clinical_trial: "Clinical trial: %{clinical_trial}"
+    clinical_trial: "Clinical Trial: %{clinical_trial}"
     when: "When: %{when}"
 
   defaults:
@@ -32,8 +32,8 @@ en:
 
   views:
     readmore:
-      more: "Czytaj Więcej"
-      less: "Czytaj Mniej"
+      more: "Read More"
+      less: "Read Less"
 
     header:
       about_us: "About Us"
@@ -107,7 +107,7 @@ en:
       address:
         header: "Address"
         nip: "NIP:"
-        regon: "Regon:"
+        regon: "REGON:"
       contact:
         header: "Contact"
         phone_number: "Phone:"

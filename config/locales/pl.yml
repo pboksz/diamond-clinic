@@ -1,13 +1,13 @@
 pl:
   mailers:
-    subject: "Appointment request from %{name} for %{when}"
-    header: "Appointment request"
-    name: "Name: %{name}"
+    subject: "Umów Wizytę od %{name} na %{when}"
+    header: "Umów Wizytę"
+    name: "Imię i Nazwisko: %{name}"
     email: "Email: %{email}"
-    phone_number: "Phone number: %{phone_number}"
-    doctor: "Doctor: %{doctor}"
-    clinical_trial: "Clinical trial: %{clinical_trial}"
-    when: "When: %{when}"
+    phone_number: "Numer Telefonu: %{phone_number}"
+    doctor: "Lekarze: %{doctor}"
+    clinical_trial: "Badania Kliniczne: %{clinical_trial}"
+    when: "Kiedy: %{when}"
 
   defaults:
     name: "Diamond Clinic"
@@ -27,8 +27,8 @@ pl:
     trams: "3, 5, 18, 50"
     buses: "102, 118, 120, 137, 138, 168, 194, 207, 217, 220, 227, 237, 240, 247, 267, 287, 297"
     stop: "Krowodrza Górka"
-    description: "Diamond Clinic is a top of the line health clinic"
-    keywords: "health, care, healthcare, surgery, medicine, medical, clinic, diamond, clinical trials, doctor, surgeon, Krakow, Poland, internist, cardiologist, pulmonologist, allergologist, nephrologist, neurologist"
+    description: "Diamond Clinic jest premier przychodnia zdrowia"
+    keywords: "zdrowia, opieki, opieki zdrowotnej, chirurgia, medycyna, medycznych, przychodnia, diament, badania kliniczne, lekarz, chirurg, Kraków, Polska, internista, kardiolog, pulmonolog, alergolog, nefrolog, neurolog"
 
   views:
     readmore:
@@ -97,8 +97,8 @@ pl:
 
     request_appointment:
       appointment:
-        sent: "Your appointment request has been sent. You will receive a call or email shortly to finalize the appointment."
-        error: "There was an error sending your appointment request. Please fill in the marked fields and try again."
+        sent: "Twoje umówe wizyty została wysłana. Będziesz otrzymywać połączenia lub e-maila, aby zakończyć spotkanie."
+        error: "Był błąd podczas wysyłania umówe wizity. Proszę wypełnić pola oznaczone i spróbuj ponownie."
         header: "Formularz Kontaktowy"
         description: "Zapisz Się Na Wizytę lub Zapytaj o Badanie Kliniczne"
         submit: "Wyślij"
@@ -107,7 +107,7 @@ pl:
       address:
         header: "Adres"
         nip: "NIP:"
-        regon: "Regon:"
+        regon: "REGON:"
       contact:
         header: "Kontakt"
         phone_number: "Telefon:"
