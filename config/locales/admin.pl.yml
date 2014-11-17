@@ -1,10 +1,10 @@
 pl:
   admin:
-    actions: "Actions"
-    confirm: "Are you sure you want to delete this?"
+    actions: "Akcje"
+    confirm: "Czy na pewno chcesz usunąć?"
 
     header:
-      appointments: "Appointments"
+      appointments: "Umówe Wizity"
       doctors: "Lekarze"
       clinical_trials: "Badanie Kliniczne"
       admins: "Admins"
@@ -13,55 +13,55 @@ pl:
 
     appointments:
       index:
-        header: "Appointments"
-        client: "Client"
+        header: "Umówe Wizity"
+        client: "Klient"
         email: "Email"
-        phone_number: "Phone number"
-        doctor: "Doctor"
-        clinical_trial: "Clinical trial"
-        when: "When"
-        created_at: "Sent"
-        message: "Message"
+        phone_number: "Numer Telefonu"
+        doctor: "Lekarz"
+        clinical_trial: "Badania Kliniczne"
+        when: "Kiedy"
+        created_at: "Wysłane"
+        message: "Wiadomość"
 
     doctors:
       index:
-        header: "Doctors"
-        add: "Add a Doctor"
-        order: "Order"
-        name: "Name"
-        specialty: "Specialty"
-        biography: "Biography"
-        photo: "Photo"
+        header: "Lekarze"
+        add: "Dodaj Lekarza"
+        order: "Kolejność"
+        name: "Imię i Nazwisko"
+        specialty: "Specjalność"
+        biography: "Biografia"
+        photo: "Zdjęcie"
       new:
-        header: "Add a Doctor"
+        header: "Dodaj Lekarza"
       edit:
-        header: "Edit Doctor"
+        header: "Edytuj Lekarza"
 
     clinical_trials:
       index:
-        header: "Clinical Trials"
-        add: "Add a Clinical Trial"
-        order: "Order"
-        condition: "Condition"
-        description: "Description"
+        header: "Badanie Kliniczne"
+        add: "Dodaj Badanie Kliniczne"
+        order: "Kolejność"
+        condition: "Stan Zdrowia"
+        description: "Opis"
       new:
-        header: "Add a Clinical Trial"
+        header: "Dodaj Badanie Kliniczne"
       edit:
-       header: "Edit Clinical Trial"
+       header: "Edytuj Badanie Kliniczne"
 
     admins:
       index:
         header: "Admins"
-        add: "Add an Admin"
+        add: "Dodaj Admina"
         email: "Email"
-        sign_in_count: "Login Count"
-        current_sign_in_at: "Current Login Time"
-        current_sign_in_ip: "Current Login IP"
-        last_sign_in_at: "Last Login Time"
-        last_sign_in_ip: "Last Login IP"
+        sign_in_count: "Liczba Logowania"
+        current_sign_in_at: "Aktualny czas Logowania"
+        current_sign_in_ip: "Aktualny IP Logowania"
+        last_sign_in_at: "Ostatni czas Logowanie"
+        last_sign_in_ip: "Ostatni IP Logowani"
       new:
-        header: "Add an Admin"
+        header: "Dodaj Admina"
 
     passwords:
       edit:
-        header: "Change Password"
+        header: "Zmień Hasło"
