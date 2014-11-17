@@ -31,6 +31,10 @@ pl:
     keywords: "health, care, healthcare, surgery, medicine, medical, clinic, diamond, clinical trials, doctor, surgeon, Krakow, Poland, internist, cardiologist, pulmonologist, allergologist, nephrologist, neurologist"
 
   views:
+    readmore:
+      more: "Czytaj Więcej"
+      less: "Czytaj Mniej"
+
     header:
       about_us: "O Nas"
       our_doctors: "Nasi Lekarze"
