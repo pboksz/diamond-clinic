@@ -1,4 +1,4 @@
-$(document).on "ready page:load", ->
+$(document).on 'ready page:load', ->
   match = window.location.pathname.match(/\/(en|pl)\//i)
   locale = if match then match[1] else 'en'
 
