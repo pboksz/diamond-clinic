@@ -21,7 +21,8 @@
             %td= doctor.order
             %td= doctor.name(:locale => locale)
             %td= doctor.specialty(:locale => locale)
-            %td= doctor.biography(:locale => locale)
+            %td
+              .readmore= simple_format(doctor.biography(:locale => locale))
             %td
               .photo
                 - if doctor.photo?

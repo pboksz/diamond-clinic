@@ -42,4 +42,5 @@
             .condition
               = icon('chevron-right')
               = clinical_trial.condition(:locale => locale)
-            .description= simple_format(clinical_trial.description(:locale => locale))
+            .description.readmore= simple_format(clinical_trial.description(:locale => locale))
+            .clearfix

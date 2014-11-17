@@ -25,4 +25,5 @@
             %td= appointment.clinical_trial_condition
             %td= appointment.when
             %td= appointment.created_at
-            %td= appointment.message
+            %td
+              .readmore= simple_format(appointment.message)
