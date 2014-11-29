@@ -14,6 +14,5 @@
 //= require jquery_ujs
 //= require jquery-ui/datepicker
 //= require jquery-ui/datepicker-pl
-//= require readmore.min
 //= require turbolinks
 //= require_tree .
