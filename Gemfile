@@ -55,11 +55,8 @@ group :doc do
 end
 
 group :test do
-  gem 'capybara'
   gem 'codeclimate-test-reporter', :require => nil
-  gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
-  gem 'headless'
 end
 
 group :development, :test do
