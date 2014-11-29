@@ -85,7 +85,7 @@ GEM
     faraday_middleware (0.9.1)
       faraday (>= 0.7.4, < 0.10)
     ffi (1.9.6)
-    font-awesome-sass (4.2.0)
+    font-awesome-sass (4.2.2)
       sass (~> 3.2)
     fssm (0.2.10)
     gh (0.13.2)
