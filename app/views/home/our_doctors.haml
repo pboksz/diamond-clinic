@@ -17,5 +17,5 @@
               = doctor.name(:locale => locale)
             .specialty= doctor.specialty(:locale => locale)
             .clearfix
-          .biography.readmore= simple_format(doctor.biography(:locale => locale))
+          .biography= readmore(doctor.biography(:locale => locale))
           .clearfix
