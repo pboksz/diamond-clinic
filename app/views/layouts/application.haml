@@ -3,7 +3,7 @@
   %head
     %title= "#{t('defaults.name')} | #{t('defaults.tagline')}"
     %meta{ :name => :description, :content => t('defaults.description') }
-    %meta{ :name => :keywords, :content => [].join(', ') }
+    %meta{ :name => :keywords, :content => t('defaults.keywords') }
     = stylesheet_link_tag 'application', :media => 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
