@@ -7,4 +7,4 @@
     = simple_form_for current_admin, :url => admin_password_path(locale), :method => :put do |f|
       = f.input :password, :as => :password
       = f.input :password_confirmation, :as => :password
-      = render 'admin/actions', :url => admin_root_path(locale)
+      = render 'admin/actions', :url => :back
