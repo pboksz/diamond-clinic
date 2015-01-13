@@ -6,7 +6,7 @@ class Admin::PasswordsController < Admin::ApplicationController
   def update
     if current_admin.update_attributes(update_params)
       sign_in current_admin, :bypass => true
-      redirect_to admin_root_path(locale)
+      redirect_to back_path(locale)
     else
       render :edit
     end

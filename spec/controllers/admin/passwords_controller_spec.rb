@@ -13,8 +13,10 @@ describe Admin::PasswordsController do
     before { put :update, :admin => params }
 
     describe 'valid params' do
+      before { allow(controller).to receive(:back_path) { admin_appointments_path } }
       let(:params) { { :password => 'password', :password_confirmation => 'password' } }
-      it { expect(response).to redirect_to admin_root_path }
+
+      it { expect(response).to redirect_to admin_appointments_path }
     end
 
     describe 'invalid params' do
