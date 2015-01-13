@@ -1,4 +1,4 @@
-DiamondClinic::Application.routes.draw do
+Rails.application.routes.draw do
   scope '(:locale)', :locale => /(en|pl)/ do
     devise_for :admin, :path_names => { :sign_in => :login, :sign_out => :logout },
                :controllers => { :sessions => 'admin/sessions' }
