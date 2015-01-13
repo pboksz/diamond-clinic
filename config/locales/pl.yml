@@ -28,7 +28,7 @@ pl:
     buses: "102, 118, 120, 137, 138, 168, 194, 207, 217, 220, 227, 237, 240, 247, 267, 287, 297"
     stop: "Krowodrza Górka"
     description: "Diamond Clinic jest premier przychodnia zdrowia"
-    keywords: "zdrowia, opieki, opieki zdrowotnej, chirurgia, medycyna, medycznych, przychodnia, diament, badania kliniczne, lekarz, chirurg, Kraków, Polska, internista, kardiolog, pulmonolog, alergolog, nefrolog, neurolog"
+    keywords: "zdrowia, opieki, opieki zdrowotnej, chirurgia, medycyna, medycznych, przychodnia, klinika, diament, badania kliniczne, lekarz, chirurg, Kraków, Małopolska, Polska, internista, kardiolog, pulmonolog, alergolog, nefrolog, neurolog"
 
   views:
     readmore:
