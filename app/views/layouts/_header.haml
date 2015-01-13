@@ -20,7 +20,7 @@
         = link_to t('admin.header.clinical_trials'), admin_clinical_trials_path(locale)
         = link_to t('admin.header.admins'), admin_admins_path(locale)
         = link_to t('admin.header.password'), edit_admin_password_path(locale)
-        = link_to t('admin.header.logout'), destroy_admin_session_path(locale), :method => :delete
+        = link_to t('admin.header.logout'), destroy_admin_session_path(locale)
       - else
         = link_to t('views.header.about_us'), about_us_path(locale)
         = link_to t('views.header.our_doctors'), our_doctors_path(locale)
