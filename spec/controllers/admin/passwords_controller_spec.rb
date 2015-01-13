@@ -6,8 +6,6 @@ describe Admin::PasswordsController do
 
   describe 'GET #edit' do
     before { get :edit }
-
-    it { expect(assigns(:admin)).to eq admin }
     it { expect(response).to render_template :edit }
   end
 

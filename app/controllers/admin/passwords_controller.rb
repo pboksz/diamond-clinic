@@ -1,6 +1,6 @@
 class Admin::PasswordsController < Admin::ApplicationController
   def edit
-    @admin = current_admin
+
   end
 
   def update
