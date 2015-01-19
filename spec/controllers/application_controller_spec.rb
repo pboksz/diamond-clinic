@@ -3,7 +3,7 @@ require 'rails_helper'
 describe ApplicationController do
   controller do
     def index
-      render :nothing => true
+      render nothing: true
     end
   end
 
@@ -13,7 +13,7 @@ describe ApplicationController do
       subject { I18n.locale }
 
       describe 'params has locale' do
-        let(:params) { { :locale => :pl } }
+        let(:params) { { locale: :pl } }
         it { expect(subject).to eq :pl }
       end
 
@@ -29,7 +29,7 @@ describe ApplicationController do
     subject { controller.locale }
 
     describe 'params has locale' do
-      let(:params) { { :locale => :pl } }
+      let(:params) { { locale: :pl } }
       it { expect(subject).to eq 'pl' }
     end
 

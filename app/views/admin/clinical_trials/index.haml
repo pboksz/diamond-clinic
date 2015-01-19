@@ -4,7 +4,7 @@
 
     .new-model
       %h2= t('admin.clinical_trials.index.header')
-      = link_to t('admin.clinical_trials.index.add'), new_admin_clinical_trial_path(locale), :class => 'button'
+      = link_to t('admin.clinical_trials.index.add'), new_admin_clinical_trial_path(locale), class: 'button'
 
     %table
       %thead
@@ -17,10 +17,10 @@
         - @clinical_trials.each do |clinical_trial|
           %tr
             %td= clinical_trial.order
-            %td= clinical_trial.condition(:locale => locale)
-            %td= readmore(clinical_trial.description(:locale => locale))
+            %td= clinical_trial.condition(locale: locale)
+            %td= readmore(clinical_trial.description(locale: locale))
             %td.action
               = link_to edit_admin_clinical_trial_path(locale, clinical_trial) do
                 = icon('pencil')
-              = link_to admin_clinical_trial_path(locale, clinical_trial), :method => :delete, :data => { :confirm => t('admin.confirm') } do
+              = link_to admin_clinical_trial_path(locale, clinical_trial), method: :delete, data: { confirm: t('admin.confirm') } do
                 = icon('trash-o')

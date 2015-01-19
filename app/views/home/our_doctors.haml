@@ -14,8 +14,8 @@
                 = icon('user-md')
             .name
               = icon('chevron-right')
-              = doctor.name(:locale => locale)
-            .specialty= doctor.specialty(:locale => locale)
+              = doctor.name(locale: locale)
+            .specialty= doctor.specialty(locale: locale)
             .clearfix
-          .biography= readmore(doctor.biography(:locale => locale))
+          .biography= readmore(doctor.biography(locale: locale))
           .clearfix

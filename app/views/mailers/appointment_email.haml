@@ -1,9 +1,9 @@
 %h2= t('mailers.header')
 
-%p= t('mailers.name', :name => @appointment.name)
-%p= t('mailers.phone_number', :phone_number => @appointment.phone_number)
-%p= t('mailers.email', :email => @appointment.email)
-%p= t('mailers.doctor', :doctor => @appointment.doctor_name)
-%p= t('mailers.clinical_trial', :clinical_trial => @appointment.clinical_trial_condition)
-%p= t('mailers.when', :when => @appointment.when)
+%p= t('mailers.name', name: @appointment.name)
+%p= t('mailers.phone_number', phone_number: @appointment.phone_number)
+%p= t('mailers.email', email: @appointment.email)
+%p= t('mailers.doctor', doctor: @appointment.doctor_name)
+%p= t('mailers.clinical_trial', clinical_trial: @appointment.clinical_trial_condition)
+%p= t('mailers.when', when: @appointment.when)
 %p= simple_format @appointment.message

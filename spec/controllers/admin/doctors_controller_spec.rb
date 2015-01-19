@@ -19,7 +19,7 @@ describe Admin::DoctorsController do
   end
 
   describe 'POST #create' do
-    before { post :create, :doctor => params }
+    before { post :create, doctor: params }
 
     describe 'saves properly' do
       let(:params) { attributes_for(:doctor) }
@@ -29,7 +29,7 @@ describe Admin::DoctorsController do
     end
 
     describe 'does not save' do
-      let(:params) { attributes_for(:doctor, :name_pl => nil) }
+      let(:params) { attributes_for(:doctor, name_pl: nil) }
 
       it { expect(assigns(:doctor)).not_to be_persisted }
       it { expect(response).to render_template :new }
@@ -38,7 +38,7 @@ describe Admin::DoctorsController do
 
   describe 'GET #edit' do
     let(:doctor) { create(:doctor) }
-    before { get :edit, :id => doctor.id }
+    before { get :edit, id: doctor.id }
 
     it { expect(assigns(:doctor)).to eq doctor }
     it { expect(response).to render_template :edit }
@@ -46,24 +46,24 @@ describe Admin::DoctorsController do
 
   describe 'PUT #update' do
     let(:doctor) { create(:doctor) }
-    before { put :update, :id => doctor.id, :doctor => params }
+    before { put :update, id: doctor.id, doctor: params }
 
     describe 'valid params' do
-      let(:params) { { :name_pl => 'Dr. Who' } }
+      let(:params) { { name_pl: 'Dr. Who' } }
 
       it { expect(doctor.reload.name).to eq 'Dr. Who' }
       it { expect(response).to redirect_to admin_doctors_path }
     end
 
     describe 'invalid params' do
-      let(:params) { { :name_pl => nil } }
+      let(:params) { { name_pl: nil } }
       it { expect(response).to render_template :edit }
     end
   end
 
   describe 'DELETE #destroy' do
     let!(:doctor) { create(:doctor) }
-    subject { delete :destroy, :id => doctor.id }
+    subject { delete :destroy, id: doctor.id }
 
     it { expect { subject }.to change { Doctor.count }.by(-1) }
     it { subject; expect(response).to redirect_to admin_doctors_path }

@@ -3,4 +3,4 @@
     = render 'layouts/messages'
 
     %h2= t('admin.doctors.new.header')
-    = render 'form', :url => admin_doctors_path(locale), :method => :post
+    = render 'form', url: admin_doctors_path(locale), method: :post

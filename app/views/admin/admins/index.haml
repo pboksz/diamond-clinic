@@ -4,7 +4,7 @@
 
     .new-model
       %h2= t('admin.admins.index.header')
-      = link_to t('admin.admins.index.add'), new_admin_admin_path(locale), :class => 'button'
+      = link_to t('admin.admins.index.add'), new_admin_admin_path(locale), class: 'button'
 
     %table
       %thead
@@ -26,5 +26,5 @@
             %td= admin.last_sign_in_at
             %td= admin.last_sign_in_ip
             %td.action
-              = link_to admin_admin_path(locale, admin), :method => :delete, :data => { :confirm => t('admin.confirm') } do
+              = link_to admin_admin_path(locale, admin), method: :delete, data: { confirm: t('admin.confirm') } do
                 = icon('trash-o')

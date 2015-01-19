@@ -28,12 +28,12 @@ module DiamondClinic
     config.i18n.default_locale = :pl
 
     # for creating rspec specs instead of test on rail generate
-    config.generators.test_framework :rspec, :fixture => true
+    config.generators.test_framework :rspec, fixture: true
 
     # for automatically creating factory girl fixtures
-    config.generators.fixture_replacement :factory_girl, :dir => 'spec/factories'
+    config.generators.fixture_replacement :factory_girl, dir: 'spec/factories'
 
-    Date::DATE_FORMATS.merge!(:default => '%d.%m.%Y')
-    Time::DATE_FORMATS.merge!(:default => '%d.%m.%Y @ %H:%M')
+    Date::DATE_FORMATS.merge!(default: '%d.%m.%Y')
+    Time::DATE_FORMATS.merge!(default: '%d.%m.%Y @ %H:%M')
   end
 end

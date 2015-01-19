@@ -19,7 +19,7 @@ describe Admin::AdminsController do
   end
 
   describe 'POST #create' do
-    before { post :create, :admin => params }
+    before { post :create, admin: params }
 
     describe 'saves properly' do
       let(:params) { attributes_for(:admin) }
@@ -29,7 +29,7 @@ describe Admin::AdminsController do
     end
 
     describe 'does not save' do
-      let(:params) { attributes_for(:admin, :email => nil) }
+      let(:params) { attributes_for(:admin, email: nil) }
 
       it { expect(assigns(:admin)).not_to be_persisted }
       it { expect(response).to render_template :new }
@@ -38,7 +38,7 @@ describe Admin::AdminsController do
 
   describe 'DELETE #destroy' do
     let!(:admin) { create(:admin) }
-    subject { delete :destroy, :id => admin.id }
+    subject { delete :destroy, id: admin.id }
 
     it { expect { subject }.to change { Admin.count }.by(-1) }
     it { subject; expect(response).to redirect_to admin_admins_path }

@@ -42,16 +42,16 @@ describe HomeController do
   end
 
   describe 'POST #appointment_create' do
-    before { post :appointment_create, :appointment => params }
+    before { post :appointment_create, appointment: params }
 
     describe 'saves properly' do
       let(:mailer) { double }
       let(:doctor) { create(:doctor) }
-      let(:params) { attributes_for(:appointment).merge(:doctor => doctor) }
+      let(:params) { attributes_for(:appointment).merge(doctor: doctor) }
       before do
         expect(AppointmentMailer).to receive(:appointment_email) { mailer }
         expect(mailer).to receive(:deliver)
-        post :appointment_create, :appointment => params
+        post :appointment_create, appointment: params
       end
 
       it { expect(assigns(:appointment)).to be_persisted }
@@ -59,8 +59,8 @@ describe HomeController do
     end
 
     describe 'does not save' do
-      let(:params) { attributes_for(:appointment, :name => nil) }
-      before { post :appointment_create, :appointment => params }
+      let(:params) { attributes_for(:appointment, name: nil) }
+      before { post :appointment_create, appointment: params }
 
       it { expect(assigns(:appointment)).not_to be_persisted }
       it { expect(assigns(:doctors)).to eq Doctor.all }

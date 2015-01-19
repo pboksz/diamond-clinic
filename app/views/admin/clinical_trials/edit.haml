@@ -3,4 +3,4 @@
     = render 'layouts/messages'
 
     %h2= t('admin.clinical_trials.edit.header')
-    = render 'form', :url => admin_clinical_trial_path(locale, @clinical_trial), :method => :put
+    = render 'form', url: admin_clinical_trial_path(locale, @clinical_trial), method: :put

@@ -2,25 +2,25 @@ class Appointment
   include Mongoid::Document
   include Mongoid::Timestamps
 
-  field :doctor_id, :type => BSON::ObjectId
-  field :clinical_trial_id, :type => BSON::ObjectId
-  field :name, :type => String
-  field :email, :type => String
-  field :phone_number, :type => String
-  field :date, :type => Date
-  field :time, :type => String
-  field :message, :type => String
+  field :doctor_id, type: BSON::ObjectId
+  field :clinical_trial_id, type: BSON::ObjectId
+  field :name, type: String
+  field :email, type: String
+  field :phone_number, type: String
+  field :date, type: Date
+  field :time, type: String
+  field :message, type: String
 
   default_scope -> { order_by(:created_at.desc) }
 
   belongs_to :doctor
-  delegate :name, :to => :doctor, :prefix => true, :allow_nil => true
+  delegate :name, to: :doctor, prefix: true, allow_nil: true
 
   belongs_to :clinical_trial
-  delegate :condition, :to => :clinical_trial, :prefix => true, :allow_nil => true
+  delegate :condition, to: :clinical_trial, prefix: true, allow_nil: true
 
-  validates :name, :presence => true
-  validates :email, :format => { :with => Devise.email_regexp }
+  validates :name, presence: true
+  validates :email, format: { with: Devise.email_regexp }
   validate  :phone_number_is_plausible
 
   def phone_number=(value)
@@ -42,7 +42,7 @@ class Appointment
   private
 
   def phone_number_plausible?(value)
-    Phony.plausible?(value, :cc => '48')
+    Phony.plausible?(value, cc: '48')
   end
 
   def phone_number_is_plausible
@@ -53,7 +53,7 @@ class Appointment
 
   def normalize_phone_number(value)
     if phone_number_plausible?("+48#{value}")
-      Phony.normalize(value, :cc => '48')
+      Phony.normalize(value, cc: '48')
     else
       value
     end
@@ -61,7 +61,7 @@ class Appointment
 
   def format_phone_number(value)
     if phone_number_plausible?(value)
-      Phony.format(value, :format => :national)[1..-1]
+      Phony.format(value, format: :national)[1..-1]
     else
       value
     end

@@ -1,17 +1,17 @@
-= simple_form_for @doctor, :url => url, :method => method do |f|
+= simple_form_for @doctor, url: url, method: method do |f|
   = f.input :order
   = f.input :name_pl
   = f.input :name_en
   = f.input :specialty_pl
   = f.input :specialty_en
-  = f.input :biography_pl, :as => :text
-  = f.input :biography_en, :as => :text
+  = f.input :biography_pl, as: :text
+  = f.input :biography_en, as: :text
   - if @doctor.photo?
     = label_tag t('simple_form.labels.doctor.photo')
     .input.photo
       = image_tag photo_doctor_path(locale, @doctor)
-      = f.input :remove_photo, :as => :boolean
+      = f.input :remove_photo, as: :boolean
   - else
-    = f.input :photo, :as => :file
-    = f.input :photo_cache, :as => :hidden
-  = render 'admin/actions', :url => admin_doctors_path(locale)
+    = f.input :photo, as: :file
+    = f.input :photo_cache, as: :hidden
+  = render 'admin/actions', url: admin_doctors_path(locale)

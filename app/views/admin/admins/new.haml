@@ -4,8 +4,8 @@
 
     %h2= t('admin.admins.new.header')
 
-    = simple_form_for @admin, :url => admin_admins_path(locale), :method => :post do |f|
+    = simple_form_for @admin, url: admin_admins_path(locale), method: :post do |f|
       = f.input :email
-      = f.input :password, :as => :password
-      = f.input :password_confirmation, :as => :password
-      = render 'admin/actions', :url => admin_admins_path(locale)
+      = f.input :password, as: :password
+      = f.input :password_confirmation, as: :password
+      = render 'admin/actions', url: admin_admins_path(locale)

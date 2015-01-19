@@ -3,7 +3,7 @@
     = render 'layouts/messages'
 
     %h2= t('devise.sessions.new.header')
-    = simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
-      = f.input :email, :autofocus => true
+    = simple_form_for resource, as: resource_name, url: session_path(resource_name) do |f|
+      = f.input :email, autofocus: true
       = f.input :password
-      = f.button :submit, t('devise.sessions.new.submit'), :class => 'button'
+      = f.button :submit, t('devise.sessions.new.submit'), class: 'button'

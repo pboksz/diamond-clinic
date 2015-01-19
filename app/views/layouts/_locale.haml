@@ -1,6 +1,6 @@
 - new_locale = if locale.nil? || locale == 'pl' then 'en' else nil end
 - if request.method == 'GET'
-  = link_to url_for params.merge(:locale => new_locale) do
-    %img{ :class => "flag flag-#{new_locale || 'pl'}" }
+  = link_to url_for params.merge(locale: new_locale) do
+    %img{ class: "flag flag-#{new_locale || 'pl'}" }
 - else
-  %img{ :class => "flag flag-#{new_locale || 'pl'}" }
+  %img{ class: "flag flag-#{new_locale || 'pl'}" }

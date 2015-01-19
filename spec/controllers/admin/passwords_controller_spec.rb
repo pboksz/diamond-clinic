@@ -10,17 +10,17 @@ describe Admin::PasswordsController do
   end
 
   describe 'PUT #update' do
-    before { put :update, :admin => params }
+    before { put :update, admin: params }
 
     describe 'valid params' do
       before { allow(controller).to receive(:back_path) { admin_appointments_path } }
-      let(:params) { { :password => 'password', :password_confirmation => 'password' } }
+      let(:params) { { password: 'password', password_confirmation: 'password' } }
 
       it { expect(response).to redirect_to admin_appointments_path }
     end
 
     describe 'invalid params' do
-      let(:params) { { :password => '' } }
+      let(:params) { { password: '' } }
       it { expect(response).to render_template :edit }
     end
   end
