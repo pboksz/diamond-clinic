@@ -8,7 +8,7 @@ describe Admin::SessionsController do
         get :new
       end
 
-      it { expect(response).to redirect_to admin_appointments_path }
+      it { expect(response).to redirect_to admin_appointments_path(locale) }
     end
 
     describe 'no current admin' do
@@ -37,7 +37,7 @@ describe Admin::SessionsController do
         post :create, admin: { email: admin.email, password: password }
       end
 
-      it { expect(response).to redirect_to admin_appointments_path }
+      it { expect(response).to redirect_to admin_appointments_path(locale) }
     end
   end
 
@@ -47,6 +47,6 @@ describe Admin::SessionsController do
       get :destroy
     end
 
-    it { expect(response).to redirect_to root_path }
+    it { expect(response).to redirect_to root_path(locale) }
   end
 end

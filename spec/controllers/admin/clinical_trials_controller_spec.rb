@@ -25,7 +25,7 @@ describe Admin::ClinicalTrialsController do
       let(:params) { attributes_for(:clinical_trial) }
 
       it { expect(assigns(:clinical_trial)).to be_persisted }
-      it { expect(response).to redirect_to admin_clinical_trials_path }
+      it { expect(response).to redirect_to admin_clinical_trials_path(locale) }
     end
 
     describe 'does not save' do
@@ -52,7 +52,7 @@ describe Admin::ClinicalTrialsController do
       let(:params) { { condition_pl: 'New Condition' } }
 
       it { expect(clinical_trial.reload.condition).to eq 'New Condition' }
-      it { expect(response).to redirect_to admin_clinical_trials_path }
+      it { expect(response).to redirect_to admin_clinical_trials_path(locale) }
     end
 
     describe 'invalid params' do
@@ -66,6 +66,6 @@ describe Admin::ClinicalTrialsController do
     subject { delete :destroy, id: clinical_trial.id }
 
     it { expect { subject }.to change { ClinicalTrial.count }.by(-1) }
-    it { subject; expect(response).to redirect_to admin_clinical_trials_path }
+    it { subject; expect(response).to redirect_to admin_clinical_trials_path(locale) }
   end
 end

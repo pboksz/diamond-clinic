@@ -7,7 +7,7 @@ describe Admin::ApplicationController do
     describe 'with current admin' do
       before do
         allow(controller).to receive(:current_admin).and_return(double)
-        expect(controller).to receive(:redirect_to).with(admin_login_path).never
+        expect(controller).to receive(:redirect_to).with(admin_login_path(locale)).never
       end
 
       it { subject }
@@ -16,7 +16,7 @@ describe Admin::ApplicationController do
     describe 'no current admin' do
       before do
         allow(controller).to receive(:current_admin).and_return(nil)
-        expect(controller).to receive(:redirect_to).with(admin_login_path)
+        expect(controller).to receive(:redirect_to).with(admin_login_path(locale))
       end
 
       it { subject }

@@ -25,7 +25,7 @@ describe Admin::DoctorsController do
       let(:params) { attributes_for(:doctor) }
 
       it { expect(assigns(:doctor)).to be_persisted }
-      it { expect(response).to redirect_to admin_doctors_path }
+      it { expect(response).to redirect_to admin_doctors_path(locale) }
     end
 
     describe 'does not save' do
@@ -52,7 +52,7 @@ describe Admin::DoctorsController do
       let(:params) { { name_pl: 'Dr. Who' } }
 
       it { expect(doctor.reload.name).to eq 'Dr. Who' }
-      it { expect(response).to redirect_to admin_doctors_path }
+      it { expect(response).to redirect_to admin_doctors_path(locale) }
     end
 
     describe 'invalid params' do
@@ -66,6 +66,6 @@ describe Admin::DoctorsController do
     subject { delete :destroy, id: doctor.id }
 
     it { expect { subject }.to change { Doctor.count }.by(-1) }
-    it { subject; expect(response).to redirect_to admin_doctors_path }
+    it { subject; expect(response).to redirect_to admin_doctors_path(locale) }
   end
 end

@@ -55,7 +55,7 @@ describe HomeController do
       end
 
       it { expect(assigns(:appointment)).to be_persisted }
-      it { expect(response).to redirect_to contact_us_path }
+      it { expect(response).to redirect_to contact_us_path(locale) }
     end
 
     describe 'does not save' do

@@ -25,7 +25,7 @@ describe Admin::AdminsController do
       let(:params) { attributes_for(:admin) }
 
       it { expect(assigns(:admin)).to be_persisted }
-      it { expect(response).to redirect_to admin_admins_path }
+      it { expect(response).to redirect_to admin_admins_path(locale) }
     end
 
     describe 'does not save' do
@@ -41,6 +41,6 @@ describe Admin::AdminsController do
     subject { delete :destroy, id: admin.id }
 
     it { expect { subject }.to change { Admin.count }.by(-1) }
-    it { subject; expect(response).to redirect_to admin_admins_path }
+    it { subject; expect(response).to redirect_to admin_admins_path(locale) }
   end
 end
