@@ -18,9 +18,13 @@ class Admin
 
   before_save :cleanup_passwords
 
+  def password_encryptor
+    @password_encryptor ||= PasswordEncryptor.new
+  end
+
   def password=(new_password)
     @password = new_password
-    self.encrypted_password = BCrypt::Password.create(new_password, cost: 10)
+    self.encrypted_password = password_encryptor.encrypt_password(new_password)
   end
 
   def password_confirmation=(new_password)
@@ -28,9 +32,7 @@ class Admin
   end
 
   def valid_password?(password)
-    bcrypt = BCrypt::Password.new(encrypted_password)
-    password = BCrypt::Engine.hash_secret(password, bcrypt.salt)
-    Rack::Utils.secure_compare(password, encrypted_password)
+    password_encryptor.compare_password?(password, encrypted_password)
   end
 
   private

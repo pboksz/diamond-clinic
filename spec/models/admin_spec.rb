@@ -2,6 +2,8 @@ require 'rails_helper'
 
 describe Admin do
   let(:admin) { build(:admin) }
+  let(:encryptor) { admin.password_encryptor }
+
 
   describe 'validations' do
     it { expect(admin).to be_valid }
@@ -34,7 +36,7 @@ describe Admin do
     let(:new_password) { 'new_password' }
     let(:encrypted_password) { 'encrypted_password' }
     before do
-      expect(BCrypt::Password).to receive(:create).with(new_password, cost: 10).and_return(encrypted_password)
+      expect(encryptor).to receive(:encrypt_password).with(new_password).and_return(encrypted_password)
       admin.password = new_password
     end
 
@@ -52,13 +54,8 @@ describe Admin do
 
   describe '#valid_password?' do
     let(:encrypted_password) { admin.encrypted_password }
-    let(:bcrypt) { double(salt: 'salt') }
     let(:password) { admin.password }
-    before do
-      expect(BCrypt::Password).to receive(:new).with(encrypted_password).and_return(bcrypt)
-      expect(BCrypt::Engine).to receive(:hash_secret).with(password, bcrypt.salt).and_return(password)
-      expect(Rack::Utils).to receive(:secure_compare).with(password, encrypted_password).and_return(true)
-    end
+    before { expect(encryptor).to receive(:compare_password?).with(password, encrypted_password).and_return(true) }
 
     it { expect(admin.valid_password?(password)).to eq true }
   end
