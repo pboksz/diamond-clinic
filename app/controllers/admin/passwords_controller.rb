@@ -14,6 +14,11 @@ class Admin::PasswordsController < Admin::ApplicationController
 
   private
 
+  helper_method :back_path
+  def back_path(target_locale = locale)
+    request.env['HTTP_REFERER'] || admin_appointments_path(target_locale)
+  end
+
   def update_params
     params.require(:admin).permit(:password, :password_confirmation)
   end

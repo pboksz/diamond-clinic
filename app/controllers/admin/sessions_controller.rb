@@ -1,5 +1,5 @@
 class Admin::SessionsController < Admin::ApplicationController
-  skip_before_action :authenticate!
+  skip_before_action :authenticate_admin!
 
   def new
     if current_admin
