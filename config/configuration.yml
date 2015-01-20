@@ -1,4 +1,5 @@
 development: &development
+  email_regex: \A[^@\s]+@([^@\s]+\.)+[^@\s]+\z
   email_from: 'hello@localhost'
   delivery_method: 'smtp'
   app_host:

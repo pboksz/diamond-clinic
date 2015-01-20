@@ -20,7 +20,7 @@ class Appointment
   delegate :condition, to: :clinical_trial, prefix: true, allow_nil: true
 
   validates :name, presence: true
-  validates :email, format: { with: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/ }
+  validates :email, format: { with: Regexp.new(A9n.email_regex) }
   validate  :phone_number_is_plausible
 
   def phone_number=(value)

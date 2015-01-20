@@ -12,7 +12,7 @@ class Admin
 
   attr_reader :password, :password_confirmation
 
-  validates :email, format: { with: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/ }
+  validates :email, format: { with: Regexp.new(A9n.email_regex) }
   validates :password, :password_confirmation, length: { minimum: 8 }
   validate :passwords_must_match
 
