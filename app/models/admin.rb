@@ -30,7 +30,7 @@ class Admin
   def valid_password?(password)
     bcrypt = BCrypt::Password.new(encrypted_password)
     password = BCrypt::Engine.hash_secret(password, bcrypt.salt)
-    ::Rack::Utils.secure_compare(password, encrypted_password)
+    Rack::Utils.secure_compare(password, encrypted_password)
   end
 
   private
