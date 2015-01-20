@@ -48,6 +48,10 @@ en:
       hours_weekday: "Monday - Friday:"
       hours_weekend: "Saturday:"
 
+    sessions:
+      header: "Admin Login"
+      submit: "Login"
+
     about_us:
       paragraph1: "Diamond Clinic is a multidisciplinary medical clinic focused on providing excellent patient care as well as conducting high quality clinical trials."
       paragraph2: "Our mission is to provide the highest quality of healthcare to our diverse patient population giving them a full range of services including access to the newest therapies and medications."

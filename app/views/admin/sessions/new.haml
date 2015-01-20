@@ -2,8 +2,8 @@
   .container
     = render 'layouts/messages'
 
-    %h2= t('devise.sessions.new.header')
+    %h2= t('views.sessions.header')
     = simple_form_for @admin, url: admin_login_path(locale), method: :post do |f|
       = f.input :email, autofocus: true
       = f.input :password
-      = f.button :submit, t('devise.sessions.new.submit'), class: 'button'
+      = f.button :submit, t('views.sessions.submit'), class: 'button'

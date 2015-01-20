@@ -48,6 +48,10 @@ pl:
       hours_weekday: "Poniedziałek - Piątek:"
       hours_weekend: "Sobota:"
 
+    sessions:
+      header: "Admin Logowanie"
+      submit: "Logowanie"
+
     about_us:
       paragraph1: "Diamond Clinic jest wielospecjalistyczną, nowoczesną i dynamicznie rozwijającą się przychodnią lekarską."
       paragraph2: "Naszą misją jest zapewnienie wysokiej jakości opieki zdrowotnej zróżnicowanej populacji pacjentów. "
