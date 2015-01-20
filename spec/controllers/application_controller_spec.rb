@@ -38,4 +38,19 @@ describe ApplicationController do
       it { expect(subject).to be_nil }
     end
   end
+
+  describe '#current_admin' do
+    subject { controller.current_admin }
+
+    describe 'no admin id in session' do
+      it { expect(subject).to be_nil }
+    end
+
+    describe 'admin id in session' do
+      let(:admin) { create(:admin) }
+      before { sign_in admin }
+
+      it { expect(subject).to eq admin }
+    end
+  end
 end

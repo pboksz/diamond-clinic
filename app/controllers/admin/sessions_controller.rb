@@ -11,9 +11,9 @@ class Admin::SessionsController < Admin::ApplicationController
   end
 
   def create
-    admin = Admin.where(email: params[:admin][:email]).first
+    admin = Admin.where(email: create_params[:email]).first
 
-    if admin && admin.valid_password?(params[:admin][:password])
+    if admin && admin.valid_password?(create_params[:password])
       create_admin_session(admin)
       redirect_to admin_appointments_path(locale)
     else
@@ -29,13 +29,7 @@ class Admin::SessionsController < Admin::ApplicationController
 
   private
 
-  def create_admin_session(admin)
-    @current_admin = admin
-    session[:admin_id] = admin.id.to_s
-  end
-
-  def destroy_admin_session
-    @current_admin = nil
-    session[:admin_id] = nil
+  def create_params
+    params.require(:admin).permit(:email, :password)
   end
 end
