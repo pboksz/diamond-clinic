@@ -8,7 +8,7 @@ preload_app true
 listen 3000
 
 # Use timeout
-timeout 240
+timeout 16
 
 before_fork do |server, worker|
   Signal.trap 'TERM' do
