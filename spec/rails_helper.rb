@@ -46,9 +46,6 @@ RSpec.configure do |config|
   # So you dont have to write FactoryGirl.create(...) every time
   config.include FactoryGirl::Syntax::Methods
 
-  # Include devise test helpers
-  config.include Devise::TestHelpers, type: :controller
-
   # Database cleaner config
   config.before :suite do
     DatabaseCleaner[:mongoid].strategy = :truncation

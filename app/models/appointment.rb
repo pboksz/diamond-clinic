@@ -47,7 +47,7 @@ class Appointment
 
   def phone_number_is_plausible
     unless phone_number_plausible?(self[:phone_number])
-      errors[:phone_number] << 'is invalid'
+      errors[:phone_number] << ''
     end
   end
 

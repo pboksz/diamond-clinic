@@ -41,9 +41,8 @@ class Admin
 
   def passwords_must_match
     unless @password == @password_confirmation
-      error = 'password and confirmation have to match'
-      errors[:password] << error
-      errors[:password_confirmation] << error
+      errors[:password] << ''
+      errors[:password_confirmation] << ''
     end
   end
 end
