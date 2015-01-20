@@ -46,6 +46,9 @@ RSpec.configure do |config|
   # So you dont have to write FactoryGirl.create(...) every time
   config.include FactoryGirl::Syntax::Methods
 
+  # Include login helpers
+  config.include LoginHelpers, type: :controller
+
   # Database cleaner config
   config.before :suite do
     DatabaseCleaner[:mongoid].strategy = :truncation
