@@ -1,17 +1,17 @@
 Rails.application.routes.draw do
   scope '(:locale)', locale: /(en|pl)/ do
-    devise_for :admin, path_names: { sign_in: :login, sign_out: :logout },
-               controllers: { sessions: 'admin/sessions' }
-    devise_scope :admin do
-      get '/admin' => 'admin/sessions#new'
-    end
-
     namespace :admin do
+      get '/login', to: 'sessions#new'
+      post '/login', to: 'sessions#create'
+      get '/logout', to: 'sessions#destroy'
+
       resources :appointments, only: [:index]
       resources :doctors, only: [:index, :new, :create, :edit, :update, :destroy]
       resources :clinical_trials, only: [:index, :new, :create, :edit, :update, :destroy]
       resources :admins, only: [:index, :new, :create, :destroy]
       resource :password, only: [:edit, :update]
+
+      root 'sessions#new'
     end
 
     resources :doctors, only: [] do

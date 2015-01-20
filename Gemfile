@@ -41,7 +41,7 @@ gem 'phony'
 gem 'simple_form'
 
 # Gem for authentication
-gem 'devise'
+gem 'bcrypt'
 
 # Gem for configuration
 gem 'a9n'
