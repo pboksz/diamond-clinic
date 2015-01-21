@@ -1,5 +1,5 @@
 class Admin::AppointmentsController < Admin::ApplicationController
   def index
-    @appointments = Appointment.all
+    @appointments = appointments_repository.all
   end
 end

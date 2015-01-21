@@ -5,19 +5,19 @@ class Admin::SessionsController < Admin::ApplicationController
     if current_admin
       redirect_to admin_appointments_path(locale)
     else
-      @admin = Admin.new
+      @admin = admins_repository.new
       render :new
     end
   end
 
   def create
-    admin = Admin.where(email: create_params[:email]).first
+    admin = admins_repository.find_by_email(create_params[:email])
 
     if admin && admin.valid_password?(create_params[:password])
       create_admin_session(admin)
       redirect_to admin_appointments_path(locale)
     else
-      @admin = Admin.new
+      @admin = admins_repository.new
       render :new
     end
   end

@@ -1,16 +1,16 @@
 class Admin::AdminsController < Admin::ApplicationController
   def index
-    @admins = Admin.all
+    @admins = admins_repository.all
   end
 
   def new
-    @admin = Admin.new
+    @admin = admins_repository.new
   end
 
   def create
-    @admin = Admin.new(create_params)
+    @admin = admins_repository.create(create_params)
 
-    if @admin.save
+    if @admin.persisted?
       redirect_to admin_admins_path(locale)
     else
       render :new
@@ -18,7 +18,7 @@ class Admin::AdminsController < Admin::ApplicationController
   end
 
   def destroy
-    @admin = Admin.find(params[:id]).destroy
+    admins_repository.destroy(params[:id])
     redirect_to admin_admins_path(locale)
   end
 

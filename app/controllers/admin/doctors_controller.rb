@@ -1,16 +1,16 @@
 class Admin::DoctorsController < Admin::ApplicationController
   def index
-    @doctors = Doctor.all
+    @doctors = doctors_repository.all
   end
 
   def new
-    @doctor = Doctor.new
+    @doctor = doctors_repository.new
   end
 
   def create
-    @doctor = Doctor.new(create_params)
+    @doctor = doctors_repository.create(create_params)
 
-    if @doctor.save
+    if @doctor.persisted?
       redirect_to admin_doctors_path(locale)
     else
       render :new
@@ -18,21 +18,20 @@ class Admin::DoctorsController < Admin::ApplicationController
   end
 
   def edit
-    @doctor = Doctor.find(params[:id])
+    @doctor = doctors_repository.find(params[:id])
   end
 
   def update
-    @doctor = Doctor.find(params[:id])
-
-    if @doctor.update_attributes(create_params)
+    if doctors_repository.update(params[:id], create_params)
       redirect_to admin_doctors_path(locale)
     else
+      @doctor = doctors_repository.find(params[:id])
       render :edit
     end
   end
 
   def destroy
-    @doctor = Doctor.find(params[:id]).destroy
+    doctors_repository.destroy(params[:id])
     redirect_to admin_doctors_path(locale)
   end
 

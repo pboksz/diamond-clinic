@@ -1,16 +1,16 @@
 class Admin::ClinicalTrialsController < Admin::ApplicationController
   def index
-    @clinical_trials = ClinicalTrial.all
+    @clinical_trials = clinic_trials_repository.all
   end
 
   def new
-    @clinical_trial = ClinicalTrial.new
+    @clinical_trial = clinic_trials_repository.new
   end
 
   def create
-    @clinical_trial = ClinicalTrial.new(create_params)
+    @clinical_trial = clinic_trials_repository.create(create_params)
 
-    if @clinical_trial.save
+    if @clinical_trial.persisted?
       redirect_to admin_clinical_trials_path(locale)
     else
       render :new
@@ -18,13 +18,11 @@ class Admin::ClinicalTrialsController < Admin::ApplicationController
   end
 
   def edit
-    @clinical_trial = ClinicalTrial.find(params[:id])
+    @clinical_trial = clinic_trials_repository.find(params[:id])
   end
 
   def update
-    @clinical_trial = ClinicalTrial.find(params[:id])
-
-    if @clinical_trial.update_attributes(create_params)
+    if @clinical_trial = clinic_trials_repository.update(params[:id], create_params)
       redirect_to admin_clinical_trials_path(locale)
     else
       render :edit
@@ -32,7 +30,7 @@ class Admin::ClinicalTrialsController < Admin::ApplicationController
   end
 
   def destroy
-    @clinical_trial = ClinicalTrial.find(params[:id]).destroy
+    clinic_trials_repository.destroy(params[:id])
     redirect_to admin_clinical_trials_path(locale)
   end
 

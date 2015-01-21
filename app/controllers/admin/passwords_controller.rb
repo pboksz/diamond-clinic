@@ -4,7 +4,7 @@ class Admin::PasswordsController < Admin::ApplicationController
   end
 
   def update
-    if current_admin.update_attributes(update_params)
+    if current_admin_repository.update(update_params)
       redirect_to back_path(locale)
     else
       render :edit

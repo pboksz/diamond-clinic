@@ -4,7 +4,7 @@ class HomeController < ApplicationController
   end
 
   def our_doctors
-    @doctors = Doctor.all
+    @doctors = doctors_repository.all
   end
 
   def our_services
@@ -12,31 +12,31 @@ class HomeController < ApplicationController
   end
 
   def clinical_research
-    @clinical_trials = ClinicalTrial.all
+    @clinical_trials = clinic_trials_repository.all
   end
 
   def contact_us
-    @doctors = Doctor.all
+    @doctors = doctors_repository.all
   end
 
   def request_appointment
-    @appointment = Appointment.new
-    @doctors = Doctor.all
-    @clinical_trials = ClinicalTrial.all
+    @appointment = appointments_repository.new
+    @doctors = doctors_repository.all
+    @clinical_trials = clinic_trials_repository.all
   end
 
   def appointment_create
-    @appointment = Appointment.new(appointment_params)
+    @appointment = appointments_repository.create(appointment_params)
 
-    if @appointment.save
+    if @appointment.persisted?
       AppointmentMailer.appointment_email(@appointment).deliver
       flash[:notice] = t('views.request_appointment.appointment.sent')
 
       redirect_to contact_us_path(locale)
     else
       flash[:alert] = t('views.request_appointment.appointment.error')
-      @doctors = Doctor.all
-      @clinical_trials = ClinicalTrial.all
+      @doctors = doctors_repository.all
+      @clinical_trials = clinic_trials_repository.all
 
       render :request_appointment
     end
