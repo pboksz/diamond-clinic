@@ -15,8 +15,6 @@ class ApplicationController < ActionController::Base
     @current_admin ||= admins_repository.find(session[:admin_id]) if session[:admin_id]
   end
 
-  private
-
   def current_admin_repository
     @current_admin_repository ||= CurrentAdminRepository.new(current_admin)
   end
@@ -36,6 +34,8 @@ class ApplicationController < ActionController::Base
   def appointments_repository
     @appointments_repository ||= DefaultRepository.new(Appointment)
   end
+
+  private
 
   def set_locale
     I18n.locale = locale || I18n.default_locale

@@ -33,6 +33,7 @@ describe Admin::SessionsController do
       let(:admin) { create(:admin, password: password) }
       before do
         allow(admin).to receive(:valid_password?).with(admin.password).and_return(true)
+        expect(controller.admins_repository).to receive(:update_login_information).with(admin.id)
         expect(controller).to receive(:create_admin_session).with(admin)
         post :create, admin: { email: admin.email, password: password }
       end

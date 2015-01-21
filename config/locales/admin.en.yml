@@ -55,10 +55,7 @@ en:
         add: "Add an Admin"
         email: "Email"
         sign_in_count: "Login Count"
-        current_sign_in_at: "Current Login Time"
-        current_sign_in_ip: "Current Login IP"
         last_sign_in_at: "Last Login Time"
-        last_sign_in_ip: "Last Login IP"
       new:
         header: "Add an Admin"
 

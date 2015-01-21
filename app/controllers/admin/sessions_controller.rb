@@ -14,7 +14,9 @@ class Admin::SessionsController < Admin::BaseController
     admin = admins_repository.find_by_email(create_params[:email])
 
     if admin && admin.valid_password?(create_params[:password])
+      admins_repository.update_login_information(admin.id)
       create_admin_session(admin)
+
       redirect_to admin_appointments_path(locale)
     else
       @admin = admins_repository.new

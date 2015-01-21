@@ -55,10 +55,7 @@ pl:
         add: "Dodaj Admina"
         email: "Email"
         sign_in_count: "Liczba Logowania"
-        current_sign_in_at: "Aktualny czas Logowania"
-        current_sign_in_ip: "Aktualny IP Logowania"
         last_sign_in_at: "Ostatni czas Logowanie"
-        last_sign_in_ip: "Ostatni IP Logowani"
       new:
         header: "Dodaj Admina"
 
