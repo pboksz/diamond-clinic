@@ -1,4 +1,4 @@
-class Admin::ClinicalTrialsController < Admin::ApplicationController
+class Admin::ClinicalTrialsController < Admin::BaseController
   def index
     @clinical_trials = clinic_trials_repository.all
   end

@@ -1,4 +1,4 @@
-class Admin::ApplicationController < ApplicationController
+class Admin::BaseController < ApplicationController
   before_action :authenticate_admin!
   def authenticate_admin!
     redirect_to admin_login_path(locale) unless current_admin

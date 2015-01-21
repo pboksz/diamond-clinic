@@ -1,4 +1,4 @@
-class Admin::PasswordsController < Admin::ApplicationController
+class Admin::PasswordsController < Admin::BaseController
   def edit
 
   end

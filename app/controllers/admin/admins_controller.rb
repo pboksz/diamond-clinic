@@ -1,4 +1,4 @@
-class Admin::AdminsController < Admin::ApplicationController
+class Admin::AdminsController < Admin::BaseController
   def index
     @admins = admins_repository.all
   end

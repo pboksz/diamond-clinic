@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Admin::ApplicationController do
+describe Admin::BaseController do
   describe '#authenticate_admin!' do
     subject { controller.authenticate_admin! }
 
