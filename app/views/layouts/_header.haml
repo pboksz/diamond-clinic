@@ -16,7 +16,7 @@
 
   .bottom.clearfix
     .nav
-      - if current_admin
+      - if controller_path.include?('admin') && current_admin
         = link_to t('admin.header.appointments'), admin_appointments_path(locale)
         = link_to t('admin.header.doctors'), admin_doctors_path(locale)
         = link_to t('admin.header.clinical_trials'), admin_clinical_trials_path(locale)
