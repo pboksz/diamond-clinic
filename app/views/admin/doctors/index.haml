@@ -21,7 +21,7 @@
             %td= doctor.order
             %td= doctor.name(locale: locale)
             %td= doctor.specialty(locale: locale)
-            %td= readmore(doctor.biography(locale: locale))
+            %td= readmore(doctor.biography(locale: locale), max_length: 100)
             %td
               .photo
                 - if doctor.photo?

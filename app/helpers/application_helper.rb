@@ -1,7 +1,9 @@
 module ApplicationHelper
-  def readmore(text)
-    if text.length > 400
-      content_tag :div, truncated(text) + expanded(text), class: :readmore
+  def readmore(text, options = {})
+    max_length = options[:max_length] || 400
+
+    if text.length > max_length
+      content_tag :div, truncated(text, max_length) + expanded(text), class: :readmore
     else
       simple_format(text)
     end
@@ -9,8 +11,8 @@ module ApplicationHelper
 
   private
 
-  def truncated(text)
-    toggleable_tag(text_tag(truncate(text, length: 400)) + link_tag(:more))
+  def truncated(text, max_length)
+    toggleable_tag(text_tag(truncate(text, length: max_length)) + link_tag(:more))
   end
 
   def expanded(text)
