@@ -43,13 +43,10 @@ RSpec.configure do |config|
   # https://relishapp.com/rspec/rspec-rails/docs
   config.infer_spec_type_from_file_location!
 
-  # So you dont have to write FactoryGirl.create(...) every time
   config.include FactoryGirl::Syntax::Methods
 
-  # Include login helpers
-  config.include LoginHelpers, type: :controller
+  config.include ControllerHelpers, type: :controller
 
-  # Database cleaner config
   config.before :suite do
     DatabaseCleaner[:mongoid].strategy = :truncation
   end

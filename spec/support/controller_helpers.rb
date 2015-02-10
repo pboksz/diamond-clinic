@@ -1,4 +1,4 @@
-module LoginHelpers
+module ControllerHelpers
   def sign_in(admin)
     session[:admin_id] = admin.id
   end
