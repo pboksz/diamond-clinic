@@ -21,8 +21,6 @@ pl:
     regon: "120413380"
     phone_number: "+48 122 651 165"
     mobile_number: "+48 571 241 412"
-    clinical_trials_number_1: "+48 12 265 11 65"
-    clinical_trials_number_2: "+48 571 241 412"
     fax_number: "+48 126 371 533"
     trams: "3, 5, 18, 50"
     buses: "102, 118, 120, 137, 138, 168, 194, 207, 217, 220, 227, 237, 240, 247, 267, 287, 297"
@@ -31,6 +29,12 @@ pl:
     keywords: "zdrowia, opieki, opieki zdrowotnej, zapalenie płuc, medycyna, medycznych, przychodnia, klinika, diament, badania kliniczne, lekarz, cukrzyca, Kraków, Małopolska, Polska, internista, kardiolog, pulmonolog, alergolog, nefrolog, neurolog"
 
   views:
+    # Any part that has a numbered list can be added or removed from. For example:
+    # sections:
+    #   1: "Some text"
+    #   2: "Other text"
+    # You can add a third line and/or a fourth, or remove any, as long as the "sections:" part stays.
+
     readmore:
       more: "Czytaj Więcej"
       less: "Czytaj Mniej"
@@ -53,48 +57,54 @@ pl:
       submit: "Logowanie"
 
     about_us:
-      paragraph1: "Diamond Clinic jest wielospecjalistyczną, nowoczesną i dynamicznie rozwijającą się przychodnią lekarską."
-      paragraph2: "Naszą misją jest zapewnienie wysokiej jakości opieki zdrowotnej zróżnicowanej populacji pacjentów. "
-      paragraph3: "Zatrudniamy doświadczonych i kompetentnych specjalistów, wywodzących się z najlepszych Oddziałów i Klinik Szpitala Uniwersyteckiego w Krakowie."
-      paragraph4: "Oferujemy szeroki zakres usług medycznych, w tym dostęp do najnowocześniejszych metod diagnostyczno-terapeutycznych. Sukces naszego leczenia zawdzięczamy  indywidualnemu  podejściu do każdego pacjenta i terapii prowadzonej w oparciu o najnowsze standardy medyczne."
-      paragraph5: "W celu umówienia się na spotkanie z naszymi specjalistami, lub uzyskania informacji na temat aktualnie prowadzonych przez nas badań klinicznych prosimy o kontakt:"
+      sections:
+        1: "Diamond Clinic jest wielospecjalistyczną, nowoczesną i dynamicznie rozwijającą się przychodnią lekarską."
+        2: "Naszą misją jest zapewnienie wysokiej jakości opieki zdrowotnej zróżnicowanej populacji pacjentów. "
+        3: "Zatrudniamy doświadczonych i kompetentnych specjalistów, wywodzących się z najlepszych Oddziałów i Klinik Szpitala Uniwersyteckiego w Krakowie."
+        4: "Oferujemy szeroki zakres usług medycznych, w tym dostęp do najnowocześniejszych metod diagnostyczno-terapeutycznych. Sukces naszego leczenia zawdzięczamy  indywidualnemu  podejściu do każdego pacjenta i terapii prowadzonej w oparciu o najnowsze standardy medyczne."
+        5: "W celu umówienia się na spotkanie z naszymi specjalistami, lub uzyskania informacji na temat aktualnie prowadzonych przez nas badań klinicznych prosimy o kontakt:"
 
     our_doctors:
 
     our_services:
       consultations:
         header: "Konsultacje Specjalistyczne"
-        internists: "Internistyczne"
-        cardiologists: "Kardiologiczne"
-        pulmonologists: "Pulmonologiczne"
-        allergologists: "Alergologiczne"
-        nephrologists: "Nefrologiczne"
-        neurologists: "Neurologiczne"
+        specialists:
+          1: "Internistyczne"
+          2: "Kardiologiczne"
+          3: "Pulmonologiczne"
+          4: "Alergologiczne"
+          5: "Nefrologiczne"
+          6: "Neurologiczne"
       diagnostics:
         header: "Badania Diagnostyczne"
-        blood_tests: "Badania Laboratoryjne z Krwi i Moczu"
-        spirometry_tests: "Badania Spirometryczne"
-        ekg_tests: "Badanie EKG"
-        allergy_tests: "Testy Alergiczne"
+        tests:
+          1: "Badania Laboratoryjne z Krwi i Moczu"
+          2: "Badania Spirometryczne"
+          3: "Badanie EKG"
+          4: "Testy Alergiczne"
       treatments:
         header: "Zabiegi"
-        treatment_types: "Iniekcje Dożylne, Podskórne, Pomięśniowe"
-        iv_treatment: "Wlewy Dożylne"
-        allergy_desensitization: "Odczulanie"
+        types:
+          1: "Iniekcje Dożylne, Podskórne, Pomięśniowe"
+          2: "Wlewy Dożylne"
+          3: "Odczulanie"
 
     clinical_research:
+      contact:
+        1: "+48 12 265 11 65"
+        2: "+48 571 241 412"
       information:
         offer: "W ramach prowadzonych przez nas badań klinicznych, oferujemy pacjentom udział w darmowym leczeniu z wykorzystaniem najnowocześniejszych leków. "
         participate: "Jeśli jesteście Państwo zainteresowani udziałem w ww badaniach klinicznych, w celu umówienia się na wizytę prosimy o kontakt:"
-
       participate:
         header: "Dlaczego Warto Brać Udział w Badaniach Klinicznych?"
-        section1: "Pacjent biorący udział w badaniu ma stałego lekarza, który służy mu codzienną pomocą w czasie trwania badania i po jego zakończeniu."
-        section2: "W ramach badania istnieje możliwość wykonywania szerokiego zakresu badań, niejednokrotnie niedostępnych w podstawowej lub nawet specjalistycznej opiece medycznej."
-        section3: "Pacjent korzysta z nowoczesnych, często jeszcze powszechnie niedostępnych metod leczenia."
-        section4: "Wszystkie wizyty i procedury wykonywanie w trakcie badania są dla pacjentów nieodpłatne."
-        section5: "Pacjenci otrzymują zwrot kosztów dojazdu na badania. "
-
+        sections:
+          1: "Pacjent biorący udział w badaniu ma stałego lekarza, który służy mu codzienną pomocą w czasie trwania badania i po jego zakończeniu."
+          2: "W ramach badania istnieje możliwość wykonywania szerokiego zakresu badań, niejednokrotnie niedostępnych w podstawowej lub nawet specjalistycznej opiece medycznej."
+          3: "Pacjent korzysta z nowoczesnych, często jeszcze powszechnie niedostępnych metod leczenia."
+          4: "Wszystkie wizyty i procedury wykonywanie w trakcie badania są dla pacjentów nieodpłatne."
+          5: "Pacjenci otrzymują zwrot kosztów dojazdu na badania. "
       current:
         header: "Lista Badań"
         offered: "Obecnie do badań klinicznych rekrutujemy chorych:"

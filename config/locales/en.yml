@@ -21,8 +21,6 @@ en:
     regon: "120413380"
     phone_number: "+48 122 651 165"
     mobile_number: "+48 571 241 412"
-    clinical_trials_number_1: "+48 12 265 11 65"
-    clinical_trials_number_2: "+48 571 241 412"
     fax_number: "+48 126 371 533"
     trams: "3, 5, 18, 50"
     buses: "102, 118, 120, 137, 138, 168, 194, 207, 217, 220, 227, 237, 240, 247, 267, 287, 297"
@@ -31,6 +29,12 @@ en:
     keywords: "health, care, healthcare, pneumonia, internal medicine, diabetes, medicine, medical, clinic, diamond, clinical trials, doctor, Krakow, Lesser Poland, Poland, internist, cardiologist, pulmonologist, allergologist, nephrologist, neurologist"
 
   views:
+    # Any part that has a numbered list can be added or removed from. For example:
+    # sections:
+    #   1: "Some text"
+    #   2: "Other text"
+    # You can add a third line and a fourth, or remove any, as long as the "sections:" part stays.
+
     readmore:
       more: "Read More"
       less: "Read Less"
@@ -53,48 +57,54 @@ en:
       submit: "Login"
 
     about_us:
-      paragraph1: "Diamond Clinic is a multidisciplinary medical clinic focused on providing excellent patient care as well as conducting high quality clinical trials."
-      paragraph2: "Our mission is to provide the highest quality of healthcare to our diverse patient population giving them a full range of services including access to the newest therapies and medications."
-      paragraph3: "We employ experienced and passionate physicians, educated and practicing at the top Jagiellonian University Hospital departments and clinics."
-      paragraph4: "We pride ourselves on providing these services in an empathetic, respectful, and caring environment."
-      paragraph5: "Contact us today to schedule an appointment with one of our specialists or to learn about our current ongoing medical trials:"
+      sections:
+        1: "Diamond Clinic is a multidisciplinary medical clinic focused on providing excellent patient care as well as conducting high quality clinical trials."
+        2: "Our mission is to provide the highest quality of healthcare to our diverse patient population giving them a full range of services including access to the newest therapies and medications."
+        3: "We employ experienced and passionate physicians, educated and practicing at the top Jagiellonian University Hospital departments and clinics."
+        4: "We pride ourselves on providing these services in an empathetic, respectful, and caring environment."
+        5: "Contact us today to schedule an appointment with one of our specialists or to learn about our current ongoing medical trials:"
 
     our_doctors:
 
     our_services:
       consultations:
         header: "Specialist Consultations"
-        internists: "Internal Medicine"
-        cardiologists: "Cardiology"
-        pulmonologists: "Pulmonology"
-        allergologists: "Allergology"
-        nephrologists: "Nephrology"
-        neurologists: "Neurology"
+        specialists:
+          1: "Internal Medicine"
+          2: "Cardiology"
+          3: "Pulmonology"
+          4: "Allergology"
+          5: "Nephrology"
+          6: "Neurology"
       diagnostics:
         header: "Diagnostic Tests"
-        blood_tests: "Laboratory tests: Blood and Urine"
-        spirometry_tests: "Lung Function Testing / Spirometry"
-        ekg_tests: "ECG Testing"
-        allergy_tests: "Allergy Testing"
+        tests:
+          1: "Laboratory tests: Blood and Urine"
+          2: "Lung Function Testing / Spirometry"
+          3: "ECG Testing"
+          4: "Allergy Testing"
       treatments:
         header: "Procedures"
-        treatment_types: "Intravascular, Intramuscular, and Subdural Injections"
-        iv_treatment: "Intravenous Infusions"
-        allergy_desensitization: "Allergy Desensitization"
+        types:
+          1: "Intravascular, Intramuscular, and Subdural Injections"
+          2: "Intravenous Infusions"
+          3: "Allergy Desensitization"
 
     clinical_research:
+      contact:
+        1: "+48 12 265 11 65"
+        2: "+48 571 241 412"
       information:
         offer: "We offer free, state of the art treatment as well as multidisciplinary care for patients taking part in our clinical trials."
         participate: "If you are interested in taking part in one of our clinical trials or to learn about our current offers please contact us:"
-
       participate:
         header: "Why Take Part in One of Our Clinical Trials?"
-        section1: "Patients taking part in our clinical trials are under the constant care of our physicians, who serve their medical needs during the trial and after its completion."
-        section2: "As part of the trials patients have the opportunity to undergo a wide variety of diagnostic procedures which are normally not readily available to the general patient population."
-        section3: "The patient is given modern, and sometimes not yet widely available medical treatment options."
-        section4: "All diagnostic procedures and all treatment is free for patients during the clinical trial."
-        section5: "Patients are refunded the cost of travel to the clinic for doctor visits during the trial."
-
+        sections:
+          1: "Patients taking part in our clinical trials are under the constant care of our physicians, who serve their medical needs during the trial and after its completion."
+          2: "As part of the trials patients have the opportunity to undergo a wide variety of diagnostic procedures which are normally not readily available to the general patient population."
+          3: "The patient is given modern, and sometimes not yet widely available medical treatment options."
+          4: "All diagnostic procedures and all treatment is free for patients during the clinical trial."
+          5: "Patients are refunded the cost of travel to the clinic for doctor visits during the trial."
       current:
         header: "Clinical Trial List"
         offered: "We are now actively looking for participants for clinical trials with the following conditions:"
