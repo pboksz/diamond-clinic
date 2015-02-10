@@ -12,9 +12,7 @@
                 = image_tag photo_doctor_path(locale, doctor)
               - else
                 = icon('user-md')
-            .name
-              = icon('chevron-right')
-              = doctor.name(locale: locale)
+            .name= icon('chevron-right', doctor.name(locale: locale))
             .specialty= doctor.specialty(locale: locale)
             .clearfix
           .biography= readmore(doctor.biography(locale: locale))

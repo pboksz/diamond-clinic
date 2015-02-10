@@ -8,30 +8,16 @@
 
       .clinical-contact
         = t('views.clinical_research.information.participate')
-        .section
-          = icon('chevron-right')
-          = t('defaults.clinical_trials_number_1')
-        .section
-          = icon('chevron-right')
-          = t('defaults.clinical_trials_number_2')
+        - t('views.clinical_research.contact').each do |key, contact|
+          .section= icon('chevron-right', contact)
         .section
           = icon('chevron-right')
           = mail_to t('defaults.email')
 
     .why-participate
       %h3= t('views.clinical_research.participate.header')
-      .section
-        = icon('chevron-right')
-        = t('views.clinical_research.participate.section1')
-      .section
-        = icon('chevron-right')
-        = t('views.clinical_research.participate.section2')
-      .section
-        = icon('chevron-right')
-        = t('views.clinical_research.participate.section3')
-      .section
-        = icon('chevron-right')
-        = t('views.clinical_research.participate.section4')
+      - t('views.clinical_research.participate.sections').each do |key, section|
+        .section= icon('chevron-right', section)
 
     .current-trials
       %h3= t('views.clinical_research.current.header')
@@ -39,8 +25,6 @@
       .clinical-trials
         - @clinical_trials.each do |clinical_trial|
           .clinical-trial
-            .condition
-              = icon('chevron-right')
-              = clinical_trial.condition(locale: locale)
+            .condition= icon('chevron-right', clinical_trial.condition(locale: locale))
             .description= readmore(clinical_trial.description(locale: locale))
             .clearfix
