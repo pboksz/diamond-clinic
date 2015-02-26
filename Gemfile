@@ -40,8 +40,8 @@ gem 'phony'
 # Gem for even simpler forms
 gem 'simple_form'
 
-# Gem for authentication
-gem 'bcrypt'
+# Gem for admin authentication
+gem 'admin_auth'
 
 # Gem for configuration
 gem 'a9n'
