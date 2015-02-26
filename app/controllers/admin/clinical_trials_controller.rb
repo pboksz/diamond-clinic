@@ -1,4 +1,6 @@
-class Admin::ClinicalTrialsController < Admin::BaseController
+class Admin::ClinicalTrialsController < ApplicationController
+  before_action :authenticate_admin!
+
   def index
     @clinical_trials = clinic_trials_repository.all
   end

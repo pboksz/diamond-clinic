@@ -5,22 +5,12 @@ class ApplicationController < ActionController::Base
 
   before_filter :set_locale
 
-  helper_method :locale
-  def locale
-    params[:locale]
+  def after_login_path(new_locale = locale)
+    admin_appointments_path(locale)
   end
 
-  helper_method :current_admin
-  def current_admin
-    @current_admin ||= admins_repository.find(session[:admin_id]) if session[:admin_id]
-  end
-
-  def current_admin_repository
-    @current_admin_repository ||= CurrentAdminRepository.new(current_admin)
-  end
-
-  def admins_repository
-    @admins_repository ||= AdminsRepository.new(Admin)
+  def after_logout_path(new_locale = locale)
+    root_path(locale)
   end
 
   def clinic_trials_repository

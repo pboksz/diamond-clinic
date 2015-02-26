@@ -1,4 +1,6 @@
-class Admin::DoctorsController < Admin::BaseController
+class Admin::DoctorsController < ApplicationController
+  before_action :authenticate_admin!
+
   def index
     @doctors = doctors_repository.all
   end
