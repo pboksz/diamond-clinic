@@ -38,7 +38,7 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     addressable (2.3.6)
-    admin_auth (0.2.6)
+    admin_auth (0.3.0)
       bcrypt (~> 3)
       haml (~> 4)
       rails (~> 4)
@@ -103,7 +103,7 @@ GEM
       net-http-pipeline
     globalid (0.3.3)
       activesupport (>= 4.1.0)
-    haml (4.0.5)
+    haml (4.0.6)
       tilt
     haml-rails (0.5.3)
       actionpack (>= 4.0.1)
