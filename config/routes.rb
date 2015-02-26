@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  scope '(:locale)', locale: /(en|pl)/ do
-    admin_auth_routes
+  admin_auth_routes
 
+  scope '(:locale)', locale: /(en|pl)/ do
     namespace :admin do
       resources :appointments, only: [:index]
       resources :doctors, only: [:index, :new, :create, :edit, :update, :destroy]
