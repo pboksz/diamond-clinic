@@ -58,7 +58,5 @@ pl:
         last_sign_in_at: "Ostatni czas Logowanie"
       new:
         header: "Dodaj Admina"
-
-    passwords:
       edit:
         header: "Zmień Hasło"

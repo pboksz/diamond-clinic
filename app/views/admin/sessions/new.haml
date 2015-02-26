@@ -3,7 +3,7 @@
     = render 'layouts/messages'
 
     %h2= t('views.sessions.header')
-    = simple_form_for @admin, url: admin_login_path(locale), method: :post do |f|
+    = simple_form_for admin, url: admin_login_path(locale), method: :post do |f|
       = f.input :email, autofocus: true
       = f.input :password
       = f.button :submit, t('views.sessions.submit'), class: 'button'
