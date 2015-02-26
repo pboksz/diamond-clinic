@@ -50,7 +50,7 @@ describe HomeController do
       let(:params) { attributes_for(:appointment).merge(doctor: doctor) }
       before do
         expect(AppointmentMailer).to receive(:appointment_email) { mailer }
-        expect(mailer).to receive(:deliver)
+        expect(mailer).to receive(:deliver_now)
         post :appointment_create, appointment: params
       end
 

@@ -29,7 +29,7 @@ class HomeController < ApplicationController
     @appointment = appointments_repository.create(appointment_params)
 
     if @appointment.persisted?
-      AppointmentMailer.appointment_email(@appointment).deliver
+      AppointmentMailer.appointment_email(@appointment).deliver_now
       flash[:notice] = t('views.request_appointment.appointment.sent')
 
       redirect_to contact_us_path(locale)
