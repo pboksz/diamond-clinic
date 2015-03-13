@@ -1,7 +1,7 @@
 pl:
   mailers:
-    subject: "Umów Wizytę od %{name} na %{when}"
-    header: "Umów Wizytę"
+    subject: "Umówiona Wizyta od %{name} na %{when}"
+    header: "Umówiona Wizyta"
     name: "Imię i Nazwisko: %{name}"
     email: "Email: %{email}"
     phone_number: "Numer Telefonu: %{phone_number}"
