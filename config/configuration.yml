@@ -2,6 +2,7 @@ development: &development
   email_regex: \A[^@\s]+@([^@\s]+\.)+[^@\s]+\z
   email_from: 'hello@localhost'
   delivery_method: 'smtp'
+  asset_host: 'http://localhost:3000'
   app_host:
     host: 'localhost'
     port: 3000
@@ -12,6 +13,7 @@ production:
   <<: *development
   email_from: 'biuro@diamondclinic.eu'
   delivery_method: 'smtp'
+  asset_host: 'http://diamondclinic.eu'
   app_host:
     host: 'diamondclinic.eu'
   smtp_settings:
