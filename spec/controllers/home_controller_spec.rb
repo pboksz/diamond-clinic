@@ -68,4 +68,9 @@ describe HomeController do
       it { expect(response).to render_template :request_appointment }
     end
   end
+
+  describe 'GET #sitemap' do
+    before { get :sitemap, format: 'xml' }
+    it { expect(response).to render_template :sitemap, layout: false }
+  end
 end
