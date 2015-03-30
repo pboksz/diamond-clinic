@@ -19,6 +19,7 @@ Rails.application.routes.draw do
     get '/contact_us', to: 'home#contact_us'
     get '/request_appointment', to: 'home#request_appointment'
     post '/request_appointment', to: 'home#appointment_create'
+    get '/sitemap(.xml)' => 'home#sitemap', format: 'xml'
 
     root 'home#about_us'
   end

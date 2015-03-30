@@ -42,6 +42,10 @@ class HomeController < ApplicationController
     end
   end
 
+  def sitemap
+    render :sitemap, layout: false
+  end
+
   private
 
   def appointment_params
