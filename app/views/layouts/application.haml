@@ -4,6 +4,7 @@
     %title= "#{t('defaults.name')} | #{t('defaults.tagline')}"
     %meta{ name: :description, content: t('defaults.description') }
     %meta{ name: :keywords, content: t('defaults.keywords') }
+    %meta{ name: :viewport, content: 'width=device-width, initial-scale=0.8' }
     %link{ rel: :alternate, href: root_url(locale: :en), hreflang: :en }
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true

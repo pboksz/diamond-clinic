@@ -59,6 +59,10 @@ group :test do
   gem 'database_cleaner'
 end
 
+group :production do
+  gem 'rails_12factor'
+end
+
 group :development, :test do
   gem 'factory_girl_rails'
   gem 'quiet_assets'
@@ -68,6 +72,5 @@ group :development, :test do
 end
 
 group :development, :production do
-  gem 'rails_12factor'
   gem 'unicorn'
 end
