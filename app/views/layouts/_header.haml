@@ -1,4 +1,9 @@
 %header{ role: 'banner' }
+  - unless cookies['cookies_consent'] == 'true'
+    .cookies
+      %span.info= t('views.header.cookies')
+      %a.close= icon('times')
+
   .top
     .left
       .logo

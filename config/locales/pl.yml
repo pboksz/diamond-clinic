@@ -40,6 +40,7 @@ pl:
       less: "Czytaj Mniej"
 
     header:
+      cookies: "This site uses cookies to improve your user experience. By staying on the site, you consent to the usage of cookies."
       about_us: "O Nas"
       our_doctors: "Nasi Lekarze"
       our_services: "Nasza Oferta"
