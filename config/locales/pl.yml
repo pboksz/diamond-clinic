@@ -72,11 +72,11 @@ pl:
         header: "Konsultacje Specjalistyczne"
         specialists:
           1: "Internistyczne"
-          2: 
+          
           3: "Pulmonologiczne"
-          4: 
-          5: 
-          6: 
+          
+          
+          
       diagnostics:
         header: "Badania Diagnostyczne"
         tests:
