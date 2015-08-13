@@ -72,11 +72,11 @@ en:
         header: "Specialist Consultations"
         specialists:
           1: "Internal Medicine"
-          2: "Cardiology"
+          2: 
           3: "Pulmonology"
-          4: "Allergology"
-          5: "Nephrology"
-          6: "Neurology"
+          4: 
+          5: 
+          6: 
       diagnostics:
         header: "Diagnostic Tests"
         tests:
