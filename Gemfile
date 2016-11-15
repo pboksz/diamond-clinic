@@ -48,7 +48,7 @@ gem 'admin_auth'
 gem 'a9n'
 
 # Gem for uploading photos
-gem 'carrierwave-mongoid', require: 'carrierwave/mongoid'
+gem 'carrierwave'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
