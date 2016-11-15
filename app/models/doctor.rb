@@ -1,6 +1,4 @@
 class Doctor < ActiveRecord::Base
-  # mount_uploader :photo, PhotoUploader
-
   default_scope -> { order_by(:order.asc) }
 
   validates :order, numericality: { only_integer: true }

@@ -47,9 +47,6 @@ gem 'admin_auth'
 # Gem for configuration
 gem 'a9n'
 
-# Gem for uploading photos
-gem 'carrierwave'
-
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
