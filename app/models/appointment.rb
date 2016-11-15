@@ -1,7 +1,4 @@
 class Appointment < ActiveRecord::Base
-  belongs_to :doctor
-  belongs_to :clinical_trial
-
   default_scope -> { order(created_at: :desc) }
 
   belongs_to :doctor
