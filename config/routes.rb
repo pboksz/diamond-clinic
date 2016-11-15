@@ -8,10 +8,6 @@ Rails.application.routes.draw do
       resources :clinical_trials, only: [:index, :new, :create, :edit, :update, :destroy]
     end
 
-    resources :doctors, only: [] do
-      get :photo, on: :member
-    end
-
     get '/about_us', to: 'home#about_us'
     get '/our_doctors', to: 'home#our_doctors'
     get '/our_services', to: 'home#our_services'

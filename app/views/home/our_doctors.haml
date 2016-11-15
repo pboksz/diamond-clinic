@@ -7,11 +7,7 @@
       - @doctors.each do |doctor|
         .doctor
           .main-info
-            .photo
-              - if doctor.photo?
-                = image_tag photo_doctor_path(locale, doctor)
-              - else
-                = icon('user-md')
+            .photo= icon('user-md')
             .name= icon('chevron-right', doctor.name(locale: locale))
             .specialty= doctor.specialty(locale: locale)
             .clearfix

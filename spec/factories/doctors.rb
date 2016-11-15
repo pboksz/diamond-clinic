@@ -9,9 +9,5 @@ FactoryGirl.define do
     specialty_en 'Cardiologist'
     biography_pl 'Biography in Polish...'
     biography_en 'Biography in English...'
-
-    factory :doctor_with_photo do
-      photo Rack::Test::UploadedFile.new("#{Rails.root}/spec/support/test.png", 'image/png')
-    end
   end
 end
