@@ -48,7 +48,8 @@ RSpec.configure do |config|
   config.include ControllerHelpers, type: :controller
 
   config.before :suite do
-    DatabaseCleaner[:mongoid].strategy = :truncation
+    DatabaseCleaner.strategy = :transaction
+    DatabaseCleaner.clean_with :truncation
   end
 
   config.before do
