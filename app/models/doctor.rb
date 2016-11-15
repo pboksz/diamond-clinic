@@ -1,16 +1,5 @@
-class Doctor
-  # include Mongoid::Document
-  # include Mongoid::Timestamps
-  #
+class Doctor < ActiveRecord::Base
   # mount_uploader :photo, PhotoUploader
-  #
-  # field :order, type: Integer
-  # field :name_pl, type: String
-  # field :name_en, type: String
-  # field :specialty_pl, type: String
-  # field :specialty_en, type: String
-  # field :biography_pl, type: String
-  # field :biography_en, type: String
 
   default_scope -> { order_by(:order.asc) }
 
