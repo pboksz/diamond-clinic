@@ -2,7 +2,7 @@ class Appointment < ActiveRecord::Base
   belongs_to :doctor
   belongs_to :clinical_trial
 
-  default_scope -> { order_by(:created_at.desc) }
+  default_scope -> { order(created_at: :desc) }
 
   belongs_to :doctor
   delegate :name, to: :doctor, prefix: true, allow_nil: true
