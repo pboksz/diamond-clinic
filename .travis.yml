@@ -2,7 +2,10 @@ language: ruby
 bundler_args: --without development
 sudo: false
 rvm: 2.2.0
-services: mysql
+before_script:
+  - cp config/database.yml.example config/database.yml
+  - bundle exec rake db:create
+  - bundle exec rake db:migrate
 script: bundle exec rspec spec
 addons:
   code_climate:
