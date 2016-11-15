@@ -1,15 +1,6 @@
-class Appointment
-  # include Mongoid::Document
-  # include Mongoid::Timestamps
-  #
-  # field :doctor_id, type: BSON::ObjectId
-  # field :clinical_trial_id, type: BSON::ObjectId
-  # field :name, type: String
-  # field :email, type: String
-  # field :phone_number, type: String
-  # field :date, type: Date
-  # field :time, type: String
-  # field :message, type: String
+class Appointment < ActiveRecord::Base
+  belongs_to :doctor
+  belongs_to :clinical_trial
 
   default_scope -> { order_by(:created_at.desc) }
 
