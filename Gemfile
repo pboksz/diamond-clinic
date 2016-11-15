@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.0'
 
 # Use mysql
-gem 'mysql2', '~> 0.4.5'
+gem 'mysql2', '0.3.17'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
