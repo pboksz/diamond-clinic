@@ -4,8 +4,8 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 
-# Use mongodb
-gem 'mongoid', '~> 4.0.0'
+# Use mysql
+gem 'mysql2', '~> 0.4.5'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
