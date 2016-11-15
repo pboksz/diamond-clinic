@@ -21,3 +21,6 @@
 
 # Carrierwave uploads
 /public/uploads
+
+# Database file
+/config/database.yml
