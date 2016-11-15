@@ -42,12 +42,11 @@ describe HomeController do
   end
 
   describe 'POST #appointment_create' do
-    before { post :appointment_create, appointment: params }
-
     describe 'saves properly' do
       let(:mailer) { double }
       let(:doctor) { create(:doctor) }
-      let(:params) { attributes_for(:appointment).merge(doctor: doctor) }
+      let(:clinical_trial) { create(:clinical_trial) }
+      let(:params) { attributes_for(:appointment).merge(doctor_id: doctor.id, clinical_trial_id: clinical_trial.id) }
       before do
         expect(AppointmentMailer).to receive(:appointment_email) { mailer }
         expect(mailer).to receive(:deliver_now)

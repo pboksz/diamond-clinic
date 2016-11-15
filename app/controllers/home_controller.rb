@@ -49,6 +49,6 @@ class HomeController < ApplicationController
   private
 
   def appointment_params
-    params.require(:appointment).permit(:doctor, :name, :email, :phone_number, :date, :time, :message)
+    params.require(:appointment).permit(:doctor_id, :clinical_trial_id, :name, :email, :phone_number, :date, :time, :message)
   end
 end
