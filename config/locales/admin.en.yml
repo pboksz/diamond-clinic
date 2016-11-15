@@ -31,7 +31,6 @@ en:
         name: "Name"
         specialty: "Specialty"
         biography: "Biography"
-        photo: "Photo"
       new:
         header: "Add a Doctor"
       edit:

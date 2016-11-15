@@ -31,7 +31,6 @@ pl:
         name: "Imię i Nazwisko"
         specialty: "Specjalność"
         biography: "Biografia"
-        photo: "Zdjęcie"
       new:
         header: "Dodaj Lekarza"
       edit:

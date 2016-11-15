@@ -30,8 +30,6 @@ en:
         specialty_en: "Specialty in English"
         biography_pl: "Biography in Polish"
         biography_en: "Biography in English"
-        photo: "Photo of Doctor"
-        remove_photo: "Remove Photo"
 
       clinical_trial:
         order: "Order"
