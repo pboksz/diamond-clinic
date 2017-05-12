@@ -19,36 +19,7 @@ class HomeController < ApplicationController
     @doctors = doctors_repository.all
   end
 
-  def request_appointment
-    @appointment = appointments_repository.new
-    @doctors = doctors_repository.all
-    @clinical_trials = clinic_trials_repository.all
-  end
-
-  def appointment_create
-    @appointment = appointments_repository.create(appointment_params)
-
-    if @appointment.persisted?
-      AppointmentMailer.appointment_email(@appointment).deliver_now
-      flash[:notice] = t('views.request_appointment.appointment.sent')
-
-      redirect_to contact_us_path(locale)
-    else
-      flash[:alert] = t('views.request_appointment.appointment.error')
-      @doctors = doctors_repository.all
-      @clinical_trials = clinic_trials_repository.all
-
-      render :request_appointment
-    end
-  end
-
   def sitemap
     render :sitemap, layout: false
-  end
-
-  private
-
-  def appointment_params
-    params.require(:appointment).permit(:doctor_id, :clinical_trial_id, :name, :email, :phone_number, :date, :time, :message)
   end
 end

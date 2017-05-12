@@ -12,16 +12,6 @@ pl:
       default_message: "Proszę przejrzeć poniższe problemy:"
 
     labels:
-      appointment:
-        name: "Imię i Nazwisko"
-        email: "Email"
-        phone_number: "Numer Telefonu"
-        doctor: "Wybierz Lekarza"
-        clinical_trial: "Wybierz Badanie Kliniczne"
-        date: "Wybierz Dzień"
-        time: "Wybierz Godzinę"
-        message: "Wiadomość lub Dodatkowe Informacje"
-
       doctor:
         order: "Kolejność"
         name_pl: "Imię, Nazwisko i Tytuł po Polsku"

@@ -11,18 +11,6 @@ en:
       password: "Password"
       logout: "Logout"
 
-    appointments:
-      index:
-        header: "Appointments"
-        client: "Client"
-        email: "Email"
-        phone_number: "Phone number"
-        doctor: "Doctor"
-        clinical_trial: "Clinical trial"
-        when: "When"
-        created_at: "Sent"
-        message: "Message"
-
     doctors:
       index:
         header: "Doctors"

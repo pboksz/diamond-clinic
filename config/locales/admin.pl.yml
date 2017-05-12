@@ -11,18 +11,6 @@ pl:
       password: "Hasło"
       logout: "Wyloguj"
 
-    appointments:
-      index:
-        header: "Umówe Wizity"
-        client: "Klient"
-        email: "Email"
-        phone_number: "Numer Telefonu"
-        doctor: "Lekarz"
-        clinical_trial: "Badania Kliniczne"
-        when: "Kiedy"
-        created_at: "Wysłane"
-        message: "Wiadomość"
-
     doctors:
       index:
         header: "Lekarze"

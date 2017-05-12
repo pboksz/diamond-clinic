@@ -1,14 +1,4 @@
 en:
-  mailers:
-    subject: "Appointment request from %{name} for %{when}"
-    header: "Appointment request"
-    name: "Name: %{name}"
-    email: "Email: %{email}"
-    phone_number: "Phone Number: %{phone_number}"
-    doctor: "Doctor: %{doctor}"
-    clinical_trial: "Clinical Trial: %{clinical_trial}"
-    when: "When: %{when}"
-
   defaults:
     name: "Diamond Clinic"
     tagline: "Specialized Medical Clinic"
@@ -72,11 +62,7 @@ en:
         header: "Specialist Consultations"
         specialists:
           1: "Internal Medicine"
-           
-          3: "Pulmonology"
-          
-          
-           
+          2: "Pulmonology"
       diagnostics:
         header: "Diagnostic Tests"
         tests:
@@ -109,14 +95,6 @@ en:
       current:
         header: "Clinical Trial List"
         offered: "We are now actively looking for participants for clinical trials with the following conditions:"
-
-    request_appointment:
-      appointment:
-        sent: "Your appointment request has been sent. You will receive a call or email shortly to finalize the appointment."
-        error: "There was an error sending your appointment request. Please fill in the marked fields and try again."
-        header: "Contact Form"
-        description: "Schedule An Appointment or Ask About a Clinical Trial"
-        submit: "Send Request"
 
     contact_us:
       address:

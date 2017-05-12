@@ -32,42 +32,6 @@ describe HomeController do
     it { expect(response).to render_template :contact_us }
   end
 
-  describe 'GET #request_appointment' do
-    before { get :request_appointment }
-
-    it { expect(assigns(:appointment)).to be_a_new Appointment }
-    it { expect(assigns(:doctors)).to eq Doctor.all }
-    it { expect(assigns(:clinical_trials)).to eq ClinicalTrial.all }
-    it { expect(response).to render_template :request_appointment }
-  end
-
-  describe 'POST #appointment_create' do
-    describe 'saves properly' do
-      let(:mailer) { double }
-      let(:doctor) { create(:doctor) }
-      let(:clinical_trial) { create(:clinical_trial) }
-      let(:params) { attributes_for(:appointment).merge(doctor_id: doctor.id, clinical_trial_id: clinical_trial.id) }
-      before do
-        expect(AppointmentMailer).to receive(:appointment_email) { mailer }
-        expect(mailer).to receive(:deliver_now)
-        post :appointment_create, appointment: params
-      end
-
-      it { expect(assigns(:appointment)).to be_persisted }
-      it { expect(response).to redirect_to contact_us_path(locale) }
-    end
-
-    describe 'does not save' do
-      let(:params) { attributes_for(:appointment, name: nil) }
-      before { post :appointment_create, appointment: params }
-
-      it { expect(assigns(:appointment)).not_to be_persisted }
-      it { expect(assigns(:doctors)).to eq Doctor.all }
-      it { expect(assigns(:clinical_trials)).to eq ClinicalTrial.all }
-      it { expect(response).to render_template :request_appointment }
-    end
-  end
-
   describe 'GET #sitemap' do
     before { get :sitemap, format: 'xml' }
     it { expect(response).to render_template :sitemap, layout: false }

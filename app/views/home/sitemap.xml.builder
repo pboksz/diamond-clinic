@@ -36,13 +36,6 @@ xml.urlset 'xmlns' => 'http://www.sitemaps.org/schemas/sitemap/0.9' do
   end
 
   xml.url do
-    xml.loc request_appointment_url
-    xml.changefreq 'monthly'
-    xml.priority 0.9
-    xml.lastmod Date.today.to_s(:db)
-  end
-
-  xml.url do
     xml.loc contact_us_url
     xml.changefreq 'monthly'
     xml.priority 0.9

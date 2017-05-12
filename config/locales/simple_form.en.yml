@@ -12,16 +12,6 @@ en:
       default_message: "Please review the problems below:"
 
     labels:
-      appointment:
-        name: "Name"
-        email: "Email"
-        phone_number: "Phone number"
-        doctor: "Choose a Physician"
-        clinical_trial: "Choose a Clinical Trial"
-        date: "Choose a Date"
-        time: "Choose a Time"
-        message: "Additional Information or Query"
-
       doctor:
         order: "Order"
         name_pl: "Name and Title in Polish"

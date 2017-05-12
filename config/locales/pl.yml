@@ -1,14 +1,4 @@
 pl:
-  mailers:
-    subject: "Umówiona Wizyta od %{name} na %{when}"
-    header: "Umówiona Wizyta"
-    name: "Imię i Nazwisko: %{name}"
-    email: "Email: %{email}"
-    phone_number: "Numer Telefonu: %{phone_number}"
-    doctor: "Lekarze: %{doctor}"
-    clinical_trial: "Badania Kliniczne: %{clinical_trial}"
-    when: "Kiedy: %{when}"
-
   defaults:
     name: "Diamond Clinic"
     tagline: "Specjalistyczne Poradnie Lekarskie"
@@ -72,11 +62,7 @@ pl:
         header: "Konsultacje Specjalistyczne"
         specialists:
           1: "Internistyczne"
-          
-          3: "Pulmonologiczne"
-          
-          
-          
+          2: "Pulmonologiczne"
       diagnostics:
         header: "Badania Diagnostyczne"
         tests:
@@ -109,14 +95,6 @@ pl:
       current:
         header: "Lista Badań"
         offered: "Obecnie do badań klinicznych rekrutujemy chorych:"
-
-    request_appointment:
-      appointment:
-        sent: "Twoje umówe wizyty została wysłana. Będziesz otrzymywać połączenia lub e-maila, aby zakończyć spotkanie."
-        error: "Był błąd podczas wysyłania umówe wizity. Proszę wypełnić pola oznaczone i spróbuj ponownie."
-        header: "Formularz Kontaktowy"
-        description: "Zapisz Się Na Wizytę lub Zapytaj o Badanie Kliniczne"
-        submit: "Wyślij"
 
     contact_us:
       address:
