@@ -15,7 +15,7 @@ deploy:
   provider: heroku
   strategy: git
   api_key:
-    secure: M2Mhwt7nSlgO/p8+kivByb3U123ZGhfzyBGmclRukKaxmFzGESliV0+51bbkCAPllEzpejsToy/XK4KZZm2rmThdGw4dVuZ7NaYwKEHjQjIEKTB7FdYTPIyNjSj3Ma3AKhhF7n8GQ6TrzAph783Rn+bPgPFoeMOYyhfza6bneHY=
+    secure: "K9JAjuMv68F2rFUBJUQ/xXFqwenfU2HbTeGBRT11Q4T5vrDn/m5dhEo3r/vY1ucXy0Zqn/bStAqsuJEw0qPHx3huvd2HOGcRVjtT59Qn3jOEKxK98leQuxDz1UwUa1b17ccWZ/VCHodpiFNdyCbghSpqx5haJ66KRS9rjuY4urw="
   app: diamond-clinic
   on:
     repo: pboksz/diamond-clinic
