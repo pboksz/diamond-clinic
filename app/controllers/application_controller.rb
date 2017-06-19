@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   before_filter :set_locale
 
   def after_login_path(new_locale = locale)
-    admin_appointments_path(locale)
+    admin_doctors_path(locale)
   end
 
   def after_logout_path(new_locale = locale)
@@ -19,10 +19,6 @@ class ApplicationController < ActionController::Base
 
   def doctors_repository
     @doctors_repository ||= DefaultRepository.new(Doctor)
-  end
-
-  def appointments_repository
-    @appointments_repository ||= DefaultRepository.new(Appointment)
   end
 
   private

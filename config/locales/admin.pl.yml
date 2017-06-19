@@ -4,7 +4,6 @@ pl:
     confirm: "Czy na pewno chcesz usunąć?"
 
     header:
-      appointments: "Umówe Wizity"
       doctors: "Lekarze"
       clinical_trials: "Badanie Kliniczne"
       admins: "Admins"
