@@ -59,6 +59,13 @@ pl:
         specialists:
           1: "Internistyczne"
           2: "Pulmonologiczne"
+          3: "Dermatologia"
+          4: "Reumatologia"
+          5: "Alergologia"
+          6: "Imunologia"
+          7: "Kardiologia"
+          8: "Endokrynologia"
+          9: "Diabetologia"
       diagnostics:
         header: "Badania Diagnostyczne"
         tests:

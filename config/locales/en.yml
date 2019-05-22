@@ -59,6 +59,13 @@ en:
         specialists:
           1: "Internal Medicine"
           2: "Pulmonology"
+          3: "Dermatology"
+          4: "Rheumatology"
+          5: "Allergology"
+          6: "Immunology"
+          7: "Cardiology"
+          8: "Endocrinology"
+          9: "Diabetology"
       diagnostics:
         header: "Diagnostic Tests"
         tests:
