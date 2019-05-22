@@ -78,9 +78,6 @@ pl:
           3: "Odczulanie"
 
     clinical_research:
-      contact:
-        1: "+48 12 265 11 65"
-        2: "+48 571 241 412"
       information:
         offer: "W ramach prowadzonych przez nas badań klinicznych, oferujemy pacjentom udział w darmowym leczeniu z wykorzystaniem najnowocześniejszych leków. "
         participate: "Jeśli jesteście Państwo zainteresowani udziałem w badaniach klinicznych, w celu umówienia się na wizytę prosimy o kontakt:"
@@ -104,14 +101,7 @@ pl:
       contact:
         header: "Kontakt"
         phone_number: "Telefon:"
-        mobile_number: "Komórka:"
         fax_number: "Fax:"
         email: "Email:"
         hours_weekday: "Poniedziałek - Piątek:"
         hours_weekend: "Sobota:"
-      directions:
-        header: "Dojazd"
-        mass_transit: "Komunikacja"
-        trams: "Tramwajami:"
-        buses: "Autobusami:"
-        stop: "Do przystanku:"

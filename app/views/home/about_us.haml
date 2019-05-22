@@ -5,8 +5,7 @@
     %h1= t('defaults.name')
     - t('views.about_us.sections').each do |key, section|
       %p= section
-    - t('views.clinical_research.contact').each do |key, contact|
-      .section= icon('chevron-right', contact)
+    .section= icon('chevron-right', t('defaults.phone_number'))
     .section
       = icon('chevron-right')
       = mail_to t('defaults.email')

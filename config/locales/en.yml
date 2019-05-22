@@ -9,7 +9,6 @@ en:
     hours_weekend: "9:00 - 15:00"
     nip: "678-292-45-94"
     regon: "120413380"
-    phone_number: "+48 122 651 165"
     mobile_number: "+48 571 241 412"
     fax_number: "+48 126 371 533"
     trams: "3, 5, 18, 50"
@@ -73,14 +72,11 @@ en:
       treatments:
         header: "Procedures"
         types:
-          1: "Intravascular, Intramuscular, and Subdural Injections"
+          1: "Intravascular, Intramuscular, and Subcutaneous Injections"
           2: "Intravenous Infusions"
           3: "Allergy Desensitization"
 
     clinical_research:
-      contact:
-        1: "+48 12 265 11 65"
-        2: "+48 571 241 412"
       information:
         offer: "We offer free, state of the art treatment as well as multidisciplinary care for patients taking part in our clinical trials."
         participate: "If you are interested in taking part in one of our clinical trials or to learn about our current offers please contact us:"
@@ -104,14 +100,7 @@ en:
       contact:
         header: "Contact"
         phone_number: "Phone:"
-        mobile_number: "Mobile:"
         fax_number: "Fax:"
         email: "Email:"
         hours_weekday: "Monday - Friday:"
         hours_weekend: "Saturday:"
-      directions:
-        header: "Directions"
-        mass_transit: "Mass Transit"
-        trams: "Tram Lines:"
-        buses: "Bus Lines:"
-        stop: "To the stop:"

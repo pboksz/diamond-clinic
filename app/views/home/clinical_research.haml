@@ -8,8 +8,7 @@
 
       .clinical-contact
         = t('views.clinical_research.information.participate')
-        - t('views.clinical_research.contact').each do |key, contact|
-          .section= icon('chevron-right', contact)
+        .section= icon('chevron-right', t('defaults.phone_number'))
         .section
           = icon('chevron-right')
           = mail_to t('defaults.email')
