@@ -14,6 +14,7 @@ en:
     fax_number: "+48 126 371 533"
     description: "Diamond Clinic is a top of the line health clinic"
     keywords: "health, care, healthcare, pneumonia, internal medicine, diabetes, medicine, medical, clinic, diamond, clinical trials, doctor, Krakow, Lesser Poland, Poland, internist, cardiologist, pulmonologist, allergologist, nephrologist, neurologist"
+    map_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1108.5506507221105!2d19.962746931777453!3d50.0575615414451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165b3bce0605ef%3A0x2ba01b5ef3bb4842!2sStefana+Rogozi%C5%84skiego+6%2C+31-559+Krak%C3%B3w%2C+Poland!5e0!3m2!1sen!2suk!4v1558528801813!5m2!1sen!2suk"
 
   views:
     # Any part that has a numbered list can be added or removed from. For example:
