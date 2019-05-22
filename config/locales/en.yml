@@ -2,8 +2,9 @@ en:
   defaults:
     name: "Diamond Clinic"
     tagline: "Specialized Medical Clinic"
-    address: "Ul. Gen. Augusta Fieldorfa-Nila 14/JU2"
-    city: "31-209 Kraków"
+    address: "ul. Stefana Rogozińskiego 6/U3"
+    city: "31-559 Kraków"
+    place: "(Graffit House)"
     email: "biuro@diamondclinic.eu"
     hours_weekday: "9:00 - 21:00"
     hours_weekend: "9:00 - 15:00"

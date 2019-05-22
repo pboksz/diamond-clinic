@@ -1,8 +1,9 @@
 %footer
   .left.address
+    %p= t('defaults.name')
     %p= t('defaults.address')
     %p= t('defaults.city')
-    %p= mail_to t('defaults.email')
+    %p= t('defaults.place')
   .center
     .logo= image_tag 'diamondclinic_logo.png'
     .copyright
@@ -18,3 +19,4 @@
       = t('views.footer.hours_weekend')
       = t('defaults.hours_weekend')
     %p= t('defaults.phone_number')
+    %p= mail_to t('defaults.email')
