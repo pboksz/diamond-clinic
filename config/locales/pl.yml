@@ -78,7 +78,7 @@ pl:
       treatments:
         header: "Zabiegi"
         types:
-          1: "Iniekcje Dożylne, Podskórne, Pomięśniowe"
+          1: "Iniekcje Dożylne, Podskórne, Domięśniowe"
           2: "Wlewy Dożylne"
           3: "Odczulanie"
 
