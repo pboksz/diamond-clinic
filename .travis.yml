@@ -1,16 +1,12 @@
 language: ruby
 bundler_args: --without development
 sudo: false
-rvm: 2.2.0
+rvm: 2.4.2
 before_script:
   - cp config/database.yml.example config/database.yml
   - bundle exec rake db:create
   - bundle exec rake db:migrate
 script: bundle exec rspec spec
-addons:
-  code_climate:
-    repo_token:
-      secure: cQfNt8d9zRVg8P4UKQZZmqlTCcZLE0xevfNgKUaZD+Hh10FcyCFDBgCbTfe5pUcV8fE+rPGHY8eGOSRSH8Gk24Nn/Zo9HpzFxh/aIuPt1Yz02j8t1KZAAtcm9WU/rhipOt75TaJPsZ66W4q0telVODdiET5OJzptObpwPcd7WNI=
 deploy:
   provider: heroku
   strategy: git
