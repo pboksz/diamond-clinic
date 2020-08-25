@@ -1,4 +1,4 @@
-development: &development
+defaults:
   email_regex: \A[^@\s]+@([^@\s]+\.)+[^@\s]+\z
   email_from: 'hello@localhost'
   delivery_method: 'smtp'
@@ -9,8 +9,14 @@ development: &development
   smtp_settings:
     address: 'localhost'
     port: 1025
+
+test:
+  delivery_method: 'test'
+  app_host:
+    host: 'localhost'
+    port: 3000
+
 production:
-  <<: *development
   email_from: 'biuro@diamondclinic.eu'
   delivery_method: 'smtp'
   asset_host: 'http://diamondclinic.eu'
@@ -24,9 +30,3 @@ production:
     domain: 'diamondclinic.eu'
     authentication: 'plain'
     enable_starttls_auto: true
-test:
-  <<: *development
-  delivery_method: 'test'
-  app_host:
-    host: 'localhost'
-    port: 3000
