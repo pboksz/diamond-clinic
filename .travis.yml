@@ -1,5 +1,6 @@
 language: ruby
 bundler_args: --without development
+dist: trusty
 sudo: false
 rvm: 2.4.2
 before_script:
