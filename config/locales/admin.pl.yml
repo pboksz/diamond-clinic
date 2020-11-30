@@ -4,7 +4,7 @@ pl:
     confirm: "Czy na pewno chcesz usunąć?"
 
     header:
-      doctors: "Lekarze"
+      doctors: "Zespół"
       clinical_trials: "Badanie Kliniczne"
       admins: "Admins"
       password: "Hasło"
@@ -12,16 +12,16 @@ pl:
 
     doctors:
       index:
-        header: "Lekarze"
-        add: "Dodaj Lekarza"
+        header: "Zespół"
+        add: "Dodaj Osobę"
         order: "Kolejność"
         name: "Imię i Nazwisko"
         specialty: "Specjalność"
         biography: "Biografia"
       new:
-        header: "Dodaj Lekarza"
+        header: "Dodaj Osobę"
       edit:
-        header: "Edytuj Lekarza"
+        header: "Edytuj Osobę"
 
     clinical_trials:
       index:
