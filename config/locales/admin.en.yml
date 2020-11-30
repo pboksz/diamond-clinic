@@ -4,7 +4,7 @@ en:
     confirm: "Are you sure you want to delete this?"
 
     header:
-      doctors: "Doctors"
+      doctors: "Team"
       clinical_trials: "Clinical Trials"
       admins: "Admins"
       password: "Password"
@@ -12,16 +12,16 @@ en:
 
     doctors:
       index:
-        header: "Doctors"
-        add: "Add a Doctor"
+        header: "Team"
+        add: "Add a Person"
         order: "Order"
         name: "Name"
         specialty: "Specialty"
         biography: "Biography"
       new:
-        header: "Add a Doctor"
+        header: "Add a Person"
       edit:
-        header: "Edit Doctor"
+        header: "Edit Person"
 
     clinical_trials:
       index:
