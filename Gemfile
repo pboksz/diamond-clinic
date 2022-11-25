@@ -53,16 +53,10 @@ group :test do
   gem 'database_cleaner'
 end
 
-group :production do
-  gem 'heroku-deflater'
-  gem 'rails_12factor'
-end
-
 group :development, :test do
   gem 'factory_girl_rails'
   gem 'pry'
   gem 'rspec-rails'
-  gem 'travis'
 end
 
 group :development, :production do
